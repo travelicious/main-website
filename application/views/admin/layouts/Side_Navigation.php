@@ -157,75 +157,9 @@
                     <li><a href="ui-other.html">Other</a></li>
                 </ul>
             </li>
-            <li class="with-sub">
-                <a href="#" class="waves-effect  waves-light">
-                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
-                    <span class="s-text">UI Kit</span>
-                </a>
-                <ul>
-                    <li><a href="ui-arrows.html">Arrows</a></li>
-                    <li><a href="ui-buttons.html">Buttons</a></li>
-                    <li><a href="ui-cards.html">Cards</a></li>
-                    <li><a href="ui-carousel.html">Carousel</a></li>
-                    <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                    <li><a href="ui-flags.html">Flags</a></li>
-                    <li><a href="ui-grid.html">Grid</a></li>
-                    <li><a href="ui-modal.html">Modal</a></li>
-                    <li><a href="ui-navs.html">Navs</a></li>
-                    <li><a href="ui-notifications.html">Notifications</a></li>
-                    <li><a href="ui-progress.html">Progress</a></li>
-                    <li><a href="ui-spinners.html">Spinners</a></li>
-                    <li><a href="ui-typography.html">Typography</a></li>
-                    <li><a href="ui-other.html">Other</a></li>
-                </ul>
-            </li>
-            <li class="with-sub">
-                <a href="#" class="waves-effect  waves-light">
-                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
-                    <span class="s-text">UI Kit</span>
-                </a>
-                <ul>
-                    <li><a href="ui-arrows.html">Arrows</a></li>
-                    <li><a href="ui-buttons.html">Buttons</a></li>
-                    <li><a href="ui-cards.html">Cards</a></li>
-                    <li><a href="ui-carousel.html">Carousel</a></li>
-                    <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                    <li><a href="ui-flags.html">Flags</a></li>
-                    <li><a href="ui-grid.html">Grid</a></li>
-                    <li><a href="ui-modal.html">Modal</a></li>
-                    <li><a href="ui-navs.html">Navs</a></li>
-                    <li><a href="ui-notifications.html">Notifications</a></li>
-                    <li><a href="ui-progress.html">Progress</a></li>
-                    <li><a href="ui-spinners.html">Spinners</a></li>
-                    <li><a href="ui-typography.html">Typography</a></li>
-                    <li><a href="ui-other.html">Other</a></li>
-                </ul>
-            </li>
-            <li class="with-sub">
-                <a href="#" class="waves-effect  waves-light">
-                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
-                    <span class="s-text">UI Kit</span>
-                </a>
-                <ul>
-                    <li><a href="ui-arrows.html">Arrows</a></li>
-                    <li><a href="ui-buttons.html">Buttons</a></li>
-                    <li><a href="ui-cards.html">Cards</a></li>
-                    <li><a href="ui-carousel.html">Carousel</a></li>
-                    <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                    <li><a href="ui-flags.html">Flags</a></li>
-                    <li><a href="ui-grid.html">Grid</a></li>
-                    <li><a href="ui-modal.html">Modal</a></li>
-                    <li><a href="ui-navs.html">Navs</a></li>
-                    <li><a href="ui-notifications.html">Notifications</a></li>
-                    <li><a href="ui-progress.html">Progress</a></li>
-                    <li><a href="ui-spinners.html">Spinners</a></li>
-                    <li><a href="ui-typography.html">Typography</a></li>
-                    <li><a href="ui-other.html">Other</a></li>
-                </ul>
-            </li>
+            
+            
+            
 
 
 
