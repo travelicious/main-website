@@ -1,4 +1,4 @@
-<!-- Sidebar -->
+ Sidebar -->
 <div class="site-overlay"></div>
 <div class="site-sidebar">
     <div class="custom-scroll custom-scroll-light">
@@ -18,7 +18,7 @@
                     <span class="s-text">Layouts</span>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="skins.html" class="waves-effect  waves-light">
                     <span class="s-icon"><i class="ti-palette"></i></span>
                     <span class="s-text">Skins</span>
@@ -156,7 +156,7 @@
                     <li><a href="ui-typography.html">Typography</a></li>
                     <li><a href="ui-other.html">Other</a></li>
                 </ul>
-            </li>
+            </li> -->
             
             
             
@@ -225,4 +225,4 @@
     </div>
 </div>
 
-<!-- Sidebar End-->
+<!-- Sidebar End
