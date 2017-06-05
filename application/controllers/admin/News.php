@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends BackendController {
+class News extends BackendController {
 
     /**
      * Index Page for this controller.
@@ -20,6 +20,7 @@ class Dashboard extends BackendController {
      */
     public function index()
     {
-        $this->load->view('admin/Dashboard');
+        $this->load->view('admin/news');
     }
+
 }
