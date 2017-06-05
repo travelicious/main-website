@@ -36,7 +36,7 @@
                             </div>
                             <progress class="progress progress-danger progress-sm" value="75" max="100">100%</progress>
                             <span class="avatar box-32">
-											<img src="img/avatars/2.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/avatars/2.jpg" alt="">
 										</span>
                             <a class="text-black" href="#">John Doe</a>, <span class="text-muted">5 min ago</span>
                         </div>
@@ -47,7 +47,7 @@
                             </div>
                             <progress class="progress progress-purple progress-sm" value="40" max="100">100%</progress>
                             <span class="avatar box-32">
-											<img src="img/avatars/3.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/avatars/3.jpg" alt="">
 										</span>
                             <a class="text-black" href="#">John Doe</a>, <span class="text-muted">15:07</span>
                         </div>
@@ -58,7 +58,7 @@
                             </div>
                             <progress class="progress progress-warning progress-sm" value="100" max="100">100%</progress>
                             <span class="avatar box-32">
-											<img src="img/avatars/4.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/avatars/4.jpg" alt="">
 										</span>
                             <a class="text-black" href="#">John Doe</a>, <span class="text-muted">yesterday</span>
                         </div>
@@ -69,7 +69,7 @@
                             </div>
                             <progress class="progress progress-success progress-sm" value="60" max="100">100%</progress>
                             <span class="avatar box-32">
-											<img src="img/avatars/5.jpg" alt="">
+											<img src="<?php echo base_url();?>assets/img/avatars/5.jpg" alt="">
 										</span>
                             <a class="text-black" href="#">John Doe</a>, <span class="text-muted">3 days ago</span>
                         </div>
@@ -113,7 +113,7 @@
                 <li class="nav-item dropdown hidden-sm-down">
                     <a href="#" data-toggle="dropdown" aria-expanded="false">
 									<span class="avatar box-32">
-										<img src="img/avatars/1.jpg" alt="">
+										<img src="<?php echo base_url();?>assets/img/avatars/1.jpg" alt="">
 									</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right animated fadeInUp">
