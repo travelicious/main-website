@@ -22,4 +22,9 @@ class Dashboard extends BackendController {
     {
         $this->load->view('admin/Dashboard');
     }
+
+    public function news()
+    {
+        $this->load->view('admin/news');
+    }
 }

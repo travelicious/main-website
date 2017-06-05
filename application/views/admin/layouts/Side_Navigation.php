@@ -18,6 +18,13 @@
                     <span class="s-text">Layouts</span>
                 </a>
             </li>
+
+            <li>
+                <a href="news" class="waves-effect  waves-light">
+                    <span class="s-icon"><i class="ti-layout-tab"></i></span>
+                    <span class="s-text">News</span>
+                </a>
+            </li>
             <!-- <li>
                 <a href="skins.html" class="waves-effect  waves-light">
                     <span class="s-icon"><i class="ti-palette"></i></span>
