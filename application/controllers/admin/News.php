@@ -20,7 +20,16 @@ class News extends BackendController {
      */
     public function index()
     {
-        $this->load->view('admin/news');
+        $this->load->view('admin/news/news');
+    }
+    public function add()
+    {
+        if($this->input->post(''))
+        {
+
+        }
+
+        $this->load->view('admin/news/add');
     }
 
 }
