@@ -5,7 +5,7 @@
         <ul class="sidebar-menu">
 
             <li class="with-sub">
-                <a href="#" class="waves-effect  waves-light">
+                <a href="Dashboard" class="waves-effect  waves-light">
 
                     <span class="s-icon"><i class="ti-anchor"></i></span>
                     <span class="s-text">Dashboard</span>
