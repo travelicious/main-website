@@ -20,6 +20,7 @@ class Dashboard extends BackendController {
      */
     public function index()
     {
-        $this->load->view('admin/Dashboard');
+        $data['body_view'] = 'admin/Dashboard';
+        $this->load->view('admin/layouts/home',$data);
     }
 }
