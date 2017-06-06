@@ -21,4 +21,22 @@ class Packages_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+    public function insert()
+    {
+        $insert_data = Array (
+            'url'           => $this->input->post('package_url'),
+            'title'         => $this->input->post('package_title'),
+            'image'         => $this->input->post('package_image'),
+            'duration'      => $this->input->post('package_duration'),
+            'description'   => $this->input->post('package_description'),
+            'meta_title'    => $this->input->post('package_meta_title'),
+            'meta_robots'   => $this->input->post('package_meta_robots'),
+            'meta_description' => $this->input->post('package_meta_description'),
+            'price'         => $this->input->post('package_price')
+
+        );
+        $this->db->insert('packages',$insert_data);
+    }
+
+
 }

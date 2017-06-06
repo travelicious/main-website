@@ -38,9 +38,32 @@ class Packages extends BackendController {
         }
 
 
-
         $data['page_title'] = 'Package List';
         $data['body_view'] = 'admin/packages/home';
         $this->load->view('admin/layouts/home',$data);
     }
+
+    public function add()
+    {
+        /* We are now adding new packages to the database */
+        $this->load->model('admin/packages_model');
+        if($this->input->post('submit'))
+        {
+            $this->packages_model->insert();
+        }
+
+
+
+
+
+
+        /* Loading the layout and the body layout is passed as name which will be loaded in view */
+        $data['page_title'] = 'Add a Package';
+        $data['body_view'] = 'admin/packages/add';
+        $this->load->view('admin/layouts/home',$data);
+
+
+    }
+
+
 }
