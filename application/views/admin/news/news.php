@@ -15,7 +15,7 @@
 
 
 
-    <![endif]-->
+   
 </head>
 <body class="fixed-sidebar fixed-header skin-default content-appear">
 <div class="wrapper">
@@ -32,9 +32,6 @@
     <div class="site-content">
         <!-- Content -->
         <div class="content-area py-1">
-<<<<<<< HEAD
-
-=======
             <div class="container-fluid">
                 <div class="row row-md">
                     <div class="col-lg-4 col-md-6 col-xs-12">
@@ -100,13 +97,14 @@
                                             <tr>
                                             <td> <?php echo $row->url;?></td>
                                             <td> <?php echo $row->title;?></td>
-                                            <td> <?php echo $row->image;?></td>
+                                           <!--  <td> <?php echo '<img src=" echo base_url();?>assets/images/news/'.$row->image.'">' ?></td> -->
+                                            <td> <img src="<?php echo base_url();?>assets/images/news<?php echo $row->image; ?>"></td>
                                             <td> <?php echo $row->description;?></td>
                                             <td> <?php echo $row->author;?></td>
                                             <td> <?php echo $row->created_at;?></td>
                                             <td> <?php echo $row->modified_at;?></td>
                                             <td><a href="news_edit?id=<?php echo $row->id; ?>"><?php echo 'Edit';?></a> </td>
-                                            <td><a href="news_delete?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></td>
+                                            <td><a href="<?php echo base_url();?>admin/News/delete_news?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></td>
                                             </tr>
 
 
@@ -132,7 +130,7 @@
                     </div>
                 </div>
             </div>
->>>>>>> test
+
         </div>
         <!-- Footer -->
         <?php $this->load->view('admin/layouts/Footer'); ?>

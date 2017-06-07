@@ -1,9 +1,3 @@
-<?php
-		
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,10 +14,7 @@
     <?php $this->load->view('admin/layouts/CSS_Include'); ?>
 
 
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 <body class="fixed-sidebar fixed-header skin-default content-appear">
 <div class="wrapper">
@@ -46,10 +37,10 @@
                         <div class="box box-block bg-white tile tile-1 mb-2">
                             <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
                             <div class="t-content">
-                                <h6 class="text-uppercase mb-1">News </h6>
+                                <h6 class="text-uppercase mb-1">SOLD PACKAGE</h6>
                                 <h1 class="mb-1">1,325</h1>
                                 <span class="tag tag-danger mr-0-5">+17%</span>
-                                <span class="text-muted font-90">News</span>
+                                <span class="text-muted font-90">from previous period</span>
                             </div>
                         </div>
                     </div>
@@ -67,83 +58,84 @@
                         <div class="box box-block bg-white tile tile-1 mb-2">
                             <div class="t-icon right"><span class="bg-primary"></span><i class="ti-package"></i></div>
                             <div class="t-content">
-                                <h6 class="text-uppercase mb-1">Add News</h6>
+                                <h6 class="text-uppercase mb-1">CUSTOMIZED PACKAGE</h6>
                                 <h1 class="mb-1">6,800</h1>
-                                <span class="tag tag-primary mr-0-5">+125</span> 
-                                 <span class="text-muted font-90">arraving today</span>
+                                <span class="tag tag-primary mr-0-5">+125</span>
+                                <span class="text-muted font-90">arraving today</span>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                 <div class="row">
-     
-          <div class="col-lg-12">
-            <section class="panel default blue_title h2">
 
+                <div class="row row-md mb-2">
 
-<div class="panel-body">
- <div class="row">
-<div class="col-sm-3"></div>
- <div class="col-sm-6">
-
-            <form action="<?php echo base_url();?>admin/News/submit_news" method="post"  enctype="multipart/form-data">
-      <div class="form-group">
-                <label for="name" style="color:white;">News URL</label>
-                <input type="text" name="url" class="form-control" id="url" placeholder="News Url">
-            </div>
-    
-            <div class="form-group">
-                <label for="name" style="color:white;">Title</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Destination Name">
-            </div>
-
-
-          <div class="form-group">
-                <label for="files" style="color:white;">Select Image</label>
-                <input type="file" name="files" class="form-control" id="files" >
-            </div>
-
-          
-             <div class="form-group">
-                <label for="description" style="color:white;">Description</label>
-              <textarea name="description" class="form-control" id="description" placeholder="Description">
-                </textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="author" style="color:white;">Author</label>
-              <textarea name="author" class="form-control" id="author" placeholder="author">
-                </textarea>
-            </div>
-
-            <!-- <div class="form-group">
-                <label for="name" style="color:white;">Created_At</label>
-                <input type="date" name="cc" class="form-control" id="cc" placeholder="Destination Name">
-            </div>
-
-            <div class="form-group">
-                <label for="name" style="color:white;">Modified_At</label>
-                <input type="date" name="ss" class="form-control" id="ss" placeholder="Destination Name">
-            </div> -->
-      
-          
-           <button type="submit" name="submit" class="btn btn-primary" value="submit">Add
-           </button>
+                    <div class="col-md-12">
+                        <div class="box bg-white">
+                            <table class="table table-responsive">
+                  <tbody>
+                                <tr>
+                                    <th><b>S.NO</b></th>
+                                    <th><b>URL</b></th>
+                                    <th><b>TITLE</b></th>
+                                    <th><b>IMAGE</b></th>
+                                    <th><b>DESCRIPTION</b></th>
+                                    <th><b>AUTHOR</b></th>
+                                    <th><b>CREATED_AT</b></th>
+                                    <th><b>MODIFIED_AT</b></th>
+                                    <th><b>EDIT</b></th>
+                                    <th><b>DELETE</b></th>
+                                </tr>
             
-        </div>
-      </div>
-    </form>
+                              
+        
+                           <?php
+ $sn=1;
+                            
+                          if($fetch_data->num_rows() >0)
+                          {
+                      foreach($fetch_data->result() as $row)
+                          {
+                          ?>
+                         
+                           <tr>
+                            <td><?php echo $sn;?></td>
+                           <td><?php echo $row->url;?></td>
+                            <td><?php echo $row->title;?></td>
+                             <td><?php echo $row->image;?></td>
+                              <td><?php echo $row->description;?></td>
+                               <td><?php echo $row->author;?></td>
+                                <td><?php echo $row->created_at;?></td>
+                                 <td><?php echo $row->modified_at;?></td>
+                                  <td><a href="<?php echo base_url();?>admin/blogs/edit_blog?id=<?php echo $row->id; ?>"> <?php echo 'Edit';?></a></td>
+                                <td><a href="<?php echo base_url();?>admin/blogs/delete_blog?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></td>
 
-</div> 
+                           </tr>
 
-        </section>
-      </div>
-    </div>
-  </div>
-</div>
-                
+                          <?php
+$sn++;
+
+                         }
+                           }
+                         else
+                           {
+                            ?>
+<tr><td>]
+No Data Found
+</td>
+</tr>
+<?php
+
+}
+
+        ?>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
                 <div class="box box-block bg-white">
                     <div class="clearfix mb-1">
                         <h5 class="float-xs-left">Container Section</h5>
