@@ -8,6 +8,7 @@
 <<<<<<< HEAD
                 <a href="Dashboard" class="waves-effect  waves-light">
 =======
+                <a href="<?php echo base_url(); ?>admin/Dashboard" class="waves-effect  waves-light">
 >>>>>>> test
 
                     <span class="s-icon"><i class="ti-anchor"></i></span>
