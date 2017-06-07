@@ -20,6 +20,6 @@ class Login extends BackendController {
      */
     public function index()
     {
-        echo "login Page";
+        $this->load->view('login');
     }
 }

@@ -68,6 +68,20 @@
                     <li><a href="#">Add News</a></li>
                 </ul>
             </li>
+
+             <li class="with-sub">
+                    <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Blogs</span>
+                </a>
+                <ul>
+                    <li><a href="<?php echo base_url();?>admin/blogs">Blog</a></li>
+                    <li><a href="<?php echo base_url();?>admin/blogs/add_blog">Add Blog</a></li>
+                
+                </ul>
+            </li>
+
             <!-- <li>
                 <a href="skins.html" class="waves-effect  waves-light">
                     <span class="s-icon"><i class="ti-palette"></i></span>
