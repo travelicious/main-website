@@ -5,11 +5,10 @@
         <ul class="sidebar-menu">
 
             <li class="with-sub">
-<<<<<<< HEAD
-                <a href="Dashboard" class="waves-effect  waves-light">
-=======
+                 <a href="Dashboard" class="waves-effect  waves-light">
+
                 <a href="<?php echo base_url(); ?>admin/Dashboard" class="waves-effect  waves-light">
->>>>>>> test
+
 
                     <span class="s-icon"><i class="ti-anchor"></i></span>
                     <span class="s-text">Dashboard</span>
