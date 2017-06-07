@@ -55,6 +55,7 @@
                                     <th>URL</th>
                                     <th>Description</th>
                                     <th>Image</th>
+                                    <th>Views</th>
                                     <th>Action</th>
                                     <th>Manage</th>
                                 </tr>
@@ -92,6 +93,9 @@
                                         <span class="text-muted"><img src="<?php echo  base_url()?>assets/images/destination/<?=$rows->image?>" style="width:100px"></span>
                                     </td>
                                     <td>
+                                        <?=$rows->views?>&nbsp;<a href="#" onclick="resetviews(<?=$rows->id?>)">Reset</a>
+                                    </td>
+                                    <td>
                                         <a href="#" onclick="changestatus(<?=$rows->id?>,<?=$flag?>)"><?=$status?></a>
                                     </td>
                                     <td>
@@ -112,6 +116,50 @@
                 
             </div>
         </div>
+<script>
+
+    function changestatus(id, flag){
+
+
+console.log(id +" "+ flag);
+
+      var ajaxmap=$.ajax({
+                      type:"POST",
+                      url:"<?php echo site_url('admin/destination/changestatus');?>",
+                      data: "{'lastName':'last','firstName':'first','middleName':'middel'}",
+                      // data:myData,
+                      mimeType: "multipart/form-data",
+                      contentType: false,
+                      cache: false,
+                      processData: false,
+
+                     success:function(data)
+                    {
+
+                      console.log(data);
+                      return false;
+                      if(data==1){
+                        setTimeout(function(){ 
+                            document.getElementById('msg').innerHTML = "Destination successfully add.";
+                            document.getElementById('msg').style.color = "#4CAF50";
+                            
+                        }, 800); 
+                        setTimeout(function(){ 
+                            window.location.href = "<?php echo base_url()?>admin/destination";
+                        }, 2000); 
+                     }else{
+
+                          setTimeout(function(){ 
+                            document.getElementById('msg').innerHTML = "Destination not add try again.";
+                            console.log("Error in Submission...");
+                          }, 800);
+                      }
+                   }
+             }).responseText;  
+         return false;
+} 
+
+</script>
         <!-- Footer -->
         <?php $this->load->view('admin/layouts/Footer'); ?>
     </div>
