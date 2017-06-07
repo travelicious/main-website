@@ -103,7 +103,7 @@
                                             <td> <?php echo $row->author;?></td>
                                             <td> <?php echo $row->created_at;?></td>
                                             <td> <?php echo $row->modified_at;?></td>
-                                            <td><a href="news_edit?id=<?php echo $row->id; ?>"><?php echo 'Edit';?></a> </td>
+                                            <td><a href="<?php echo base_url();?>admin/News/edit_news?id=<?php echo $row->id; ?>"><?php echo 'Edit';?></a> </td>
                                             <td><a href="<?php echo base_url();?>admin/News/delete_news?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></td>
                                             </tr>
 

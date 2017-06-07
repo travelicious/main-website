@@ -88,35 +88,43 @@
 <div class="col-sm-3"></div>
  <div class="col-sm-6">
 
-            <form action="<?php echo base_url();?>admin/News/submit_news" method="post"  enctype="multipart/form-data">
+
+
+            <form action="<?php echo base_url();?>admin/News/save_news" method="post"  enctype="multipart/form-data">
+
+
+                                         <?php foreach ($fetch_item->result() as $row); ?>
+
+
       <div class="form-group">
-                <label for="name" style="color:white;">News URL</label>
-                <input type="text" name="url" class="form-control" id="url" placeholder="News Url">
+                <label for="name">News URL</label>
+                <input type="text" name="url" class="form-control" id="url" placeholder="News Url" value="<?php echo $row->url; ?>">
             </div>
     
             <div class="form-group">
-                <label for="name" style="color:white;">Title</label>
+                <label for="name">Title</label>
                 <input type="text" name="title" class="form-control" id="title" placeholder="Destination Name">
             </div>
 
 
           <div class="form-group">
-                <label for="files" style="color:white;">Select Image</label>
+                <label for="files">Select Image</label>
                 <input type="file" name="files" class="form-control" id="files" >
             </div>
 
           
              <div class="form-group">
-                <label for="description" style="color:white;">Description</label>
+                <label for="description">Description</label>
               <textarea name="description" class="form-control" id="description" placeholder="Description">
                 </textarea>
             </div>
 
             <div class="form-group">
-                <label for="author" style="color:white;">Author</label>
+                <label for="author">Author</label>
               <textarea name="author" class="form-control" id="author" placeholder="author">
                 </textarea>
             </div>
+
 
             <!-- <div class="form-group">
                 <label for="name" style="color:white;">Created_At</label>
@@ -129,7 +137,7 @@
             </div> -->
       
           
-           <button type="submit" name="submit" class="btn btn-primary" value="submit">Add
+           <button type="submit" name="save" class="btn btn-primary" value="save">Add
            </button>
             
         </div>
