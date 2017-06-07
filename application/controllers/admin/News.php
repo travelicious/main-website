@@ -30,16 +30,17 @@ class News extends BackendController {
 
     public function add_news()
     {
-
-
         $this->load->view('admin/news/add_news');
     }
+
+
+
     public function submit_news()
     {
-
-
         $url = $_POST["url"];
         $title = $_POST["title"];
+        $description = $_POST["description"];
+        $author = $_POST["author"];
         $image_name = $_FILES['files']['name'];
 
         $target_dir = "assets/images/news/";
@@ -47,11 +48,22 @@ class News extends BackendController {
         $image = "dest_".uniqid().$ext;
         $target_file = $target_dir.$image;
         if(move_uploaded_file($_FILES['files']['tmp_name'],$target_file)){
-       $queryInsert = $this->db->query("INSERT INTO `news` (`url`, `title`, `image`, `description`, `author`) VALUES ('$url', '$title', '$image_name', 'desc', 'alam');");
+       $queryInsert = $this->db->query("INSERT INTO `news` (`url`, `title`, `image`, `description`, `author`) VALUES ('$url', '$title', '$image_name', '$description', '$author');");
     }
 
-redirect('<?php echo base_url();?>admin/News/news'); 
+        redirect('admin/news');
 
     }
+
+
+
+    public function delete_news()
+    {
+        $id = $_GET['id'];
+        $queryDelete = $this->db->query("DELETE FROM news WHERE id= '$id' ");
+
+        redirect('admin/news');
+    }
+
 
 }
