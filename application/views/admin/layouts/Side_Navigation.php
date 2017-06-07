@@ -5,7 +5,10 @@
         <ul class="sidebar-menu">
 
             <li class="with-sub">
-                <a href="Dashboard" class="waves-effect  waves-light">
+
+
+                <a href="<?php echo base_url(); ?>admin/Dashboard" class="waves-effect  waves-light">
+
 
                     <span class="s-icon"><i class="ti-anchor"></i></span>
                     <span class="s-text">Dashboard</span>
@@ -19,12 +22,79 @@
                 </a>
             </li>
 
-            <li>
-                <a href="news" class="waves-effect  waves-light">
-                    <span class="s-icon"><i class="ti-layout-tab"></i></span>
+            <li class="with-sub">
+                <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
                     <span class="s-text">News</span>
                 </a>
+                <ul>
+                    <li><a href="<?php echo base_url(); ?>admin/news/news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
+                </ul>
             </li>
+
+            <!-- <li class="with-sub">
+                 <a href="#" class="waves-effect  waves-light">
+                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                     <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                     <span class="s-text">Blog</span>
+                </a>
+                <ul>
+                  <li><a href="#">News</a></li>
+                   <li><a href="#">Add News</a></li>
+                 </ul>
+            </li>-->
+            
+            <li class="with-sub">
+                <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Packages</span>
+                </a>
+                <ul>
+                    <li><a href="<?php echo base_url(); ?>admin/packages/add">View</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/packages/add">Add Package</a></li>
+                </ul>
+            </li>
+            <!--<li class="with-sub">
+                <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Destination</span>
+                </a>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Add News</a></li>
+                </ul>
+            </li>-->
+			 <li class="with-sub">
+           <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Destination</span>
+                </a>  
+				<ul>
+                    <li><a href="<?php echo base_url();?>admin/destination">Destination</a></li>
+                    <li><a href="<?php echo base_url();?>admin/destination/add_destination">Add Destination</a></li>
+                
+                </ul>
+
+			 </li>
+
+             <li class="with-sub">
+                    <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Blogs</span>
+                </a>
+                <ul>
+                    <li><a href="<?php echo base_url();?>admin/blogs">Blog</a></li>
+                    <li><a href="<?php echo base_url();?>admin/blogs/add_blog">Add Blog</a></li>
+                
+                </ul>
+            </li>
+
             <!-- <li>
                 <a href="skins.html" class="waves-effect  waves-light">
                     <span class="s-icon"><i class="ti-palette"></i></span>

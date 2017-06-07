@@ -12,7 +12,7 @@
             <div class="container-fluid">
                 <div class="row text-xs-center">
                     <div class="col-sm-4 text-sm-left mb-0-5 mb-sm-0">
-2016 © Travelicious Holidays
+2016-17 © Travelicious Holidays
 </div>
                     <div class="col-sm-8 text-sm-right">
                         <ul class="nav nav-inline l-h-2">

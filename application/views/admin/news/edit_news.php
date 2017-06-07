@@ -1,3 +1,9 @@
+<?php
+		
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +20,10 @@
     <?php $this->load->view('admin/layouts/CSS_Include'); ?>
 
 
-
-   
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body class="fixed-sidebar fixed-header skin-default content-appear">
 <div class="wrapper">
@@ -69,54 +77,73 @@
 
                 </div>
 
-
-                <div class="row row-md mb-2">
-
-                    <div class="col-md-12">
-                        <div class="box bg-white">
-                            <table class="table table-responsive">
-                          
-                                <tr>
-                                    <th>URL</th>
-                                    <th>News Title</th>
-                                    <th>image</th>
-                                    <th>Description</th>
-                                    <th>Author</th>
-                                    <th>Created At</th>
-                                    <th>Modified At</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                                </tr>
-                                <?php
-
-                                        foreach ($fetch_data->result() as $row) {
+                 <div class="row">
+     
+          <div class="col-lg-12">
+            <section class="panel default blue_title h2">
 
 
-                                            ?>
+<div class="panel-body">
+ <div class="row">
+<div class="col-sm-3"></div>
+ <div class="col-sm-6">
 
-                                            <tr>
-                                            <td> <?php echo $row->url;?></td>
-                                            <td> <?php echo $row->title;?></td>
-                                           <!--  <td> <?php echo '<img src=" echo base_url();?>assets/images/news/'.$row->image.'">' ?></td> -->
-                                            <td> <img src="<?php echo base_url();?>assets/images/news<?php echo $row->image; ?>"></td>
-                                            <td> <?php echo $row->description;?></td>
-                                            <td> <?php echo $row->author;?></td>
-                                            <td> <?php echo $row->created_at;?></td>
-                                            <td> <?php echo $row->modified_at;?></td>
-                                            <td><a href="news_edit?id=<?php echo $row->id; ?>"><?php echo 'Edit';?></a> </td>
-                                            <td><a href="<?php echo base_url();?>admin/News/delete_news?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></td>
-                                            </tr>
+            <form action="<?php echo base_url();?>admin/News/submit_news" method="post"  enctype="multipart/form-data">
+      <div class="form-group">
+                <label for="name" style="color:white;">News URL</label>
+                <input type="text" name="url" class="form-control" id="url" placeholder="News Url">
+            </div>
+    
+            <div class="form-group">
+                <label for="name" style="color:white;">Title</label>
+                <input type="text" name="title" class="form-control" id="title" placeholder="Destination Name">
+            </div>
 
 
-                                            <?php
-                                        }
-                                ?>
-                             
-                               
-                            </table>
-                        </div>
-                    </div>
-                </div>
+          <div class="form-group">
+                <label for="files" style="color:white;">Select Image</label>
+                <input type="file" name="files" class="form-control" id="files" >
+            </div>
+
+          
+             <div class="form-group">
+                <label for="description" style="color:white;">Description</label>
+              <textarea name="description" class="form-control" id="description" placeholder="Description">
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="author" style="color:white;">Author</label>
+              <textarea name="author" class="form-control" id="author" placeholder="author">
+                </textarea>
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="name" style="color:white;">Created_At</label>
+                <input type="date" name="cc" class="form-control" id="cc" placeholder="Destination Name">
+            </div>
+
+            <div class="form-group">
+                <label for="name" style="color:white;">Modified_At</label>
+                <input type="date" name="ss" class="form-control" id="ss" placeholder="Destination Name">
+            </div> -->
+      
+          
+           <button type="submit" name="submit" class="btn btn-primary" value="submit">Add
+           </button>
+            
+        </div>
+      </div>
+    </form>
+
+</div> 
+
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+                
                 <div class="box box-block bg-white">
                     <div class="clearfix mb-1">
                         <h5 class="float-xs-left">Container Section</h5>
@@ -130,7 +157,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- Footer -->
         <?php $this->load->view('admin/layouts/Footer'); ?>
