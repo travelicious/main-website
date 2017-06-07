@@ -23,11 +23,18 @@ class Packages_model extends CI_Model {
     }
     public function insert()
     {
+        if ( ! $this->upload->do_upload('package_image')) {
+            echo $this->upload->display_errors();
+        }
+        else {
+            $file_data = $this->upload->data();
+        }
+
         $insert_data = Array (
             'url'           => $this->input->post('package_url'),
             'title'         => $this->input->post('package_title'),
-            'image'         => $this->input->post('package_image'),
             'duration'      => $this->input->post('package_duration'),
+            'image'         => $file_data['file_name'],
             'description'   => $this->input->post('package_description'),
             'meta_title'    => $this->input->post('package_meta_title'),
             'meta_robots'   => $this->input->post('package_meta_robots'),

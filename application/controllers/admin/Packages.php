@@ -50,11 +50,8 @@ class Packages extends BackendController {
         if($this->input->post('submit'))
         {
             $this->packages_model->insert();
+            $data['posted_data'] = $this->input->post();
         }
-
-
-
-
 
 
         /* Loading the layout and the body layout is passed as name which will be loaded in view */
