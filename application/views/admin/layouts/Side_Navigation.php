@@ -29,22 +29,22 @@
                     <span class="s-text">News</span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo base_url(); ?>admin/news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news/news">News</a></li>
                     <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
                 </ul>
             </li>
 
-            <li class="with-sub">
-                <a href="#" class="waves-effect  waves-light">
-                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
-                    <span class="s-text">Blog</span>
+            <!-- <li class="with-sub">
+                 <a href="#" class="waves-effect  waves-light">
+                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                     <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                     <span class="s-text">Blog</span>
                 </a>
                 <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Add News</a></li>
-                </ul>
-            </li>
+                  <li><a href="#">News</a></li>
+                   <li><a href="#">Add News</a></li>
+                 </ul>
+            </li>-->
             
             <li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
@@ -57,7 +57,7 @@
                     <li><a href="<?php echo base_url(); ?>admin/packages/add">Add Package</a></li>
                 </ul>
             </li>
-            <li class="with-sub">
+            <!--<li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
                     <span class="s-icon"><i class="ti-paint-bucket"></i></span>
@@ -67,7 +67,20 @@
                     <li><a href="#">News</a></li>
                     <li><a href="#">Add News</a></li>
                 </ul>
-            </li>
+            </li>-->
+			 <li class="with-sub">
+           <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Destination</span>
+                </a>  
+				<ul>
+                    <li><a href="<?php echo base_url();?>admin/destination">Blog</a></li>
+                    <li><a href="<?php echo base_url();?>admin/destination/add_destination">Add Blog</a></li>
+                
+                </ul>
+
+			 </li>
 
              <li class="with-sub">
                     <a href="#" class="waves-effect  waves-light">
