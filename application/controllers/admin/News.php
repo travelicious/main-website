@@ -50,7 +50,7 @@ class News extends BackendController {
        $queryInsert = $this->db->query("INSERT INTO `news` (`url`, `title`, `image`, `description`, `author`) VALUES ('$url', '$title', '$image_name', 'desc', 'alam');");
     }
 
-redirect('<?php echo base_url(); ?>admin/news'); 
+redirect('<?php echo base_url();?>admin/News/news'); 
 
     }
 
