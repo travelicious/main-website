@@ -66,4 +66,19 @@ class News extends BackendController {
     }
 
 
+    public function edit_news()
+    {
+
+        $id = $_GET['id'];
+        $url = $_POST["url"];
+        $title = $_POST["title"];
+        $description = $_POST["description"];
+        $author = $_POST["author"];
+        $image_name = $_FILES['files']['name'];
+
+        $result = array( 'url'=>$URL,'title'=>$title,'description'=>$description, 'author'=>$author,'image'=>$image_name);
+        $this->load->Get_news( $id , $result );
+    }
+
+
 }
