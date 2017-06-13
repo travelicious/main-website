@@ -38,6 +38,18 @@ class Destination extends BackendController {
     }
 
 
+    public function changestatus()
+    {
+        $data = $_REQUEST['data'];
+        
+        echo json_decode($data);
+
+        exit;
+        // echo $_POST['id'];
+        // echo " ".$flag;
+
+    }
+
     public function submitDestination()
     {
         $datetimes=datetimes;

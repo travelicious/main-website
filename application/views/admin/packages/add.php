@@ -1,5 +1,5 @@
 
-<?php print_r($posted_data); ?>
+
 
 <div class="content-area py-1">
     <div class="container-fluid">

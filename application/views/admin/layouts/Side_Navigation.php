@@ -75,8 +75,8 @@
                     <span class="s-text">Destination</span>
                 </a>  
 				<ul>
-                    <li><a href="<?php echo base_url();?>admin/destination">Blog</a></li>
-                    <li><a href="<?php echo base_url();?>admin/destination/add_destination">Add Blog</a></li>
+                    <li><a href="<?php echo base_url();?>admin/destination">Destination</a></li>
+                    <li><a href="<?php echo base_url();?>admin/destination/add_destination">Add Destination</a></li>
                 
                 </ul>
 
