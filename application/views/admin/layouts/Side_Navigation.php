@@ -91,6 +91,7 @@
                 <ul>
                     <li><a href="<?php echo base_url();?>admin/blogs">Blog</a></li>
                     <li><a href="<?php echo base_url();?>admin/blogs/add_blog">Add Blog</a></li>
+                    <li><a href="<?php echo base_url();?>admin/upload_file">Upload Image</a></li>
                 
                 </ul>
             </li>

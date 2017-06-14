@@ -66,7 +66,7 @@
                             <?php echo $package->price; ?>
                         </td>
                         <td>
-                            <img src="<?php echo $package->image; ?>">
+                            <img src="<?php echo base_url() . 'assets/images/'.$package->image; ?>">
                         </td>
                         <td>
                             <?php echo $package->created_at; ?>
