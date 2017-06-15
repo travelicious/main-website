@@ -70,7 +70,7 @@
                     <span class="s-text">Packages</span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo base_url(); ?>admin/packages/add">View</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/packages">View</a></li>
                     <li><a href="<?php echo base_url(); ?>admin/packages/add">Add Package</a></li>
                 </ul>
             </li>
