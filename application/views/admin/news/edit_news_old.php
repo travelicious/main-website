@@ -80,83 +80,78 @@
                  <div class="row">
      
           <div class="col-lg-12">
+            <section class="panel default blue_title h2">
+
+
+<div class="panel-body">
+ <div class="row">
+<div class="col-sm-3"></div>
+ <div class="col-sm-6">
+
+<!-- ____________________ Alamgir Hussain ________________ -->
+
+            <form action="<?php echo base_url();?>admin/News/save_news" method="post"  enctype="multipart/form-data">
+
+
+                                         <?php foreach ($fetch_item->result() as $row); ?>
+
+
+            <div class="form-group">
+                <label for="url">News URL</label>
+                <input type="text" name="url" class="form-control" id="url" placeholder="News Url" value="<?php echo $row->url; ?>">
+                <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $row->id; ?>">
+            </div>
+    
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" id="title" placeholder="Title" value="<?php echo $row->title; ?>">
+            </div>
+
+
+          <div class="form-group">
+                <label for="files">Select Image</label>
+                <input type="file" name="files" class="form-control" id="files" > <span><img width="100" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></span>
+            </div>
+
+          
+             <div class="form-group">
+                <label for="description">Description</label>
+              <textarea name="description" class="form-control" id="description" placeholder="Description" value="<?php echo $row->description; ?>"><?php echo $row->description; ?>
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Author</label>
+                <input type="text" name="author" class="form-control" id="author" placeholder="Author" value="<?php echo $row->author; ?>">
+            </div>
+      
+          
+             <button type="submit" name="save" class="btn btn-primary" value="save">Save</button>
             
-
-
-<div class="content-area py-1">
-    <div class="container-fluid">
-
-        <div class="row row-md mb-2">
-            <div class="col-md-12">
-                <h1>Adding News</h1>
-            </div>
         </div>
+      </div>
+    </form>
 
+</div> 
 
-
-
-
-        <div class="row row-md mb-2">
-
-            <div class="col-md-12">
-                <div class="box bg-white">
-                    <form action="<?php echo base_url();?>admin/News/submit_news" method="post" enctype="multipart/form-data">
-
-                        <div class="box box-block bg-white">
-
-                            <div class="form-group row">
-                                <label for="url" class="col-xs-2 col-form-label">News URL</label>
-                                <div class="col-xs-10">
-                                    <input class="form-control" type="text" id="url" name="url">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="title" class="col-xs-2 col-form-label">Title</label>
-                                <div class="col-xs-10">
-                                    <input class="form-control" type="text"  id="title" name="title">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="files" class="col-xs-2 col-form-label">Image</label>
-                                <div class="col-xs-10">
-                                    <input class="form-control" type="file" id="files" name="files">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="description" class="col-xs-2 col-form-label">Description</label>
-                                <div class="col-xs-10">
-                                    <input class="form-control" type="text"  id="description" name="description">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="author" class="col-xs-2 col-form-label">Author</label>
-                                <div class="col-xs-10">
-                                    <input class="form-control" type="text"  id="author" name="author">
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="form-group row">
-                                <label for="example-number-input" class="col-xs-2 col-form-label"></label>
-                                <div class="col-xs-10 text-md-right">
-                                    <input class="btn btn-danger" type="submit" name="submit" value="Add News" id="example-number-input">
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+        </section>
       </div>
     </div>
+  </div>
+</div>
+                
+                <div class="box box-block bg-white">
+                    <div class="clearfix mb-1">
+                        <h5 class="float-xs-left">Container Section</h5>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Footer -->
