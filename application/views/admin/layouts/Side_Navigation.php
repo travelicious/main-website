@@ -31,6 +31,23 @@
                 <ul>
                     <li><a href="<?php echo base_url(); ?>admin/news/news">News</a></li>
                     <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news/library">Library</a></li>
+                </ul>
+            </li>
+
+            <li class="with-sub">
+                <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Inclusion/Exclusion</span>
+                </a>
+                <ul>
+                    <li><a href="<?php echo base_url(); ?>admin/inclusion_exclusion/inclusion">Inclusions</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/inclusion_exclusion/exclusion">Exclusions</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/inclusion_exclusion/add_inclusion_exclusion">Add Inclusion/Exclusions</a></li>
+                    <!-- <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li> -->
                 </ul>
             </li>
 

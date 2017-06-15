@@ -8,8 +8,8 @@
 
          $query = $this->db->query("select * from news order by id desc");
          return $query;  
-         //select* from blogs
       }  
+
 
 
      /* public function fetch_item()  
@@ -24,12 +24,38 @@
          //select* from blogs
       }*/
 
-      public function updateEvent($id, $result)
+      public function fetch_item()
       {
-        $this->db->where('id', $id);
-        $this->db->update('news', $result);
+         $id= $_GET['id'];
+         $query = $this->db->query("select * from news where id = '$id'");
+         return $query; 
       }
 
+      public function fetch_library()
+      {
+         $query = $this->db->query("select * from images");
+         return $query;  
+      }
+
+      public function front_fetch_data()  
+      { 
+         $query = $this->db->query("select * from news order by id desc limit 0,9");
+         return $query; 
+      } 
+
+      public function single_news_data()  
+      { 
+        $id = $_GET['id'];
+         $query = $this->db->query("select * from news where id= '$id'");
+         return $query; 
+      } 
+
+      public function single_news_data2()  
+      { 
+        $id = $_GET['id'];
+         $query = $this->db->query("select * from news_comment where news_id= '$id'");
+         return $query; 
+      } 
 
 
    }  

@@ -88,7 +88,7 @@
 <div class="col-sm-3"></div>
  <div class="col-sm-6">
 
-
+<!-- ____________________ Alamgir Hussain ________________ -->
 
             <form action="<?php echo base_url();?>admin/News/save_news" method="post"  enctype="multipart/form-data">
 
@@ -97,48 +97,36 @@
 
 
       <div class="form-group">
-                <label for="name">News URL</label>
+                <label for="url">News URL</label>
                 <input type="text" name="url" class="form-control" id="url" placeholder="News Url" value="<?php echo $row->url; ?>">
+                <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $row->id; ?>">
             </div>
     
             <div class="form-group">
-                <label for="name">Title</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Destination Name">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" id="title" placeholder="Title" value="<?php echo $row->title; ?>">
             </div>
 
 
           <div class="form-group">
                 <label for="files">Select Image</label>
-                <input type="file" name="files" class="form-control" id="files" >
+                <input type="file" name="files" class="form-control" id="files" > <span><img width="100" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></span>
             </div>
 
           
              <div class="form-group">
                 <label for="description">Description</label>
-              <textarea name="description" class="form-control" id="description" placeholder="Description">
+              <textarea name="description" class="form-control" id="description" placeholder="Description" value="<?php echo $row->description; ?>"><?php echo $row->description; ?>
                 </textarea>
             </div>
 
             <div class="form-group">
-                <label for="author">Author</label>
-              <textarea name="author" class="form-control" id="author" placeholder="author">
-                </textarea>
+                <label for="name">Author</label>
+                <input type="text" name="author" class="form-control" id="author" placeholder="Author" value="<?php echo $row->author; ?>">
             </div>
-
-
-            <!-- <div class="form-group">
-                <label for="name" style="color:white;">Created_At</label>
-                <input type="date" name="cc" class="form-control" id="cc" placeholder="Destination Name">
-            </div>
-
-            <div class="form-group">
-                <label for="name" style="color:white;">Modified_At</label>
-                <input type="date" name="ss" class="form-control" id="ss" placeholder="Destination Name">
-            </div> -->
       
           
-           <button type="submit" name="save" class="btn btn-primary" value="save">Add
-           </button>
+             <button type="submit" name="save" class="btn btn-primary" value="save">Save</button>
             
         </div>
       </div>

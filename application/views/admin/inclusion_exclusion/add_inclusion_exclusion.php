@@ -88,59 +88,34 @@
 <div class="col-sm-3"></div>
  <div class="col-sm-6">
 
+            <form action="<?php echo base_url();?>admin/inclusion_exclusion/submit_inclusion_exclusion" method="post"  enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="text" style="color:white;">Text</label>
+                  <textarea name="text" class="form-control" id="text" placeholder="text">
+                    </textarea>
+                </div>
+        
+                <!-- <div class="form-group">
+                    <label for="type" style="color:white;">Type</label>
+                    <input type="text" name="type" class="form-control" id="type" placeholder="type">
+                </div> -->
 
-<!-- ____________________ Alamgir Hussain ________________ -->
+                <select name="type">
 
+                    <option value="inclusion">Inclusion</option>
+                    <option value="exclusion">Exclusion</option>   
 
-            <form action="<?php echo base_url();?>admin/News/submit_news" method="post"  enctype="multipart/form-data">
-      <div class="form-group">
-                <label for="name" style="color:white;">News URL</label>
-                <input type="text" name="url" class="form-control" id="url" placeholder="News Url">
-            </div>
-    
-            <div class="form-group">
-                <label for="name" style="color:white;">Title</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Title">
-            </div>
-
-
-          <div class="form-group">
-                <label for="files" style="color:white;">Select Image</label>
-                <input type="file" name="files" class="form-control" id="files" >
-            </div>
-
+                </select>
           
-             <div class="form-group">
-                <label for="description" style="color:white;">Description</label>
-              <textarea name="description" class="form-control" id="description" placeholder="Description">
-                </textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="author" style="color:white;">Author</label>
-              <textarea name="author" class="form-control" id="author" placeholder="author">
-                </textarea>
-            </div>
-
-            <!-- <div class="form-group">
-                <label for="name" style="color:white;">Created_At</label>
-                <input type="date" name="cc" class="form-control" id="cc" placeholder="Destination Name">
-            </div>
-
-            <div class="form-group">
-                <label for="name" style="color:white;">Modified_At</label>
-                <input type="date" name="ss" class="form-control" id="ss" placeholder="Destination Name">
-            </div> -->
-      
-          
-           <button type="submit" name="submit" class="btn btn-primary" value="submit">Add
-           </button>
+              
+               <button type="submit" name="submit" class="btn btn-primary" value="submit">Add
+               </button>
             
-        </div>
-      </div>
-    </form>
+            </form>
 
 </div> 
+</div>
+</div>
 
         </section>
       </div>

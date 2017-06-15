@@ -1,5 +1,5 @@
 <?php
-		
+        
 
 ?>
 
@@ -89,56 +89,22 @@
  <div class="col-sm-6">
 
 
-<!-- ____________________ Alamgir Hussain ________________ -->
 
+            <form action="<?php echo base_url();?>admin/News/submit_photo" method="post" enctype="multipart/form-data">
 
-            <form action="<?php echo base_url();?>admin/News/submit_news" method="post"  enctype="multipart/form-data">
-      <div class="form-group">
-                <label for="name" style="color:white;">News URL</label>
-                <input type="text" name="url" class="form-control" id="url" placeholder="News Url">
-            </div>
+                <div class="form-group">
+                    <label for="image_title">Image Title</label>
+                    <input type="text" name="image_title" class="form-control" id="image_title" placeholder="Title" >
+                </div>
     
-            <div class="form-group">
-                <label for="name" style="color:white;">Title</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Title">
-            </div>
+                <div class="form-group">
+                    <label for="files">Select Image</label>
+                    <input type="file" name="files[]" class="form-control" id="files" multiple> 
+                </div>
 
-
-          <div class="form-group">
-                <label for="files" style="color:white;">Select Image</label>
-                <input type="file" name="files" class="form-control" id="files" >
-            </div>
-
-          
-             <div class="form-group">
-                <label for="description" style="color:white;">Description</label>
-              <textarea name="description" class="form-control" id="description" placeholder="Description">
-                </textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="author" style="color:white;">Author</label>
-              <textarea name="author" class="form-control" id="author" placeholder="author">
-                </textarea>
-            </div>
-
-            <!-- <div class="form-group">
-                <label for="name" style="color:white;">Created_At</label>
-                <input type="date" name="cc" class="form-control" id="cc" placeholder="Destination Name">
-            </div>
-
-            <div class="form-group">
-                <label for="name" style="color:white;">Modified_At</label>
-                <input type="date" name="ss" class="form-control" id="ss" placeholder="Destination Name">
-            </div> -->
-      
-          
-           <button type="submit" name="submit" class="btn btn-primary" value="submit">Add
-           </button>
-            
-        </div>
-      </div>
-    </form>
+                <button type="submit" name="submit_photo" class="btn btn-primary" value="Upload">Upload</button>
+   
+            </form>
 
 </div> 
 
@@ -173,3 +139,16 @@
 
 
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Image Page</title>
+</head>
+<body style="text-align: center;">
+        
+</form>
+</body>
+</html>
+
+

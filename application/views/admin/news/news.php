@@ -26,7 +26,7 @@
  <?php $this->load->view('admin/layouts/Side_Navigation'); ?>
 
 
-    <!-- Header -->
+    <!-- Header Alamgir  -->
     <?php $this->load->view('admin/layouts/Header'); ?>
 
     <div class="site-content">
@@ -69,6 +69,7 @@
 
                 </div>
 
+<!-- ____________________ Alamgir ________________ -->
 
                 <div class="row row-md mb-2">
 
@@ -97,8 +98,7 @@
                                             <tr>
                                             <td> <?php echo $row->url;?></td>
                                             <td> <?php echo $row->title;?></td>
-                                           <!--  <td> <?php echo '<img src=" echo base_url();?>assets/images/news/'.$row->image.'">' ?></td> -->
-                                            <td> <img src="<?php echo base_url();?>assets/images/news<?php echo $row->image; ?>"></td>
+                                            <td> <img class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
                                             <td> <?php echo $row->description;?></td>
                                             <td> <?php echo $row->author;?></td>
                                             <td> <?php echo $row->created_at;?></td>
