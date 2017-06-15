@@ -18,8 +18,10 @@ class Dashboard extends BackendController {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+
     public function index()
     {
-        $this->load->view('admin/Dashboard');
+        $data['body_view'] = 'admin/Dashboard';
+        $this->load->view('admin/layouts/home',$data);
     }
 }

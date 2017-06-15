@@ -55,7 +55,6 @@
                                     <th>URL</th>
                                     <th>Description</th>
                                     <th>Image</th>
-                                    <th>Views</th>
                                     <th>Action</th>
                                     <th>Manage</th>
                                 </tr>
@@ -92,11 +91,9 @@
                                     <td>
                                         <span class="text-muted"><img src="<?php echo  base_url()?>assets/images/destination/<?=$rows->image?>" style="width:100px"></span>
                                     </td>
+                               
                                     <td>
-                                        <?=$rows->views?>&nbsp;<a href="#" onclick="resetviews(<?=$rows->id?>)">Reset</a>
-                                    </td>
-                                    <td>
-                                        <a href="#" onclick="changestatus(<?=$rows->id?>,<?=$flag?>)"><?=$status?></a>
+                                        
                                     </td>
                                     <td>
                                         <a href="<?php echo base_url()?>admin/destination/destination_edit?id=<?=$rows->id?>">Edit</a>

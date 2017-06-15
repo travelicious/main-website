@@ -68,7 +68,7 @@
     <input type="text" class="form-control" id="meta_robots" name="meta_robots" placeholder="Enter Meta Robot">
   </div>
 
-   <div class="form-group">
+    <div class="form-group">
     <label for="meta_description">Meta Description</label>
     <textarea class="form-control" id="meta_description" name="meta_description" rows="2"></textarea>
   </div>
