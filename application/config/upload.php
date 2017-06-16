@@ -1,4 +1,5 @@
 <?php
+$config['encrypt_name'] = TRUE;
 $config['upload_path']          = './assets/images/';
 $config['allowed_types']        = 'gif|jpg|png';
 $config['max_size']             = 1000;
