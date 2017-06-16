@@ -91,7 +91,7 @@
 
 
                                             ?>
-                                            <td style="text-align: center;"> <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/photos/<?php echo $row->image_name; ?>"><br>
+                                            <td style="text-align: center;"> <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>"><br>
                                             <span><a href="<?php echo base_url();?>admin/photos/delete_photos?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></span>
                                             </td>
                                             <!-- <td><a href="<?php echo base_url();?>admin/News/edit_news?id=<?php echo $row->id; ?>"><?php echo 'Edit';?></a> </td> -->
