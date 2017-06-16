@@ -74,6 +74,17 @@
                     <li><a href="<?php echo base_url(); ?>admin/packages/add">Add Package</a></li>
                 </ul>
             </li>
+            <li class="with-sub">
+                <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Photos</span>
+                </a>
+                <ul>
+                    <li><a href="<?php echo base_url(); ?>admin/photos">View</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/photos/add">Add Photos</a></li>
+                </ul>
+            </li>
             <!--<li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
