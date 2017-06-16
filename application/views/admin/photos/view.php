@@ -76,12 +76,8 @@
                     <div class="col-md-12">
                         <div class="box bg-white">
                             <table class="table table-responsive">
-                          
-                                <tr>
-                                    <th>Image</th>
-                                   <!--  <th>Edit</th> -->
-                                    <!-- <th>Delete</th> -->
-                                </tr>
+
+                             
                                 
 
                                         <tr>
@@ -91,6 +87,7 @@
 
 
                                             ?>
+
 
                       <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
                    
@@ -108,7 +105,7 @@
                                         }
                                 ?>
                                             
-                                        </tr>
+                                     
 
 
                                             
