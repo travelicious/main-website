@@ -136,12 +136,12 @@ $(document).ready(function() {
                
                 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
                 
-                <a href="single_news?id=<?php echo $array[0]['id']; ?>">
+                <a href="news/single_news?id=<?php echo $array[0]['id']; ?>">
                 <img src="<?php echo base_url();?>assets/images/news/<?php echo $array[0]['image']; ?>" class="img-responsive img-news"></a>
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[0]['title']; ?></h3>
                         <em style="color:red;"><?php echo $array[0]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[0]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[0]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[0]['id']; ?>">Read More >></a></p>
                     
                     </div>
                 </div>
@@ -151,18 +151,18 @@ $(document).ready(function() {
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[1]['title']; ?></h3>
                         <em><?php echo $array[1]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[1]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[1]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[1]['id']; ?>">Read More >></a></p>
                     
                     </div>
-                     <a href="single_news?id=<?php echo $array[1]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php echo $array[1]['image']; ?>" class="img-responsive img-news"></a>
+                     <a href="news/single_news?id=<?php echo $array[1]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php echo $array[1]['image']; ?>" class="img-responsive img-news"></a>
                 </div>
                 
                  <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <a href="single_news?id=<?php echo $array[2]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[2]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
+                <a href="news/single_news?id=<?php echo $array[2]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[2]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[2]['title']; ?></h3>
                         <em><?php echo $array[2]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[2]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[2]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[2]['id']; ?>">Read More >></a></p>
                     
                     </div>
                 
@@ -184,22 +184,22 @@ $(document).ready(function() {
             </div>
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo">
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <a href="single_news?id=<?php echo $array[3]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[3]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
+                <a href="news/single_news?id=<?php echo $array[3]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[3]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[3]['title']; ?></h3>
                         <em><?php echo $array[3]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[3]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[3]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[3]['id']; ?>">Read More >></a></p>
                     
                     </div>
                 
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
                 
-               <a href="single_news?id=<?php echo $array[4]['id']; ?>"> <img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[4]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
+               <a href="news/single_news?id=<?php echo $array[4]['id']; ?>"> <img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[4]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[4]['title']; ?></h3>
                         <em><?php echo $array[4]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[4]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[4]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[4]['id']; ?>">Read More >></a></p>
                     
                     </div>
                 
@@ -209,10 +209,10 @@ $(document).ready(function() {
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[5]['title']; ?></h3>
                         <em><?php echo $array[5]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[5]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[5]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[5]['id']; ?>">Read More >></a></p>
                     
                     </div>
-                     <a href="single_news?id=<?php echo $array[5]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[5]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
+                     <a href="news/single_news?id=<?php echo $array[5]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[5]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
                 
                 
                 </div>
@@ -233,11 +233,11 @@ $(document).ready(function() {
                
                 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
                 
-                <a href="single_news?id=<?php echo $array[6]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[6]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
+                <a href="news/single_news?id=<?php echo $array[6]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[6]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[6]['title']; ?></h3>
                         <em><?php echo $array[6]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[6]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[6]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[6]['id']; ?>">Read More >></a></p>
                     
                     </div>
                 
@@ -247,20 +247,20 @@ $(document).ready(function() {
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[7]['title']; ?></h3>
                         <em><?php echo $array[7]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[7]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[7]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[7]['id']; ?>">Read More >></a></p>
                     
                     </div>
-                     <a href="single_news?id=<?php echo $array[7]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[7]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
+                     <a href="news/single_news?id=<?php echo $array[7]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[7]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
                 
                 
                 </div>
                 
                  <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <a href="single_news?id=<?php echo $array[8]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[8]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
+                <a href="news/single_news?id=<?php echo $array[8]['id']; ?>"><img src="<?php echo base_url();?>assets/images/news/<?php  echo $array[8]['image']; ?>" class="img-responsive img-news" alt="news" title="news one"></a>
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[8]['title']; ?></h3>
                         <em><?php echo $array[8]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo $array[8]['description']; ?>...<a href="#">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[8]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[8]['id']; ?>">Read More >></a></p>
                     
                     </div>
                 

@@ -217,27 +217,27 @@ $(document).ready(function() {
                             <label for="name">
                                 Name</label>
                             <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required="required" />
-                            <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $row->id; ?>" placeholder="Enter name" required="required" />
+                            <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $row->id; ?>" />
                             
-                          </div>
                         </div>
-                        <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="email">
                                 Email Address</label>
                             
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required="required" />
                         </div>
-                        </div>
-                        <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group">
-                            <button name="post" class="btn btn-default btn-block single-post-btn"> Post Comment</button>
-                        </div>
+                            <button name="post_btn" class="btn btn-default btn-block single-post-btn"> Post Comment</button>
                         </div>
                     </div>
+                  </div>
                     
                     <div class="clearfix"></div>
-                </div>
+               
                 </form>
                  
               
