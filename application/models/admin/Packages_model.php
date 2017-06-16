@@ -23,7 +23,8 @@ class Packages_model extends CI_Model {
     }
     public function insert()
     {
-        if ( ! $this->upload->do_upload('package_image')) {
+        if ( ! $this->upload->do_upload('package_image')) 
+        {
             echo $this->upload->display_errors();
         }
         else {
