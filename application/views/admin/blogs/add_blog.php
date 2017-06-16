@@ -1,5 +1,5 @@
 
-        <div class="content-area py-1">
+<div class="content-area py-1">
             <div class="container-fluid">
                 <div class="row row-md">
                     <div class="col-lg-4 col-md-6 col-xs-12">
@@ -50,14 +50,14 @@
 
                             <div class="form-group row">
                                 <label for="url" class="col-xs-2 col-form-label">URL</label>
-                                <div class="col-xs-10">
+                                <div class="col-xs-8">
                                     <input class="form-control" type="text" name="url">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="title" class="col-xs-2 col-form-label">Title</label>
-                                <div class="col-xs-10">
+                                <div class="col-xs-8">
                                     <input class="form-control" type="text" name="title">
                                 </div>
                             </div>
@@ -65,21 +65,21 @@
                     
                             <div class="form-group row">
                                 <label for="image" class="col-xs-2 col-form-label"> Image</label>
-                                <div class="col-xs-10">
+                                <div class="col-xs-8">
                                     <input class="form-control" type="file"  name="files">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
-                                <div class="col-xs-10">
+                                <div class="col-xs-8">
                                 <textarea class="form-control" rows="4" name="description"></textarea>
                             </div>
                             </div>
 
                                   <div class="form-group row">
                                 <label for="author" class="col-xs-2 col-form-label">Author</label>
-                                <div class="col-xs-10">
+                                <div class="col-xs-8">
                                     <input class="form-control" type="text" name="author">
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                             <div class="form-group row">
                                 <label for="example-number-input" class="col-xs-2 col-form-label"></label>
                                 <div class="col-xs-10 text-md-right">
-                                    <input class="btn btn-danger" type="submit" name="submit" value="Add Package" id="example-number-input">
+                                    <input class="btn btn-danger" type="submit" name="submit" value="Add Blog" id="example-number-input">
                                 </div>
                             </div>
 

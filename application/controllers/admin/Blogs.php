@@ -32,56 +32,6 @@ function __construct()
     }
 
 
-
-// public function add_blog() {
-// //Including validation library
-// $this->load->library('form_validation');
-
-// $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-
-// //Validating url Field
-// $this->form_validation->set_rules('url', 'URL', 'required');
-
-// //Validatingtitle Field
-// $this->form_validation->set_rules('title', 'Title', 'required');
-
-// //Validating Description. Field
-// $this->form_validation->set_rules('description', 'Description', 'required');
-
-// $this->form_validation->set_rules('files', 'Files', 'required');
-
-
-              
-
-// 	 $this->load->library('upload');
-
-//    $this->upload->do_upload('files');
-
-//   $test = $this->upload->data();
-
-
-// if ($this->form_validation->run() == FALSE) {
-//   $this->load->view('admin/blogs/add_blog');
-//   } 
-//   else {
-//           //Setting values for tabel columns
-//           $data = array(
-//           'url' => $this->input->post('url'),
-//           'title' => $this->input->post('title'),
-//           'image' => $test['file_name'],
-           
-//           'description' => $this->input->post('description'),
-//           'author' => $this->input->post('author')
-//           );
-//           //Transfering data to Model
-//           $this->Blog_model->form_insert($data);
-//           //Loading View
-//           $this->load->view('admin/blogs/add_blog', $data);
-
-
-//           redirect('admin/blogs');
-//           }
-// }
 	public function index()
 
 
@@ -107,5 +57,31 @@ public function delete_blog()
 
         redirect('admin/blogs');
     }
+
+
+ public function post_comment()
+    {
+        /* We are now adding new comment to the database */
+        $this->load->model('admin/Blog_model');
+        if($this->input->post('comment'))
+        {
+            $this->Blog_model->comment();
+
+           redirect('frontend/blogs/blog');
+            //$data['posted_data'] = $this->input->post();
+        }
+
+        /* Loading the layout and the body layout is passed as name which will be loaded in view */
+        $data['page_title'] = 'Add a Blog';
+        //$data['body_view'] = 'admin/blogs/add_blog';
+        $this->load->view('frontend/blogs/single_blog',$data);
+
+
+    }
+
+
+
+
+
 }
 ?>

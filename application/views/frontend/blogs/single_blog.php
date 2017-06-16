@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Travelicious Holiday</title>
+<title>Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
@@ -61,7 +61,7 @@ $(document).ready(function() {
     <div class="col-md-3">
        <img src="<?php echo base_url(); ?>assets/layouts/images/logo.png" class="img-responsive logos" alt="logo" title="logo title">
        </div>
-      <div class="col-md-1 col-1">  <span>Blog</span></div>
+      <div class="col-md-1 col-1">  <span>News</span></div>
     <div class="col-md-5">
          
                 <div class="input-group custom-search-form">
@@ -80,9 +80,10 @@ $(document).ready(function() {
       	<li class="dropdown">
 					<a href="#" class="dropdown-toggle custogle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-bars iclass" aria-hidden="true"></i></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="http://localhost/main-website/frontend/blog">Recent Post</a></li>
-						<li><a href="">Submit Post</a></li>
-						<li><a href="#">Logout</a></li>
+						<li><a href="#">Top News</a></li>
+						<li><a href="#">Latest News</a></li>
+						<li><a href="#">Submit News</a></li>
+                        <li><a href="#">Author</a></li>
 					</ul>
 				</li>
                 </ul>
@@ -93,15 +94,15 @@ $(document).ready(function() {
     </div> 
     </div>
    
-	<div class="banner blog-bnn">
-		<div class="agileinfo-dot blog-bnr-height">
+	<div class="banner banner blog-bnn">
+		<div class="agileinfo-dot blog-bnr-height ">
         <div class="banner-slider">
             <div class="container">
             <section class="slider">
 						<div class="flexslider">
                 <div class="col-md-12">
                             
-                    <div class="col-md-4 ">
+                   <div class="col-md-4 ">
                     
                     <h4 class="txt-bnr">Travelicious Holidays, which is presently known as Travelicious Holiday, is one of the premier travel and tourism companies in India.</h4>
   <button class="btn btns-mor">Read More</button>                    
@@ -128,70 +129,52 @@ $(document).ready(function() {
         
         </div>
 	</div>
-	<!-- //banner -->
-	<!-- welcome -->
-	<div class="welcome wlcomnew" id="welcome">
-        <div class="container-fluid margin-top-container">
-        
-        <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo cont">
-           
-                <h2 class="blog-headling">Trending</h2>
 
-       
-
-
-
-
-                     
+   
         
                            <?php
                             
-                          if($fetch_data->num_rows() >0)
+                          if($single_blog_data->num_rows() >0)
                           {
-                      foreach($fetch_data->result() as $row)
+                      foreach($single_blog_data->result() as $row1)
                           {
 
                           ?>
 <?php
-                         $url=$row->url;
+                         $url=$row1->url;
 
-                         $title=$row->title;
+                         $title=$row1->title;
 
-                         $image=$row->image;
+                         $image=$row1->image;
 
-                         $description=$row->description;
+                         $description=$row1->description;
 
-                         $author=$row->author;
+                         $author=$row1->author;
 
-                         $created_at=$row->created_at;
+                         $created_at=$row1->created_at;
                         
 
 ?>
 
-                   
+
+
+              <div class="welcome wlcomnew" id="welcome">
+        <div class="container-fluid margin-top-container">
+        
+        <div class="row">
             
-            
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo">
+                <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12  col-9">
 
-                      <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                   
-                      <div class="col-md-12 blog-home-ing bdr-block">
-                      <a href="blog/single_blog?id=<?php echo $row->id; ?>"><img src="<?php echo base_url().'assets/images/'.$row->image; ?>" class="img-responsive img-news bdr-block" alt="blog" title="blog"></a>
+                 <h3 class="blog-headling"><?php echo $title ?></h3>
 
-               
+               <p class="single-news-para"><span><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive width" alt="blog" title="blog"></span></p>
+               <p>
+               <?php echo $description ?>
 
-                      <div class="caption img-news">
-                      <h3 class="justifyclass blog-cus"><?php echo $title ?></h3>
-                        <em class="cem"><?php echo $created_at ?></em><em class="text-right"><?php echo $author ?></em> 
-                        <p class="justifyclass blog-cus"><?php echo substr($description,0,200); ?><a href="">Read More..>></a></p>
-                    </div>
-                    </div><br>
-                    </div>
-                
-               
+                </p>
 
-                  
-                         
+
 
                            
                           <?php
@@ -207,35 +190,308 @@ $(document).ready(function() {
 }
 
         ?>
-     
-            
-               </div>    
-            
-     </div>
-        <div class="row">
-            <div class="col-md-12">
-            <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                    <button class="btn btn-default btn-readmor"> Read More</button>
-                    <br>
-                      <div class="clearfix"></div>
-                </div>
-                <div class="col-md-4">
-                </div>
-            
+    </div>
+
+
+
+
+   
+
+
+
+                  <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                    <div class="col-md-12">
+
+                     <h3 class="blog-headling">Latest Post</h3>
+
+                           <?php
+                            
+                          if($latest_blog_data->num_rows() >0)
+                          {
+                      foreach($latest_blog_data->result() as $row)
+                          {
+
+                          ?>
+                      <?php
+                         $url=$row->url;
+
+                         $title=$row->title;
+
+                         $image=$row->image;
+
+                         $description=$row->description;
+
+                         $author=$row->author;
+
+                         $created_at=$row->created_at;
+                        
+
+                        ?>
+
+                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="col-md-6"><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
+                        <div class="col-md-6"><p><span>
+                        <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></a></p></span> 
+                        </div>
+                        
+                        
+                        
+                        </div>  
+                         <?php
+
+
+                         }
+                           }
+                         else
+                           {
+                            ?>
+<?php
+
+}
+
+        ?>    
+
+
+                          
+                    
+             </div>
+              <br>
+                  
+                    <div class="col-md-12">
+           <h3 class="blog-headling">Treding Post</h3>
+
+                           <?php
+                            
+                          if($latest_blog_data->num_rows() >0)
+                          {
+                      foreach($latest_blog_data->result() as $row)
+                          {
+
+                          ?>
+                      <?php
+                        
+                         $url=$row->url;
+
+                         $title=$row->title;
+
+                         $image=$row->image;
+
+                         $description=$row->description;
+
+                         $author=$row->author;
+
+                         $created_at=$row->created_at;
+                        
+
+                        ?>
+
+                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="col-md-6"><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
+                        <div class="col-md-6"><p><span></span> 
+                        <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></a></p>
+                        </div>
+
+                        
+                        
+                        
+                        </div>  
+                         <?php
+
+
+                         }
+                           }
+                         else
+                           {
+                            ?>
+<?php
+
+}
+
+        ?>    
+
+                    
+
+                         
+
+
+                      </div>
+
+                    <div class="col-md-12">
+                     <h3 class="blog-headling">Categories</h3>
+                        <em class="categories-tag"> Category name</em>
+                        <em class="categories-tag"> Category name</em>
+                        <em class="categories-tag"> Category name</em>
+                
+                    
+                    </div>
+                   
+                   
+                
+ </div>    
+
+
+
+       
+                 
+                
             
             </div>
+
+
+
+
+ <?php
+                            
+                          if($comment_blog->num_rows() >0)
+                          {
+                      foreach($comment_blog->result() as $row)
+                          {
+
+                          ?>
+                      <?php
+                        
+                  
+
+                         $name=$row->name;
+                         $created_at=$row->created_at;
+
+                         $comment=$row->comment;
+
+                        
+
+                        ?>
+
+  <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo cont">
+
+   <h3 class="blog-headling">Comment:</h3>
+                <div class="col-md-1 col-lg-1 col-sm-12 col-xs-12"></div>
+                <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
+                 <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive img-circle"></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><?php echo $name ?></h4>
+
+
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>
+              <?php echo $created_at ?></small></p>
+
+
+                <p><?php echo $comment ?></p>
+            </div>
+            <div class="timeline-body">
+              
+            </div>
+          </div>
+        </li>
+</ul>
+</div>
+</div>
+
+
+
+                         <?php
+
+
+                         }
+                           }
+                         else
+                           {
+                            ?>
+<?php
+
+}
+
+        ?>    
+
+
+               
+        
+             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo cont">
            
+                <h3 class="blog-headling">Add New Comments</h3>
+                
+                
+                  <form action="http://localhost/main-website/frontend/blog/add_comment" method="Post">
+                <div class="row">
+                  
+                    <div class="col-md-12 ">
+                        <div class="form-group margin-news-form">
+                            <label for="comment">
+                                Comment</label>
+                            <textarea name="message" id="comment" class="form-control" rows="8" cols="24" required="required"
+                                placeholder="Comment Please"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                         <div class="form-group">
+                            <label for="name">
+                                Name</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter name" required="required" />
+                            <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $row1->id; ?>" />
+                        </div>
+
+
+                            
+                            
+                    
+                        
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        
+                         <div class="form-group">
+                            <label for="email">
+                                Email Address</label>
+                            
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+                        </div>
+                        
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        
+                         <div class="form-group">
+                             <label for="email">
+                             </label>
+<br>
+                             <div class="col-xs-10 text-md-right">
+
+                                    <input class="btn btn-default btn-block single-post-btns" type="submit" name="comment" id="example-number-input" value="Post Comment">
+                      
+                        </div>
+                        </div>
+                       
+                        
+                       
+                       
+                    </div>
+              
+                </div>
+                </form>
+                 
+              
+                 
             </div>
+            
+            
+            
+            </div>   
+            
+<div class="clearfix"></div>
+     
+     
           
         
-       
-       <div class="clearfix"></div>
+        </div>
+      
         
         
-		
-	</div>
+    
+  </div>
+                  
+
+                   
 	<!-- //welcome -->
  
     <!-- news-letter -->
@@ -277,10 +533,10 @@ $(document).ready(function() {
                 <div class="col-md-3 agile-footer-grid">
 					<h4>Social Link</h4>
 					<div class="popular-grids">
-					<a href="https://www.facebook.com/bootsnipp" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-	            <a href="https://twitter.com/bootsnipp" target="_blank"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-	            <a href="https://plus.google.com/+Bootsnipp-page" target="_blank"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-	            <a href="mailto:bootsnipp@gmail.com" target="_blank"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+					<a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
 </p>
 					</div>
 					<!--<div class="popular-grids">
@@ -406,8 +662,8 @@ $(document).ready(function() {
     </div>
   </div>
 	<!-- //footer -->
-	<script src="<?php echo base_url(); ?>assets/layouts/js/jarallax.js"></script>
-	<script src="<?php echo base_url(); ?>assets/layouts/js/SmoothScroll.min.js"></script>
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
 	<script type="text/javascript">
 		/* init Jarallax */
 		$('.jarallax').jarallax({
@@ -416,8 +672,8 @@ $(document).ready(function() {
 			imgHeight: 768
 		})
 	</script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/layouts/js/move-top.js"></script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/layouts/js/easing.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -435,7 +691,7 @@ $(document).ready(function() {
 			});
 	</script>
 	<!-- //here ends scrolling icon -->
-	<script src="<?php echo base_url(); ?>assets/layouts/js/owl.carousel.js"></script>
+	<script src="js/owl.carousel.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
   $( function() {

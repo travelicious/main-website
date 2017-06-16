@@ -18,6 +18,14 @@ class Photos extends BackendController {
 
     public function add()
     {
+           $data['page_title'] = 'Upload An Image';
+
+           //this is center body view passed as variable
+        $data['body_view'] = 'admin/photos/add';
+
+
+         // this is default layout without the center body , center body is passed with the variable body_view
+        $this->load->view('admin/layouts/home',$data);
 
     }
 
@@ -34,7 +42,7 @@ class Photos extends BackendController {
     public function multiple_upload()
     {
 
-        $number_of_files_uploaded = count($_FILES['images']['name']);
+        $number_of_files_uploaded = count($_FILES['files']['name']);
         // Faking upload calls to $_FILE
         for ($i = 0; $i < $number_of_files_uploaded; $i++) :
             $_FILES['userfile']['name']     = $_FILES['images']['name'][$i];
@@ -43,7 +51,7 @@ class Photos extends BackendController {
             $_FILES['userfile']['error']    = $_FILES['images']['error'][$i];
             $_FILES['userfile']['size']     = $_FILES['images']['size'][$i];
 
-            if ( ! $this->upload->do_upload()) :
+            if ( ! $this->upload->do_upload('files')) :
                 $error = array('error' => $this->upload->display_errors());
                 //$this->load->view('upload_form', $error);
             else :
@@ -51,7 +59,7 @@ class Photos extends BackendController {
 
                 $file_data = $this->upload->data();
                 $insert_data = Array (
-                    'image_name'         => $file_data['file_name']
+                      'image_name'   => $file_data['file_name']
                 );
                 $this->db->insert('images',$insert_data);
             endif;

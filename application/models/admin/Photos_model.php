@@ -12,7 +12,7 @@ class Photos_model extends CI_Model {
 
     public function upload_single()
     {
-        if ( ! $this->upload->do_upload('image')) {
+        if ( ! $this->upload->do_upload('files')) {
             echo $this->upload->display_errors();
         }
         else {
@@ -22,6 +22,7 @@ class Photos_model extends CI_Model {
             'image_name'         => $file_data['file_name']
         );
         $this->db->insert('images',$insert_data);
+        redirect('admin/photos/');
 
     }
 

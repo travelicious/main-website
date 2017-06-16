@@ -64,6 +64,11 @@ body {
   max-width: 1270px;
 }
 
+h1{font-size:36px !important;}
+h2{font-size:30px !important;}
+h3{font-size:24px !important;}
+h4{font-size:18px !important;}
+
 * {
   outline: none !important;
 }
