@@ -33,41 +33,7 @@
         <!-- Content -->
         <div class="content-area py-1">
             <div class="container-fluid">
-                <div class="row row-md">
-                    <div class="col-lg-4 col-md-6 col-xs-12">
-                        <div class="box box-block bg-white tile tile-1 mb-2">
-                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
-                            <div class="t-content">
-                                <h6 class="text-uppercase mb-1">News </h6>
-                                <h1 class="mb-1">1,325</h1>
-                                <span class="tag tag-danger mr-0-5">+17%</span>
-                                <span class="text-muted font-90">News</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12">
-                        <div class="box box-block bg-white tile tile-1 mb-2">
-                            <div class="t-icon right"><span class="bg-success"></span><i class="ti-bar-chart"></i></div>
-                            <div class="t-content">
-                                <h6 class="text-uppercase mb-1">NO. OF VISITORE</h6>
-                                <h1 class="mb-1"> 47,855</h1>
-                                <i class="fa fa-caret-up text-success mr-0-5"></i><span>12,350</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12">
-                        <div class="box box-block bg-white tile tile-1 mb-2">
-                            <div class="t-icon right"><span class="bg-primary"></span><i class="ti-package"></i></div>
-                            <div class="t-content">
-                                <h6 class="text-uppercase mb-1">Add News</h6>
-                                <h1 class="mb-1">6,800</h1>
-                                <span class="tag tag-primary mr-0-5">+125</span> 
-                                 <span class="text-muted font-90">arraving today</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                
 
 <!-- ____________________ Alamgir ________________ -->
 
@@ -88,8 +54,12 @@
 
                                             ?>
 
+<<<<<<< HEAD
 
                       <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+=======
+                      <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12" style="text-align: center;">
+>>>>>>> e19fededf133f0deb6f841d6c609154c10604d53
                    
                       <div class="col-md-12 blog-home-ing bdr-block">
                     <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>">
