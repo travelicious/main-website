@@ -42,12 +42,8 @@
                     <div class="col-md-12">
                         <div class="box bg-white">
                             <table class="table table-responsive">
-                          
-                                <tr>
-                                    <th>Image</th>
-                                   <!--  <th>Edit</th> -->
-                                    <!-- <th>Delete</th> -->
-                                </tr>
+
+                             
                                 
 
                                         <tr>
@@ -58,7 +54,12 @@
 
                                             ?>
 
+<<<<<<< HEAD
+
+                      <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+=======
                       <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12" style="text-align: center;">
+>>>>>>> e19fededf133f0deb6f841d6c609154c10604d53
                    
                       <div class="col-md-12 blog-home-ing bdr-block">
                     <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>">
@@ -74,7 +75,7 @@
                                         }
                                 ?>
                                             
-                                        </tr>
+                                     
 
 
                                             
