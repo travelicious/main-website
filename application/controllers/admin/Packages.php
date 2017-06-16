@@ -39,7 +39,12 @@ class Packages extends BackendController {
 
 
         $data['page_title'] = 'Package List';
+
+        //this is center body view passed as variable
         $data['body_view'] = 'admin/packages/home';
+
+
+        // this is default layout without the center body , center body is passed with the variable body_view
         $this->load->view('admin/layouts/home',$data);
     }
 
@@ -59,8 +64,8 @@ class Packages extends BackendController {
         $data['body_view'] = 'admin/packages/add';
         $this->load->view('admin/layouts/home',$data);
 
-
     }
+
 
 
 }
