@@ -125,7 +125,9 @@
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text"  id="description" name="description">
+                                    <!-- <input class="form-control" type="text"  id="description" name="description"> -->
+                                    <textarea name="description" class="form-control" id="description" placeholder="Description">
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
