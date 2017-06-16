@@ -13,8 +13,24 @@ class Photos extends BackendController {
 
     public function index()
     {
+        $this->load->model('admin/Photos_model');
+        $data['photos_fetch']= $this->Photos_model->photos_fetch();
 
+        $this->load->view('admin/photos/view',$data);
     }
+
+    /* ________________________________________ Delete News ________________________________  */
+
+    public function delete_photos()
+    {
+        $id = $_GET['id'];
+        $queryDelete = $this->db->query("DELETE FROM images WHERE id= '$id' ");
+
+        redirect('admin/photos');
+    }
+
+
+/* ________________________________________ Delete News End________________________________  */
 
     public function add()
     {

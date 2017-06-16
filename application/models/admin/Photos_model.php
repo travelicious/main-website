@@ -25,4 +25,10 @@ class Photos_model extends CI_Model {
 
     }
 
+    public function photos_fetch()  
+      { 
+         $query = $this->db->query("select * from images order by id desc");
+         return $query; 
+      }
+
 }
