@@ -44,7 +44,7 @@ class News extends BackendController {
 
         $target_dir = "assets/images/news/";
         $ext        = ".".pathinfo($image_name, PATHINFO_EXTENSION);
-        $image = "news_".uniqid().$ext;
+        $image = uniqid().$ext;
         $target_file = $target_dir.$image;
         if(move_uploaded_file($_FILES['files']['tmp_name'],$target_file)){
        $queryInsert = $this->db->query("INSERT INTO `news` (`url`, `title`, `image`, `description`, `author`, `meta_title`, `meta_robots`, `meta_description`) VALUES ('$url', '$title', '$image', '$description', '$author', '$meta_title', '$meta_robots', '$meta_description');");
@@ -81,6 +81,7 @@ class News extends BackendController {
         $this->load->model('Get_news');
        
         $data['fetch_item']= $this->Get_news->fetch_item();
+        $data['fetch_photo']= $this->Get_news->fetch_photo();
         //exit;
         $this->load->view('admin/news/edit_news',$data);
     }
@@ -97,6 +98,9 @@ class News extends BackendController {
         $id = $_POST['id'];
        // echo $id;exit;
         $url = $_POST["url"];
+        $meta_title = $_POST["news_meta_title"];
+        $meta_description = $_POST["news_meta_description"];
+        $meta_robots = $_POST["news_meta_robots"];
         $title = $_POST["title"];
         $description = addslashes($_REQUEST["description"]);
         $author = $_POST["author"];
@@ -109,9 +113,9 @@ class News extends BackendController {
         move_uploaded_file($_FILES['files']['tmp_name'],$target_file);
 
         if ($image_name =="") {
-              $this->db->query("UPDATE news SET url = '$url' , title = '$title' , description = '$description' , author = '$author'  where id = '".$id."'");
+              $this->db->query("UPDATE news SET url = '$url' , meta_title = '$meta_title' , meta_robots = '$meta_robots' , meta_description = '$meta_description' , title = '$title' , description = '$description' , author = '$author'  where id = '".$id."'");
         }else{
-       $queryUpdate = $this->db->query("UPDATE news SET url = '$url' , title = '$title' , description = '$description' , author = '$author' , image = '$image' where id = '".$id."'");
+       $queryUpdate = $this->db->query("UPDATE news SET url = '$url' , meta_title = '$meta_title' , meta_robots = '$meta_robots' , meta_description = '$meta_description', title = '$title' , description = '$description' , author = '$author' , image = '$image' where id = '".$id."'");
         }
 
         redirect('admin/news');
@@ -174,13 +178,13 @@ class News extends BackendController {
 /* ________________________________________ Library Start ________________________________  */
 
 
- public function library()
+/* public function library()
     {
         $this->load->model('Get_news');
         $data['fetch_library']= $this->Get_news->fetch_library();
 
         $this->load->view('admin/news/library',$data);
-    }
+    }*/
 
 
 /* ________________________________________ Library end ________________________________  */

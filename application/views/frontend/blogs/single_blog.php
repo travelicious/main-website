@@ -151,7 +151,7 @@ $(document).ready(function() {
 
                          $author=$row1->author;
 
-                         $created_at=$row1->created_at;
+                         $created_at= $row1->created_at;
                         
 
 ?>
@@ -280,7 +280,7 @@ $(document).ready(function() {
 
                          $author=$row->author;
 
-                         $created_at=$row->created_at;
+                         $created_at= $row->created_at;
                         
 
                         ?>
@@ -353,6 +353,7 @@ $(document).ready(function() {
                   
 
                          $name=$row->name;
+<<<<<<< HEAD
 
 
                           $datatime = time($row1->created_at);
@@ -360,6 +361,11 @@ $(document).ready(function() {
 
                          $created_at= timespan($datatime, $now) . 'ago';
                       
+=======
+                         $post_time =  idate($row->created_at);
+                         $now = time();
+                         $created_at= timespan($post_time, $now) . ' ago';
+>>>>>>> fabfb0d7376eb37a7b149a308eddfb870c650347
 
                          $comment=$row->comment;
 
