@@ -105,7 +105,7 @@ $(document).ready(function() {
 			
 					<div class="header-left animated wow fadeInLeft animated" data-wow-delay=".5s" >
 							<ul>
-								<li> <button class="btn btn-danger btn-md btn-logins" type="button"><i class="fa fa-user-circle-o"></i>Login</button></li>
+								<li><a href="<?php echo base_url();?>frontend/login"> <button class="btn btn-danger btn-md btn-logins" type="button"><i class="fa fa-user-circle-o"></i>Login</button></li></a>
 								<li class="signup">Sign up</li>
 								
 							</ul>

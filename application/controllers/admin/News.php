@@ -18,7 +18,10 @@ class News extends BackendController {
 
     public function add_news()
     {
-        $this->load->view('admin/news/add_news');
+        $this->load->model('Get_news');
+        $data['fetch_photo']= $this->Get_news->fetch_photo();
+        
+        $this->load->view('admin/news/add_news',$data);
     }
 
 
@@ -33,6 +36,10 @@ class News extends BackendController {
         $title = $_POST["title"];
         $description = $_POST["description"];
         $author = $_POST["author"];
+        $meta_title = $_POST['news_meta_title'];
+        $meta_robots = $_POST['news_meta_robots'];
+        $meta_description = $_POST['news_meta_description'];
+
         $image_name = $_FILES['files']['name'];
 
         $target_dir = "assets/images/news/";
@@ -40,7 +47,7 @@ class News extends BackendController {
         $image = "news_".uniqid().$ext;
         $target_file = $target_dir.$image;
         if(move_uploaded_file($_FILES['files']['tmp_name'],$target_file)){
-       $queryInsert = $this->db->query("INSERT INTO `news` (`url`, `title`, `image`, `description`, `author`) VALUES ('$url', '$title', '$image', '$description', '$author');");
+       $queryInsert = $this->db->query("INSERT INTO `news` (`url`, `title`, `image`, `description`, `author`, `meta_title`, `meta_robots`, `meta_description`) VALUES ('$url', '$title', '$image', '$description', '$author', '$meta_title', '$meta_robots', '$meta_description');");
     }
 
         redirect('admin/news');

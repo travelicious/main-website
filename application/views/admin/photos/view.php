@@ -9,7 +9,7 @@
 
 
     <!-- Title -->
-    <title>Admin</title>
+    <title>View Photos.</title>
 
     <?php $this->load->view('admin/layouts/CSS_Include'); ?>
 
@@ -35,8 +35,6 @@
             <div class="container-fluid">
                 
 
-<!-- ____________________ Alamgir ________________ -->
-
                 <div class="row row-md mb-2">
 
                     <div class="col-md-12">
@@ -48,18 +46,18 @@
 
                                         <tr>
                                         <?php
-
                                         foreach ($photos_fetch->result() as $row) {
+                                        ?>
 
+<<<<<<< HEAD
+=======
 
                                             ?>
 
-<<<<<<< HEAD
 
-                      <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
-=======
+>>>>>>> 78115da4ba2db3f7256a63561e7760f9ccffee46
                       <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12" style="text-align: center;">
->>>>>>> e19fededf133f0deb6f841d6c609154c10604d53
+
                    
                       <div class="col-md-12 blog-home-ing bdr-block">
                     <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>">
