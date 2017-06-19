@@ -1,8 +1,3 @@
-<?php
-        
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +10,7 @@
 
 
     <!-- Title -->
-    <title>Admin</title>
+    <title>Add News | Admin</title>
 
     <?php $this->load->view('admin/layouts/CSS_Include'); ?>
 
@@ -54,44 +49,38 @@
 
         <div class="row row-md mb-2">
             <div class="col-md-12">
-                <h1>Editing News</h1>
+                <h1>Adding News</h1>
             </div>
         </div>
+        <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
+            <div class="row" id="selectable">
 
+                <form action="<?php echo base_url();?>admin/News/save_news" method="post" enctype="multipart/form-data">
 
+                <?php foreach ($fetch_item->result() as $row2); ?>
 
+                <div class="row row-md mb-2">
+                    <div class="col-md-12">
+                        <div class="col-md-8">
 
-
-        <div class="row row-md mb-2">
-
-            <div class="col-md-12">
-                <div class="box bg-white">
-
-                <!-- ____________________ Alamgir Hussain ________________ -->
-
-                    <form action="<?php echo base_url();?>admin/News/save_news" method="post" enctype="multipart/form-data">
-
-                    <?php foreach ($fetch_item->result() as $row); ?>
-
-                        <div class="box box-block bg-white">
-
+                                <div class="box box-block bg-white">
                             <div class="form-group row">
                                 <label for="url" class="col-xs-2 col-form-label">News URL</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text" id="url" name="url" value="<?php echo $row->url; ?>">
-                                    <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $row->id; ?>">
+                                    <input class="form-control" type="text" id="url" name="url" value="<?php echo $row2->url; ?>">
+                                    <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $row2->id; ?>">
                                 </div>
                             </div>
                             <div class="form-group row">
                                         <label for="news-meta-title" class="col-xs-2 col-form-label">Meta Title</label>
                                         <div class="col-xs-10">
-                                            <input class="form-control" type="text"  id="news-meta-title" name="news_meta_title" value="<?php echo $row->meta_title; ?>">
+                                            <input class="form-control" type="text"  id="news-meta-title" name="news_meta_title" value="<?php echo $row2->meta_title; ?>">
                                         </div>
                             </div>
                             <div class="form-group row">
                                 <label for="news-meta-description" class="col-xs-2 col-form-label">Meta Description</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text"  id="news-meta-description" name="news_meta_description" value="<?php echo $row->meta_description; ?>">
+                                    <input class="form-control" type="text"  id="news-meta-description" name="news_meta_description" value="<?php echo $row2->meta_description; ?>">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -103,52 +92,156 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="title" class="col-xs-2 col-form-label">Title</label>
+                                <label for="title" class="col-xs-2 col-form-label">News Title</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text"  id="title" name="title" value="<?php echo $row->title; ?>">
+                                    <input class="form-control" type="text"  id="title" name="title" value="<?php echo $row2->title; ?>">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="files" class="col-xs-2 col-form-label">Image</label>
                                 <div class="col-xs-10">
                                     <input class="form-control" type="file" id="files" name="files">
-                                    <span><img width="100" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></span>
+                                    <span><img width="100" src="<?php echo base_url();?>assets/images/news/<?php echo $row2->image; ?>"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-10">
-                                    <!-- <input class="form-control" type="text"  id="description" name="description" value="<?php echo $row->description; ?>"> -->
-                                    <textarea name="description" class="form-control" id="description" placeholder="Description" value="<?php echo $row->description; ?>"><?php echo $row->description; ?>
+                                    <!-- <input class="form-control" type="text"  id="description" name="description"> -->
+                                    <textarea name="description" class="form-control" id="description" placeholder="Description"><?php echo $row2->description; ?>
                                     </textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="author" class="col-xs-2 col-form-label">Author</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text"  id="author" name="author" value="<?php echo $row->author; ?>">
+                                    <input class="form-control" type="text"  id="author" name="author" value="<?php echo $row2->author; ?>">
                                 </div>
                             </div>
-
-
-
 
                             <div class="form-group row">
                                 <label for="example-number-input" class="col-xs-2 col-form-label"></label>
                                 <div class="col-xs-10 text-md-right">
-                                    <button type="submit" name="save" class="btn btn-primary" value="save">Update</button>
+                                    <input class="btn btn-danger" type="submit" name="save" value="save" id="example-number-input">
                                 </div>
                             </div>
-
-
+                                </div>
 
                         </div>
-                    </form>
+                        <div class="col-md-4" >
+                            <div class="col-md-12" style="    background: #d6d4d4;
+                        padding: 41px 10px;
+                        margin: 2px 0px;">
+                                <div class="panel panel-default">
+                                    <div class="panel-headline">
+                                        <h4>Package Category</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                        <label><input type="checkbox"> <span>Kerala </span></label>
+                                    </div>
+                                    <div class="panel-booter">
+                                        <a href="#">Add New Category</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="    background: #d6d4d4;
+                        padding: 41px 10px;
+                        margin: 8px 0px;">
+                                <div class="panel panel-default">
+                                    <div class="panel-body" style="    margin-top: -32px;">
+                                        <a class="" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                            Link with href
+                                        </a>
+                                        <hr>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="well">
+                                                Separate tags with commas
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a href="#">Choose from the most used tags</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <img src="<?php echo base_url(); ?>assets/images/pkg1.jpg" class="img-rersponsive" alt="img" title="img" style=" width: 100%;
+                               margin-left: -13px;
+                               height: 150px;" data-toggle="modal" data-target="#myModal">
+                                <div class="caption">
+                                    <p style="margin-left: -14px;"><em>Click images for edit or  update</em></p>
+                                    <a href="#" style="margin-left: -14px;"> Remove Featured Images</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog custom-dilog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <ul class="nav nav-tabs mb-0-5" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Upload Media</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Media Library</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home" role="tabpanel">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <h6 class="mt-2">File browser</h6>
+                                        <label class="custom-file">
+                                            <form action="<?php echo base_url(); ?>admin/photos/upload" method="post" enctype="multipart/form-data">
+                                            <input type="file" name="image" id="file" class="custom-file-input"  onchange="this.form.submit()">
+                                            <span class="custom-file-control"></span>
+                                            </form>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="tab-pane" id="profile" role="tabpanel">
+                                    <div class="row">
+
+                                    <?php
+
+                                        foreach ($fetch_photo->result() as $row) {
+                                    ?>
+
+                                        <div class="col-md-3">
+                                            <input type="checkbox" class="chk inpt "  id="img1" name="img1" value="0"  />
+                                            <label for="img1" class="customlbl"> <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>"></label>
+                                        </div>
+                                    <?php } ?>
+
+                                        <div class="cleadrfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" >Set as thumbnail images</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
       </div>
     </div>

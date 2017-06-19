@@ -81,6 +81,7 @@ class News extends BackendController {
         $this->load->model('Get_news');
        
         $data['fetch_item']= $this->Get_news->fetch_item();
+        $data['fetch_photo']= $this->Get_news->fetch_photo();
         //exit;
         $this->load->view('admin/news/edit_news',$data);
     }

@@ -141,7 +141,7 @@ $(document).ready(function() {
                     <div class="caption img-news">
                     <h3 class="justifyclass"><?php echo $array[0]['title']; ?></h3>
                         <em style="color:red;"><?php echo $array[0]['created_at']; ?></em>
-                        <p class="justifyclass"><?php echo substr($array[0]['description'],0,200); ?>...<a href="news/single_news?id=<?php echo $array[0]['id']; ?>">Read More >></a></p>
+                        <p class="justifyclass"><?php echo substr($array[0]['description'],0,300); ?>...<a href="news/single_news?id=<?php echo $array[0]['id']; ?>">Read More >></a></p>
                     
                     </div>
                 </div>
