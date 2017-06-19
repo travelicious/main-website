@@ -57,6 +57,12 @@
          return $query; 
       } 
 
+      public function fetch_photo()  
+      { 
+         $query = $this->db->query("select * from images order by id desc");
+         return $query; 
+      }
+
 
    }  
 

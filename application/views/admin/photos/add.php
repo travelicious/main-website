@@ -11,6 +11,6 @@
                 <input class="btn btn-primary" type="submit" name="submit" value="UPLOAD"/>
               
             
-        </form>
+</form>
 
 

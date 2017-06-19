@@ -17,6 +17,8 @@ class Photos extends BackendController {
         $data['photos_fetch']= $this->Photos_model->photos_fetch();
 
         $this->load->view('admin/photos/view',$data);
+        
+
     }
 
     /* ________________________________________ Delete News ________________________________  */

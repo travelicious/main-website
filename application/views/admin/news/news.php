@@ -9,7 +9,7 @@
 
 
     <!-- Title -->
-    <title>Admin</title>
+    <title>News List | Admin</title>
 
     <?php $this->load->view('admin/layouts/CSS_Include'); ?>
 
