@@ -40,12 +40,7 @@
                                             <input class="form-control" type="text" id="package-title" name="package_title">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="package-image" class="col-xs-2 col-form-label">Package Image</label>
-                                        <div class="col-xs-10">
-                                            <input class="form-control" type="file" id="package-image" name="package_image">
-                                        </div>
-                                    </div>
+
                                     <div class="form-group row">
                                         <label for="package-description" class="col-xs-2 col-form-label">Package Description</label>
                                         <div class="col-xs-10">

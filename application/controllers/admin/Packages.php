@@ -61,7 +61,10 @@ class Packages extends BackendController {
 
         /* Loading the layout and the body layout is passed as name which will be loaded in view */
         $data['page_title'] = 'Add a Package';
+
         $data['body_view'] = 'admin/packages/add';
+
+
         $this->load->view('admin/layouts/home',$data);
 
     }
