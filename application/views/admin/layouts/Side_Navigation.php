@@ -104,7 +104,7 @@
                 </a>  
 				<ul>
                     <li><a href="<?php echo base_url();?>admin/destination">Destination</a></li>
-                    <li><a href="<?php echo base_url();?>admin/destination/add_destination">Add Destination</a></li>
+                    <li><a href="<?php echo base_url();?>admin/destination/destination_add">Add Destination</a></li>
                 
                 </ul>
 

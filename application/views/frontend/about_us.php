@@ -240,7 +240,7 @@ Booking in Travelicious Holidays is absolutely simple and can be done online wit
                               
                               </div>
                               <div class="col-md-6">
-                               <p class="primg">Gourav</p>
+                               <p class="primg">Alamgir</p>
                                   <p class="degi">Delhi</p>
                               </div>
                        
@@ -265,7 +265,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                               
                               </div>
                               <div class="col-md-6">
-                               <p class="primg">Jili Gorg</p>
+                               <p class="primg">Gaurav Rajput</p>
                                   <p class="degi">Degination Name</p>
                               </div>
                        
