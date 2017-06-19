@@ -44,7 +44,7 @@ class News extends BackendController {
 
         $target_dir = "assets/images/news/";
         $ext        = ".".pathinfo($image_name, PATHINFO_EXTENSION);
-        $image = "news_".uniqid().$ext;
+        $image = uniqid().$ext;
         $target_file = $target_dir.$image;
         if(move_uploaded_file($_FILES['files']['tmp_name'],$target_file)){
        $queryInsert = $this->db->query("INSERT INTO `news` (`url`, `title`, `image`, `description`, `author`, `meta_title`, `meta_robots`, `meta_description`) VALUES ('$url', '$title', '$image', '$description', '$author', '$meta_title', '$meta_robots', '$meta_description');");
