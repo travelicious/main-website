@@ -48,7 +48,7 @@
                                         <?php
                                         foreach ($photos_fetch->result() as $row) {
                                         ?>
-                                            
+
                       <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12" style="text-align: center;">
 
                    
