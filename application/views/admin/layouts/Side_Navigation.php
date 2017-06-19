@@ -31,8 +31,8 @@
                 <ul>
                     <li><a href="<?php echo base_url(); ?>admin/news">News</a></li>
                     <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
-                    <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li>
-                    <li><a href="<?php echo base_url(); ?>admin/news/library">Library</a></li>
+                    <!-- <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news/library">Library</a></li> -->
                 </ul>
             </li>
 
