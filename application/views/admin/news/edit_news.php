@@ -83,6 +83,26 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                        <label for="news-meta-title" class="col-xs-2 col-form-label">Meta Title</label>
+                                        <div class="col-xs-10">
+                                            <input class="form-control" type="text"  id="news-meta-title" name="news_meta_title" value="<?php echo $row->meta_title; ?>">
+                                        </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="news-meta-description" class="col-xs-2 col-form-label">Meta Description</label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="text"  id="news-meta-description" name="news_meta_description" value="<?php echo $row->meta_description; ?>">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="news-meta-robots" class="col-xs-2 col-form-label">Meta Robots</label>
+                                <div class="col-xs-10">
+                                    <select class="form-control"  id="news-meta-robots" name="news_meta_robots">
+                                        <option value="0">.......</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="title" class="col-xs-2 col-form-label">Title</label>
                                 <div class="col-xs-10">
                                     <input class="form-control" type="text"  id="title" name="title" value="<?php echo $row->title; ?>">

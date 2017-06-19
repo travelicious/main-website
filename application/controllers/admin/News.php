@@ -97,6 +97,9 @@ class News extends BackendController {
         $id = $_POST['id'];
        // echo $id;exit;
         $url = $_POST["url"];
+        $meta_title = $_POST["news_meta_title"];
+        $meta_description = $_POST["news_meta_description"];
+        $meta_robots = $_POST["news_meta_robots"];
         $title = $_POST["title"];
         $description = addslashes($_REQUEST["description"]);
         $author = $_POST["author"];
@@ -109,9 +112,9 @@ class News extends BackendController {
         move_uploaded_file($_FILES['files']['tmp_name'],$target_file);
 
         if ($image_name =="") {
-              $this->db->query("UPDATE news SET url = '$url' , title = '$title' , description = '$description' , author = '$author'  where id = '".$id."'");
+              $this->db->query("UPDATE news SET url = '$url' , meta_title = '$meta_title' , meta_robots = '$meta_robots' , meta_description = '$meta_description' , title = '$title' , description = '$description' , author = '$author'  where id = '".$id."'");
         }else{
-       $queryUpdate = $this->db->query("UPDATE news SET url = '$url' , title = '$title' , description = '$description' , author = '$author' , image = '$image' where id = '".$id."'");
+       $queryUpdate = $this->db->query("UPDATE news SET url = '$url' , meta_title = '$meta_title' , meta_robots = '$meta_robots' , meta_description = '$meta_description', title = '$title' , description = '$description' , author = '$author' , image = '$image' where id = '".$id."'");
         }
 
         redirect('admin/news');
