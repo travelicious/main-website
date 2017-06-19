@@ -174,13 +174,13 @@ class News extends BackendController {
 /* ________________________________________ Library Start ________________________________  */
 
 
- public function library()
+/* public function library()
     {
         $this->load->model('Get_news');
         $data['fetch_library']= $this->Get_news->fetch_library();
 
         $this->load->view('admin/news/library',$data);
-    }
+    }*/
 
 
 /* ________________________________________ Library end ________________________________  */

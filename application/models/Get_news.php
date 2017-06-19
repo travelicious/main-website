@@ -31,11 +31,11 @@
          return $query; 
       }
 
-      public function fetch_library()
+      /*public function fetch_library()
       {
          $query = $this->db->query("select * from images");
          return $query;  
-      }
+      }*/
 
       public function front_fetch_data()  
       { 
