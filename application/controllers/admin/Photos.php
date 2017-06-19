@@ -13,8 +13,18 @@ class Photos extends BackendController {
 
     public function index()
     {
+         // this is default layout without the center body , center body is passed with the variable 
+
+        $data['page_title'] = 'view image';
+
         $this->load->model('admin/Photos_model');
+
         $data['photos_fetch']= $this->Photos_model->photos_fetch();
+
+
+
+         // this is default layout without the center body , center body is passed with the variable body_vie
+
 
         $this->load->view('admin/photos/view',$data);
         
