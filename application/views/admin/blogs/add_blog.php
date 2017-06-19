@@ -30,7 +30,7 @@
 
                     
                             <div class="form-group row">
-                                <label for="image" class="col-xs-2 col-form-label"> Image</label>
+                                <label for="image" class="col-xs-2 col-form-label">Image</label>
                                 <div class="col-xs-8">
                                     <input class="form-control" type="file"  name="files">
                                 </div>
@@ -40,6 +40,41 @@
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-8">
                                 <textarea class="form-control" rows="4" name="description"></textarea>
+                            </div>
+                            </div>
+
+                  
+                            <div class="form-group row">
+                                <label for="meta_title" class="col-xs-2 col-form-label">Meta_Title</label>
+                                <div class="col-xs-8">
+                                    <input class="form-control" type="text" name="meta_title">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="meta_robot" class="col-xs-2 col-form-label">Meta_Robot</label>
+                                 <div class="col-xs-8">
+                                <select class="form-control" name="meta_robot">
+                                <option>......</option>
+                                    <option>NOINDEX , NOFOLLOW</option>
+
+                                    <option>INDEX , NOFOLLOW</option>
+
+                                    <option>NOINDEX , FOLLOW</option>
+                                   </select>
+                                  </div>
+                                 
+                                </div>
+                            
+
+                     
+
+
+
+                                  <div class="form-group row">
+                                <label for="meta_description" class="col-xs-2 col-form-label">Meta_Description</label>
+                                <div class="col-xs-8">
+                                <textarea class="form-control" rows="4" name="meta_description"></textarea>
                             </div>
                             </div>
 
