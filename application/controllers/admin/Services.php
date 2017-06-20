@@ -1,3 +1,4 @@
+<!--Created By Aditya-->
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -20,6 +21,7 @@ class Services extends BackendController {
     }
 
     public function add_services_data() {
+//   code for edit     
 
         if (isset($_POST['edit'])) {
             $edit_id = $this->input->post('service_id');
@@ -27,6 +29,9 @@ class Services extends BackendController {
 
             $this->db->query("update services set service_name = '$service_name' where id = $edit_id");
             $this->view_services();
+
+//            end code for edit
+//            code for add
         } elseif (isset($_POST['submit'])) {
             $data = array(
                 'service_name' => $this->input->post('service_name'),
@@ -35,6 +40,8 @@ class Services extends BackendController {
 
             $this->view_services();
         }
+
+//        end code for add
     }
 
     public function delete_services($id) {

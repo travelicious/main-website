@@ -295,15 +295,30 @@ $(document).ready(function() {
                         
                   
 
+<<<<<<< HEAD
                           $name=$row->name;
 
 
 
                           $datatime = time($row->created_at);
+=======
+                         $name=$row->name;
+
+
+
+                          $datatime = strtotime($row1->created_at);
+>>>>>>> 7ff6f67bb583a8d24ab42af5b1638e20479223fa
                            $now = time();
 
                          $created_at= timespan($datatime, $now) . '&nbsp'.'ago';
                       
+<<<<<<< HEAD
+=======
+
+                         
+
+
+>>>>>>> 7ff6f67bb583a8d24ab42af5b1638e20479223fa
                          $comment=$row->comment;
 
                         
