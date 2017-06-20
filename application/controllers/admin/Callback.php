@@ -1,4 +1,5 @@
-<!--Created By Aditya-->
+
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -23,10 +24,8 @@ class Callback extends BackendController {
         'contact_number'=>$this->input->post('req_contact'),
         'email_id'=>$this->input->post('req_mail'),
         );
-        $ok = $this->db->insert('callback_requested',$callback_req_data);
-        if($ok){
-           echo json_encode(array('st' => 1));
-        }
+         $this->db->insert('callback_requested',$callback_req_data);
+       
     }
 
 }

@@ -74,20 +74,20 @@
                 <div class="head">
                     <div class="container">
                         <div class="col-md-3">
-<<<<<<< HEAD
+                            <<<<<<< HEAD
                             <div class="navbar-brand logo ">
                                 <h1 class="animated wow pulse" data-wow-delay=".5s">
                                     <a href="index.html"><img src="<?php echo base_url(); ?>assets/frontend/images/logo.png" class="img-responsive custom-img" alt="logo" title="company logo"></a></h1>
                             </div>
-=======
-                        <div class="circle text-center">
-                         <a href="<?php echo base_url();?>frontend/create_package">
-                            <i class="fa fa-archive bgicon" aria-hidden="true"></i>
-                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            
+                            =======
+                            <div class="circle text-center">
+                                <a href="<?php echo base_url(); ?>frontend/create_package">
+                                    <i class="fa fa-archive bgicon" aria-hidden="true"></i>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+
                             </div>
-                       <h4 class="h4head">Create Your Package</h4></a>
->>>>>>> d64167e5508269aa81f3094b6953514596446381
+                            <h4 class="h4head">Create Your Package</h4></a>
+                            >>>>>>> d64167e5508269aa81f3094b6953514596446381
                         </div>
                         <div class="col-md-9">
 
@@ -719,7 +719,7 @@
                                 <div class="form-group">
                                     <label for="InputName">Email Id </label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control fcf" name="req_mail" id="req_mail" placeholder="Enter Source point" required="">
+                                        <input type="email" class="form-control fcf" name="req_mail" id="req_mail" placeholder="Enter Source point" required="">
                                         <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span></div>
                                 </div>
                             </div>
@@ -751,7 +751,7 @@
 
 
 
-        <div class="modal fade" id="thanks_modal"  role="dialog">
+        <div class="modal fade thanx" id="thanks_modal"  role="dialog">
             <div class="modal-dialog diologs">
 
                 <!-- Modal content-->
@@ -867,24 +867,8 @@
                     processData: false,
                     contentType: false,
                     success: function (response) {
-                        var obj = JSON.parse(response);
-                        var udte = '';
-                        if (obj.st == 1) {
-                            $("#callback_request_formdata")[0].reset();
-                            $("#thanks_modal").modal('show');
-
-                        } else {
-                            udte = "Unable to process your request";
-                        }
-
-                        var successmsg = '<div class="box-body">';
-                        successmsg += '<div class="alert alert-success alert-dismissable">';
-                        successmsg += '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>';
-                        successmsg += '<h4>	<i class="icon fa fa-check"></i> Alert!</h4>';
-                        successmsg += udte;
-                        successmsg += '</div>';
-                        successmsg += '</div>';
-                        $('.successmsg').html(successmsg);
+                        $("#callback_request_formdata")[0].reset();
+                        $(".thanx").modal('show');
                     }
                 });
             });
@@ -894,6 +878,47 @@
 
 
             //callback reqest code end
+            
+            
+               $(function () {
+        $("#callback_request_formdata").validate({
+            rules: {
+                req_name: {
+                    required: true
+                },
+                req_cit: {
+                    required: true
+                },
+                req_contact: {
+                    required: true,
+                    minlength:9,
+                    maxlength:10,
+                    number: true
+                },
+                req_mail: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                req_name: {
+                    required: "Please Insert your Name"
+                },
+                req_cit: {
+                    required: "Please  Insert your City"
+                },
+                req_contact: {
+                    required: "Please Enter Mobile Number"
+                    
+                },
+                req_mail: {
+                    required: "Please Insert Email id"
+                }
+            }
+
+        });
+    });
+
         </script>    
 
     </body>	
