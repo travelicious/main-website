@@ -12,7 +12,7 @@ if (!empty($srchd_data)) {
     $placeholder = "Edit Services";
 } else {
     $name = 'submit';
-     $placeholder = "Add Services";
+    $placeholder = "Add Services";
 }
 ?>
 
@@ -21,10 +21,10 @@ if (!empty($srchd_data)) {
 
     <div class="col-md-12">
         <div class="box bg-white">
-            <form id="save_service_data" action="<?php echo base_url('admin/Services/add_services_data')?>" method="post">
-                
-                    <input type="hidden" name="service_id" value="<?php echo $s_id?>"/>
-                
+            <form id="save_service_data" action="<?php echo base_url('admin/Services/add_services_data') ?>" method="post">
+
+                <input type="hidden" name="service_id" value="<?php echo $s_id ?>"/>
+
 
                 <div class="box box-block bg-white">
 
@@ -39,7 +39,7 @@ if (!empty($srchd_data)) {
                     <div class="form-group row">
                         <label for="example-number-input" class="col-xs-2 col-form-label"></label>
                         <div class="col-xs-10 text-md-left">
-                            <input class="btn btn-danger" type="submit" name="<?php echo $name ?>" value="<?php echo $placeholder?>" id="example-number-input">
+                            <input class="btn btn-danger" type="submit" name="<?php echo $name ?>" value="<?php echo $placeholder ?>" id="example-number-input">
                         </div>
                     </div>
 
