@@ -43,9 +43,8 @@
                     <span class="s-text">Inclusion/Exclusion</span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo base_url(); ?>admin/inclusion_exclusion/inclusion">Inclusions</a></li>
-                    <li><a href="<?php echo base_url(); ?>admin/inclusion_exclusion/exclusion">Exclusions</a></li>
-                    <li><a href="<?php echo base_url(); ?>admin/inclusion_exclusion/add_inclusion_exclusion">Add Inclusion/Exclusions</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/services/view_services">View</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/services/add_services">Add Services</a></li>
                     <!-- <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
                     <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li> -->
                 </ul>
