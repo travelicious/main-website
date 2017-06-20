@@ -83,6 +83,9 @@
                                 <div class="col-xs-10">
                                     <select class="form-control"  id="news-meta-robots" name="news_meta_robots">
                                         <option value="0">.......</option>
+                                        <option value="NOINDEX">FOLLOW</option>
+                                        <option value="INDEX">NOFOLLOW</option>
+                                        <option value="NOINDEX">NOFOLLOW</option>
                                     </select>
                                 </div>
                             </div>

@@ -8,7 +8,7 @@
 
          $query = $this->db->query("select * from news order by id desc");
          return $query;  
-      }  
+      }   
 
 
 
@@ -39,8 +39,14 @@
 
       public function front_fetch_data()  
       { 
-         $query = $this->db->query("select * from news order by id desc limit 0,9");
+         $query = $this->db->query("select * from news order by id desc limit 0,10");
          return $query; 
+      } 
+
+      public function front_right_data()  
+      {  
+         $query = $this->db->query("select * from news limit 0,10");
+         return $query;  
       } 
 
       public function single_news_data()  

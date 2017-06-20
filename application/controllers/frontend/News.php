@@ -30,8 +30,8 @@ class News extends FrontendController {
     {
         $this->load->model('Get_news');
         $data['front_fetch_data']= $this->Get_news->front_fetch_data();
-
-        $this->load->view('frontend/news',$data);
+        $data['front_right_data']= $this->Get_news->front_right_data();
+        $this->load->view('frontend/news/news',$data);
     }
 
     public function single_news()
@@ -40,7 +40,7 @@ class News extends FrontendController {
         $this->load->model('Get_news');
         $data['single_news_data']= $this->Get_news->single_news_data();
         $data['single_news_data2']= $this->Get_news->single_news_data2();
-        $this->load->view('frontend/single_news',$data);
+        $this->load->view('frontend/news/single_news',$data);
     }
 
     public function submit_news_comment()
@@ -56,7 +56,7 @@ class News extends FrontendController {
         $data['single_news_data']= $this->Get_news->single_news_data();
         $data['single_news_data2']= $this->Get_news->single_news_data2();
 
-        $this->load->view('frontend/single_news',$data);
+        $this->load->view('frontend/news/single_news',$data);
     } 
 
 }
