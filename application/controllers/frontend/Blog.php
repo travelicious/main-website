@@ -10,6 +10,8 @@ public function index()
 
  	$data["fetch_data"]=$this->Blog_model->fetch_data();
 
+    $data["latest_blog_data"]=$this->Blog_model->latest_blog_data();
+
 	$this->load->view('frontend/blogs/blog',$data);
 
 
@@ -25,7 +27,7 @@ public function single_blog()
 
 
 
- 	$data["latest_blog_data"]=$this->Blog_model->latest_blog_data();
+ 	$data["latest_blog_data1"]=$this->Blog_model->latest_blog_data1();
 
 
  	$data["comment_blog"]=$this->Blog_model->comment_blog();

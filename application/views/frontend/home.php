@@ -74,10 +74,20 @@
                 <div class="head">
                     <div class="container">
                         <div class="col-md-3">
+<<<<<<< HEAD
                             <div class="navbar-brand logo ">
                                 <h1 class="animated wow pulse" data-wow-delay=".5s">
                                     <a href="index.html"><img src="<?php echo base_url(); ?>assets/frontend/images/logo.png" class="img-responsive custom-img" alt="logo" title="company logo"></a></h1>
                             </div>
+=======
+                        <div class="circle text-center">
+                         <a href="<?php echo base_url();?>frontend/create_package">
+                            <i class="fa fa-archive bgicon" aria-hidden="true"></i>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            
+                            </div>
+                       <h4 class="h4head">Create Your Package</h4></a>
+>>>>>>> d64167e5508269aa81f3094b6953514596446381
                         </div>
                         <div class="col-md-9">
 
