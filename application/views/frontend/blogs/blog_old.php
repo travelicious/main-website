@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Demo</title>
+<title>Travelicious Holiday</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
@@ -17,9 +17,7 @@
 <link href="<?php echo base_url(); ?>assets/layouts/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/owl.carousel.css" type="text/css" media="all">
-
 <link href="<?php echo base_url(); ?>assets/layouts/css/owl.theme.css" rel="stylesheet">
-
 <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/cm-overlay.css" />
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/font.css" />
 <!-- font -->
@@ -82,10 +80,9 @@ $(document).ready(function() {
       	<li class="dropdown">
 					<a href="#" class="dropdown-toggle custogle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-bars iclass" aria-hidden="true"></i></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Top Blog</a></li>
-						<li><a href="#">Latest Blog</a></li>
-						<li><a href="#">Submit Blog</a></li>
-                        <li><a href="#">Author</a></li>
+						<li><a href="http://localhost/main-website/frontend/blog">Recent Post</a></li>
+						<li><a href="">Submit Post</a></li>
+						<li><a href="#">Logout</a></li>
 					</ul>
 				</li>
                 </ul>
@@ -96,13 +93,32 @@ $(document).ready(function() {
     </div> 
     </div>
    
-	<div class="banner banner single-blog-bnn">
-		<div class="agileinfo-dot single-blog-bnr-height ">
+	<div class="banner blog-bnn">
+		<div class="agileinfo-dot blog-bnr-height">
         <div class="banner-slider">
             <div class="container">
             <section class="slider">
 						<div class="flexslider">
-                
+                <div class="col-md-12">
+                            
+                    <div class="col-md-4 ">
+                    
+                    <h4 class="txt-bnr">Travelicious Holidays, which is presently known as Travelicious Holiday, is one of the premier travel and tourism companies in India.</h4>
+  <button class="btn btns-mor">Read More</button>                    
+                    </div>
+                    <div class="col-md-4">
+                     <h4 class="txt-bnr">Travelicious Holidays, which is presently known as Travelicious Holiday, is one of the premier travel and tourism companies in India.</h4>
+  <button class="btn btns-mor">Read More</button>
+                    
+                    </div>
+                    <div class="col-md-4">
+                     <h4 class="txt-bnr">Travelicious Holidays, which is presently known as Travelicious Holiday, is one of the premier travel and tourism companies in India.</h4>
+  <button class="btn btns-mor">Read More</button>
+                    
+                    </div>
+                    
+                            </div>            
+                            
                             
                 </div>
                 </section>
@@ -116,13 +132,19 @@ $(document).ready(function() {
 	<!-- welcome -->
 	<div class="welcome wlcomnew" id="welcome">
         <div class="container-fluid margin-top-container">
-     <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-             <!--first blog-->
+        
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo cont">
+           
+                <h2 class="blog-headling">Trending</h2>
+
+       
 
 
 
+
+                     
+        
                            <?php
                             
                           if($fetch_data->num_rows() >0)
@@ -147,48 +169,31 @@ $(document).ready(function() {
 
 ?>
 
+                   
+            
+            
 
+                      <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                   
+                      <div class="col-md-12 blog-home-ing bdr-block">
+                      <a href="blog/single_blog?id=<?php echo $row->id; ?>"><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>" class="img-responsive img-news bdr-block" alt="blog" title="blog"></a>
 
+               
 
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-      
-             <h6 class="h6-class">Kerala Tour</h6>
-             
-        <h3 class="blog-headline-3"><?php echo $title ?></h3>
-                    
-                <small class="sml"><?php echo $created_at ?></small>    
-                    <div class="clearfix"></div>
-
-                    <a href="<?php echo base_url();?>frontend/blog/single_blog?id=<?php echo $row->id;?>"><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>" class="img-responsive blog-img" alt="img-blog" title="blog images title"> </a>
-                    <div class="caption">
-
-                    <p class="sng-blog"><?php echo substr($description,0,400); ?></p>
-                    
+                      <div class="caption img-news">
+                      <h3 class="justifyclass blog-cus"><?php echo $title ?></h3>
+                        <em class="cem"><?php echo $created_at ?></em><em class="text-right"><?php echo $author ?></em> 
+                        <p class="justifyclass blog-cus"><?php echo substr($description,0,200); ?><a href="">Read More..>></a></p>
                     </div>
-                    
-               </div>
-             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col12-zindex">
-              <div class="col-md-6 col-lg-6 col-sm-1`2 col-xs-12 mrg-pad">
-                 <div class="btn-group border-radius-group">
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-facebook" aria-hidden="true"></i></button>
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-twitter" aria-hidden="true"></i></button>
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-google-plus" aria-hidden="true"></i></button>
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-youtube" aria-hidden="true"></i></button>
-  </div>
-                 </div>
-                 <a href="<?php echo base_url();?>frontend/blog/single_blog?id=<?php echo $row->id;?>">
-                 <div class="col-md-6 col-lg-6 col-sm-1`2 col-xs-12 pull-right text-right mrg-pad"> <button class="btn btn-danger border-radius-group">Continue Reading</button></div></a>
-             
+                    </div><br>
+                    </div>
+                
+               
 
-     
+                  
+                         
 
-
-
-             </div>
-             <hr class="blog-hr-brds">
-
-
-           
+                           
                           <?php
 
 
@@ -202,198 +207,31 @@ $(document).ready(function() {
 }
 
         ?>
-
-                <!--// end first blog-->
-        
-                </div>
-        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 col-4-blog">
-
-
-
+     
             
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12-b-n">
-             <div class="input-group inpt-grp-blog-n">
-                <div class="input-group-btn search-panel">
-                    
-                <input type="hidden" name="search_param" value="all" id="search_param">         
-                <input type="text" class="form-control inptfield-n" name="x" placeholder="Search term...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default srch-blog-n" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                </span>
-            </div>            
+               </div>    
+            
+     </div>
+        <div class="row">
+            <div class="col-md-12">
+            <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-default btn-readmor"> Read More</button>
+                    <br>
+                      <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4">
                 </div>
             
-                
-                </div> 
-
-            <!--recent blog post-->
-
-
-
-
-
-
-
-             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12-b-n">
-             <button type="button" class="btn btn-danger btn-block withImageAndIcon btn-blog-new">
-		    	
-		    	Recent Blog POst
-    		</button>
-
- <?php
-                            
-                          if($latest_blog_data->num_rows() >0)
-                          {
-                      foreach($latest_blog_data->result() as $row)
-                          {
-
-                          ?>
-
-                      <?php
-                        
-                         $url=$row->url;
-
-                         $title=$row->title;
-
-                         $image=$row->image;
-
-                         $description=$row->description;
-
-                         $author=$row->author;
-
-                         $created_at= $row->created_at;
-                        
-
-                        ?>
-                 
-                 <div class="dovimg">
-                 <h6><?php echo $created_at ?> </h6>
-                <img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-right" alt="" title="">
-                 <div class="caption"><?php echo $title ?></div>
-
-
-                 
-                    <div class="clearfix"></div>
-
-
-         </div>
-                                               <?php
-
-
-                         }
-                           }
-                         else
-                           {
-                            ?>
-<?php
-
-}
-
-        ?>  
-                 
-                
-                </div> 
-
-
-
-
-              <!--// end recent blog post-->
-            <!--recent blog post-->
-             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12-b-n">
-             <button type="button" class="btn btn-danger btn-block withImageAndIcon btn-blog-new">
-		    	
-		    	Recent Comment
-    		</button>
-                 
-                <ul class="ul-class">
-                 
-                 <li>Lorem ipsum text goes here for comment recent comment.</li>
-                    <li class="seperator"></li>
-                 <li>Lorem ipsum text goes here for comment recent comment.</li>
-                    <li class="seperator"></li>
-                 <li>Lorem ipsum text goes here for comment recent comment.</li>
-
-        
-                 
-                 </ul>
-                 
-                 
-                 
-                 
-                
-                </div> 
-              <!--// end recent blog post-->
-            <!--follow us-->
-             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12-b-n">
-             <button type="button" class="btn btn-danger btn-block withImageAndIcon btn-blog-new">
-		    	
-		    	Follow US
-    		</button>
-                 
-                  <ul class="social-network social-circle">
-
-                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>	
-                 
-                 
-                 
-                 
-                
-                </div> 
-              <!--// end recent blog post-->
-             <!--subscribe now-->
-
-
-
-
-             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12-b-n">
-                  <form id="loginForm" method="POST" action="/login/" novalidate="novalidate"  class="forms-sub">
-                              <div class="form-group">
-                                  <label for="username" class="control-label">Username</label>
-                                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Enter User Name">
-                                  <span class="help-block"></span>
-                              </div>
-                              <div class="form-group">
-                                  <label for="password" class="control-label">Email Id</label>
-                                  <input type="email" class="form-control" id="emailId" name="email" value="" required="" title="Please enter your Email id">
-                                  <span class="help-block"></span>
-                              </div>
-                      <br/> 
-                       <button type="button" class="btn btn-danger btn-block withImageAndIcon btn-blog-new">
-		    	Subscribe Now
-    		</button>
-                 </form>
             
-                 
-                 
-                 
-                 
-                 
-                 
-                
-                </div> 
-              <!--// end recent blog post-->
-              
-         
-         
-         
-         </div>
-            
-            </div>   
-     
-            
-<div class="clearfix"></div>
-     
-     
+            </div>
+           
+            </div>
           
         
-        </div>
-      
+       
+       <div class="clearfix"></div>
         
         
 		
@@ -417,11 +255,11 @@ $(document).ready(function() {
 				<div class="col-md-3 agile-footer-grid mid">
 					<h4>Quick Links</h4>
 					<ul class="w3agile_footer_grid_list">
-						<li><a href="#">About Us </a> </li>
+						<li><a href="http://localhost/main-website/frontend/about_us">About Us </a> </li>
 						<li><a href="#">Contact Us </a></li>
                         <li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Term & Condation</a></li>
-                        <li><a href="#">Refund and cancllation policy</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Refund and Cancellation Policy</a></li>
 						<li><a href="#">Testimonial</a></li>
 					</ul>
 				</div>
@@ -439,10 +277,10 @@ $(document).ready(function() {
                 <div class="col-md-3 agile-footer-grid">
 					<h4>Social Link</h4>
 					<div class="popular-grids">
-					<a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+					<a href="https://www.facebook.com/bootsnipp" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/bootsnipp" target="_blank"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page" target="_blank"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:bootsnipp@gmail.com" target="_blank"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
 </p>
 					</div>
 					<!--<div class="popular-grids">
@@ -597,7 +435,7 @@ $(document).ready(function() {
 			});
 	</script>
 	<!-- //here ends scrolling icon -->
-	<script src="js/owl.carousel.js"></script>
+	<script src="<?php echo base_url(); ?>assets/layouts/js/owl.carousel.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
   $( function() {

@@ -130,9 +130,14 @@ $(document).ready(function() {
         </div>
 	</div>
 
-   
-        
-                           <?php
+<!-- welcome -->
+  <div class="welcome wlcomnew" id="welcome">
+        <div class="container-fluid margin-top-container">
+     <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+
+               <?php
                             
                           if($single_blog_data->num_rows() >0)
                           {
@@ -156,25 +161,23 @@ $(document).ready(function() {
 
 ?>
 
+             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+      
+      <br><br>
+             
+        <h3 class="blog-headline-3"><?php echo $title ?></h3>
+                    
+              
+                    <div class="clearfix"></div>
 
+                    <img src="<?php echo base_url().'assets/uploads/images/'.$image; ?>" class="img-responsive blog-img" alt="img-blog" title="blog images title"> </a>
+                    <div class="caption">
 
-              <div class="welcome wlcomnew" id="welcome">
-        <div class="container-fluid margin-top-container">
-        
-        <div class="row">
-            
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo">
-                <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12  col-9">
-
-                 <h3 class="blog-headling"><?php echo $title ?></h3>
-
-               <p class="single-news-para"><span><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive width" alt="blog" title="blog"></span></p>
-               <p>
-               <?php echo $description ?>
-
-                </p>
-
-
+                    <p class="sng-blog"><?php echo $description ?></p>
+                    
+                    </div>
+                    
+               </div>
 
                            
                           <?php
@@ -191,10 +194,6 @@ $(document).ready(function() {
 
         ?>
     </div>
-
-
-
-
    
 
 
@@ -206,9 +205,9 @@ $(document).ready(function() {
 
                            <?php
                             
-                          if($latest_blog_data->num_rows() >0)
+                          if($latest_blog_data1->num_rows() >0)
                           {
-                      foreach($latest_blog_data->result() as $row)
+                      foreach($latest_blog_data1->result() as $row)
                           {
 
                           ?>
@@ -229,9 +228,9 @@ $(document).ready(function() {
                         ?>
 
                      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="col-md-6"><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
-                        <div class="col-md-6"><p><span>
-                        <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></a></p></span> 
+                        <div class="col-md-9"><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
+                        <div class="col-md-9"><p><span>
+                        <h3 class="blog-headline-3"> <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></h3></a></p></span> 
                         </div>
                         
                         
@@ -251,71 +250,14 @@ $(document).ready(function() {
 
         ?>    
 
-
+</div>
                           
                     
              </div>
+             </div>
               <br>
                   
-                    <div class="col-md-12">
-           <h3 class="blog-headling">Treding Post</h3>
-
-                           <?php
-                            
-                          if($latest_blog_data->num_rows() >0)
-                          {
-                      foreach($latest_blog_data->result() as $row)
-                          {
-
-                          ?>
-                      <?php
-                        
-                         $url=$row->url;
-
-                         $title=$row->title;
-
-                         $image=$row->image;
-
-                         $description=$row->description;
-
-                         $author=$row->author;
-
-                         $created_at= $row->created_at;
-                        
-
-                        ?>
-
-                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="col-md-6"><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
-                        <div class="col-md-6"><p><span></span> 
-                        <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></a></p>
-                        </div>
-
-                        
-                        
-                        
-                        </div>  
-                         <?php
-
-
-                         }
-                           }
-                         else
-                           {
-                            ?>
-<?php
-
-}
-
-        ?>    
-
-                    
-
-                         
-
-
-                      </div>
-
+           <!--        
                     <div class="col-md-12">
                      <h3 class="blog-headling">Categories</h3>
                         <em class="categories-tag"> Category name</em>
@@ -323,7 +265,7 @@ $(document).ready(function() {
                         <em class="categories-tag"> Category name</em>
                 
                     
-                    </div>
+                    </div> -->
                    
                    
                 
@@ -348,25 +290,20 @@ $(document).ready(function() {
                           {
 
                           ?>
+
                       <?php
                         
                   
 
-                         $name=$row->name;
-<<<<<<< HEAD
+                          $name=$row->name;
 
 
-                          $datatime = time($row1->created_at);
+
+                          $datatime = time($row->created_at);
                            $now = time();
 
-                         $created_at= timespan($datatime, $now) . 'ago';
+                         $created_at= timespan($datatime, $now) . '&nbsp'.'ago';
                       
-=======
-                         $post_time =  idate($row->created_at);
-                         $now = time();
-                         $created_at= timespan($post_time, $now) . ' ago';
->>>>>>> fabfb0d7376eb37a7b149a308eddfb870c650347
-
                          $comment=$row->comment;
 
                         
@@ -380,7 +317,9 @@ $(document).ready(function() {
                 <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
                  <ul class="timeline">
         <li>
-          <div class="timeline-badge"><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive img-circle"></div>
+          <div class="timeline-badge"><img src="<?php 
+          echo base_url().'assets/uploads/images/'.$image ?>" 
+          class="img-responsive img-circle"></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title"><?php echo $name ?></h4>

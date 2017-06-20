@@ -175,11 +175,12 @@ $(document).ready(function() {
                     <div class="col-md-12">
                         <div class="col-md-3">
                         <div class="circle text-center">
+                         <a href="<?php echo base_url();?>frontend/create_package">
                             <i class="fa fa-archive bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             
                             </div>
-                        <h4 class="h4head">Create Your Package</h4>
+                       <h4 class="h4head">Create Your Package</h4></a>
                         </div>
                           <div class="col-md-3">
                         <div class="circle text-center">
