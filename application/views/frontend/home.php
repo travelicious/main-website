@@ -249,14 +249,14 @@
                         <div class="tabbable-panel">
                             <div class="tabbable-line">
                                 <ul class="nav nav-tabs cus-ul ">
-                                    <li class="active">
+<!--                                    <li class="active">
                                         <a href="#tab_default_1" data-toggle="tab" class="cus-a">
                                             Travelicious Video </a>
                                     </li>
                                     <li>
                                         <a href="#tab_default_2" data-toggle="tab" class="cus-a">
                                             Brand Mentions </a>
-                                    </li>
+                                    </li>-->
 
                                 </ul>
 
@@ -279,7 +279,7 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <div class="tab-content">
-                                <div class="tab-pane tp1 active" id="tab_default_1">
+<!--                                <div class="tab-pane tp1 active" id="tab_default_1">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="col-md-7">
@@ -369,7 +369,7 @@
                                     </div>
 
                                 </div>
-                                <div class="tab-pane tp2" id="tab_default_2">
+                                <div class="tab-pane tp2" id="tab_default_2">-->
                                     <div class="row">
                                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                                             <div class="col-md-6 col-md-blog">
