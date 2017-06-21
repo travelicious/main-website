@@ -2786,7 +2786,7 @@ hr.hrpkg{border: 2px solid #60737c;
 .pktgsbtn{font-size: 17px;
     text-transform: uppercase;
     padding: 10px 25px;
-    vertical-align: middle;]}
+    vertical-align: middle;}
 p.para-pkg{padding: 10px 15px;
     color: #e0dada;}
 
@@ -2948,7 +2948,7 @@ div#welcome {
  }
 .popular-grids a i fa {
     color: #37474f;
-    background:#37474f
+    background:#37474f;
     text-decoration: none;
 }
 
@@ -3063,7 +3063,7 @@ button.btn.btn-primary.custom-search {
     color: #8e969a;
 }
 .banner.blog-bnn {
-    background: url(../images/single-block-bnr.jpg) no-repeat 0px 0px;
+    background: url(../images/bnr-single-post.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .agileinfo-dot.blog-bnr-height {
@@ -4109,7 +4109,7 @@ h3.blog-headline-3{text-align: center;
     font-size: 24px;
     font-weight: normal;font-family: cursive; }
 
-small.sml{padding: 10px 340px; font-family: cursive;}
+small.sml{padding: 10px 318px; font-family: cursive;}
 img.img-responsive {
     margin: 25px 0px;
 }

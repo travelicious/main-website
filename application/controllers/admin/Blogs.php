@@ -47,17 +47,7 @@ function __construct()
 		$this->load->view('admin/blogs/blogs',$data);
 
  	}
-
-
-
-public function delete_blog()
-    {
-        $id = $_GET['id'];
-        $queryDelete = $this->db->query("DELETE FROM blogs WHERE id= '$id' ");
-
-        redirect('admin/blogs');
-    }
-
+    
 
  public function post_comment()
     {

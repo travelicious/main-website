@@ -9,7 +9,7 @@ parent::__construct();
       {  
          //data is retrive from this query  
         // $query = $this->db->get('blogs'); 
-         $query = $this->db->query("select * from blogs order by id desc limit 0,6"); 
+         $query = $this->db->query("select * from blogs order by id desc limit 2,6"); 
          return $query;  
          //select* from blogs
       }  
@@ -63,7 +63,16 @@ parent::__construct();
 public function latest_blog_data()  
       {  
        
-         $query = $this->db->query("select * from blogs order by id desc limit 3"); 
+         $query = $this->db->query("select * from blogs order by id desc limit 0,5"); 
+
+         return $query;  
+         //select* from blogs
+      }
+
+public function latest_blog_data1()  
+      {  
+       
+         $query = $this->db->query("select * from blogs order by id desc limit 0,3"); 
 
          return $query;  
          //select* from blogs
