@@ -48,6 +48,7 @@
                                     <th>TITLE</th>
                                     <th>IMAGE</th>
                                     <th>DESCRIPTION</th>
+                                 
                                     <th>AUTHOR</th>
                                     <th>CREATED_AT</th>
                                     <th>MODIFIED_AT</th>
@@ -71,9 +72,13 @@
                             <td><?php echo $row->url;?></td>
                             <td><?php echo $row->title;?></td>
                       
-                             <td><img src="<?php echo base_url() .'assets/images/'.$row->image; ?>"></td>
+                             <td><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>">
+                             </td>
 
                             <td><?php echo $row->description;?></td>
+
+                        
+
                             <td><?php echo $row->author;?></td>
                             <td><?php echo $row->created_at;?></td>
                             <td><?php echo $row->modified_at;?></td>

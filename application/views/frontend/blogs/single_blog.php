@@ -151,7 +151,7 @@ $(document).ready(function() {
 
                          $author=$row1->author;
 
-                         $created_at=$row1->created_at;
+                         $created_at= $row1->created_at;
                         
 
 ?>
@@ -168,7 +168,7 @@ $(document).ready(function() {
 
                  <h3 class="blog-headling"><?php echo $title ?></h3>
 
-               <p class="single-news-para"><span><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive width" alt="blog" title="blog"></span></p>
+               <p class="single-news-para"><span><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive width" alt="blog" title="blog"></span></p>
                <p>
                <?php echo $description ?>
 
@@ -229,7 +229,7 @@ $(document).ready(function() {
                         ?>
 
                      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="col-md-6"><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
+                        <div class="col-md-6"><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
                         <div class="col-md-6"><p><span>
                         <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></a></p></span> 
                         </div>
@@ -280,13 +280,13 @@ $(document).ready(function() {
 
                          $author=$row->author;
 
-                         $created_at=$row->created_at;
+                         $created_at= $row->created_at;
                         
 
                         ?>
 
                      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="col-md-6"><img src="<?php echo base_url().'assets/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
+                        <div class="col-md-6"><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
                         <div class="col-md-6"><p><span></span> 
                         <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></a></p>
                         </div>
@@ -353,7 +353,17 @@ $(document).ready(function() {
                   
 
                          $name=$row->name;
-                         $created_at=$row->created_at;
+
+
+
+                          $datatime = strtotime($row1->created_at);
+                           $now = time();
+
+                         $created_at= timespan($datatime, $now) . 'ago';
+                      
+
+                         
+
 
                          $comment=$row->comment;
 

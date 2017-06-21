@@ -168,12 +168,12 @@ ndard dummy text ever since the 1500s.
                 <h3 class="h3-news">Latest <mark>News</mark> </h3>
 
                 <?php
-               foreach ($front_fetch_data->result() as $row) {
+               foreach ($front_latest_news->result() as $row) {
                 ?>
 
              <div class="panel panel-body pbody" >
                  <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
-                 <a href="news/single_news?id=<?php echo $row->id; ?>">
+                 <a href="<?php echo base_url("frontend/news/single_news").'/'.$row->url; ?>">
                  <img src="<?php echo base_url(); ?>assets/images/news/<?php echo $row->image; ?>" class="img-responsive img-rounded" alt="" tilte="" style="height: 89px;">
                      <div class="caption">
                      <h4 style="text-align: center;"><?php echo $row->title; ?></h4></a>
@@ -183,7 +183,7 @@ ndard dummy text ever since the 1500s.
                  <p>Place :<b>City name</b></p>
                  <p>Date :<b><?php echo $row->created_at; ?></b></p>
                      <p class="new-para-news"> <?php echo substr($row->description,0,100); ?>  </p>
-                     <a href="news/single_news?id=<?php echo $row->id; ?>" class="text-right text-danger readmore">Read More</a>
+                     <a href="<?php echo base_url("frontend/news/single_news").'/'.$row->url; ?>" class="text-right text-danger readmore">Read More</a>
                  
                  </div>
                  
@@ -211,19 +211,19 @@ ndard dummy text ever since the 1500s.
                 <h3 class="h3-news2">Most <mark>Visited</mark> News </h3>
 
                 <?php
-                foreach ($front_right_data->result() as $row3) { 
+                foreach ($front_most_visited_news->result() as $row3) { 
                 ?>
 
 
              <div class="panel panel-body pbody">
                  <p class="right-side ">
-                 <a href="news/single_news?id=<?php echo $row3->id; ?>">
+                 <a href="<?php echo base_url("frontend/news/single_news").'/'.$row3->url; ?>">
                  <img src="<?php echo base_url(); ?>assets/images/news/<?php echo $row3->image; ?>" class="img-responsive img-rounded" alt="" tilte="" style="height: 59px; width: 79px; display: inline-block;"><br>
                  <span><?php echo $row3->title; ?></span></a>
                  <?php echo substr($row->description,0,50); ?>
 
                      <span>..........</span>
-                     <a href="news/single_news?id=<?php echo $row3->id; ?>" class="text-right text-danger">Read More</a>
+                     <a href="<?php echo base_url("frontend/news/single_news").'/'.$row3->url; ?>" class="text-right text-danger">Read More</a>
                      </p>
                  <div class="clearfix"></div>
                  

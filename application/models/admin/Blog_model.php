@@ -31,13 +31,22 @@ parent::__construct();
 
         $insert_data = Array (
             'url'           => $this->input->post('url'),
+
             'title'         => $this->input->post('title'),
          
             'image'         => $file_data['file_name'],
 
             'description'   => $this->input->post('description'),
+
+            'meta_title'    => $this->input->post('meta_title'),
+
+            'meta_robot'    => $this->input->post('meta_robot'),
+
+       'meta_description'   => $this->input->post('meta_description'),
+
             'author'        => $this->input->post('author')
         );
+  
         $this->db->insert('blogs',$insert_data);
     }
 

@@ -29,34 +29,38 @@ class News extends FrontendController {
 	public function index()
     {
         $this->load->model('Get_news');
-        $data['front_fetch_data']= $this->Get_news->front_fetch_data();
-        $data['front_right_data']= $this->Get_news->front_right_data();
+        $data['front_latest_news']= $this->Get_news->front_latest_news();
+        $data['front_most_visited_news']= $this->Get_news->front_most_visited_news();
         $this->load->view('frontend/news/news',$data);
     }
 
-    public function single_news()
+    public function single_news($url)
     {
-    	$id = $_GET['id'];
+    	//$id = $_GET['id'];
+
         $this->load->model('Get_news');
-        $data['single_news_data']= $this->Get_news->single_news_data();
-        $data['single_news_data2']= $this->Get_news->single_news_data2();
+        $data['view_counts']= $this->Get_news->view_counts($url);
+        $data['front_single_news']= $this->Get_news->front_single_news($url);
+        $data['front_single_news_comment']= $this->Get_news->front_single_news_comment($url);
+
         $this->load->view('frontend/news/single_news',$data);
     }
 
     public function submit_news_comment()
     {
-    	$id = $_GET['id'];
+    	$url = $_GET['url'];
         $name = $_GET["name"];
         $email = $_GET["email"];
         $message = addslashes($_GET["message"]);
        
-       $queryInsert = $this->db->query("INSERT INTO `news_comment` (`news_id`, `u_name`, `u_email`, `message`) VALUES ('$id', '$name', '$email', '$message');");
+       $queryInsert = $this->db->query("INSERT INTO `news_comment` (`url`, `u_name`, `u_email`, `message`) VALUES ('$url', '$name', '$email', '$message');");
 
-        $this->load->model('Get_news');
-        $data['single_news_data']= $this->Get_news->single_news_data();
-        $data['single_news_data2']= $this->Get_news->single_news_data2();
+        /*$this->load->model('Get_news');
+        $data['front_single_news']= $this->Get_news->front_single_news($url);
+        $data['front_single_news_comment']= $this->Get_news->front_single_news_comment($url);
 
-        $this->load->view('frontend/news/single_news',$data);
+        $this->load->view('frontend/news/',$data);*/
+        redirect('frontend/news');
     } 
 
 }

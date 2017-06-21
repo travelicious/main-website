@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,7 +123,7 @@ $(document).ready(function() {
             
         <div class="row">
 
-        <?php     foreach ($single_news_data->result() as $row){
+        <?php     foreach ($front_single_news->result() as $row){
 
 
                                             ?>
@@ -130,8 +131,7 @@ $(document).ready(function() {
            
                 <h2 class="blog-headling"><?php echo $row->title; ?></h2>
                 <em class="single-news-em"><?php echo $row->created_at; ?></em>
-               
-            
+                <em style="color: blue;" class="single-news-em">Total Views : <?php echo $row->view_count; ?></em>
             
             </div>
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo">
@@ -153,7 +153,7 @@ $(document).ready(function() {
     <ul class="timeline">
 
 
-<?php     foreach ($single_news_data2->result() as $row2){
+<?php     foreach ($front_single_news_comment->result() as $row2){
 
 
                                             ?>
@@ -173,6 +173,7 @@ $(document).ready(function() {
         </li>
 
         <?php } ?>
+
         <!-- <li>
           <div class="timeline-badge danger"><img src="<?php echo base_url();?>assets/frontend/images/comment-2.jpg" class="img-responsive img-circle"></div>
           <div class="timeline-panel">
@@ -191,6 +192,7 @@ $(document).ready(function() {
        
     </ul>
            </div>
+
                 <div class="col-md-1 col-lg-1 col-sm-12 col-xs-12"></div>
 
        
@@ -217,7 +219,7 @@ $(document).ready(function() {
                             <label for="name">
                                 Name</label>
                             <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required="required" />
-                            <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $row->id; ?>" />
+                            <input type="hidden" class="form-control" name="url" id="id" value="<?php echo $row->url; ?>" />
                             
                         </div>
                     </div>
