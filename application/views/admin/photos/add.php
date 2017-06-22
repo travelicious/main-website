@@ -15,7 +15,7 @@
     <div class="form-group row">
 
         <div class="col-xs-6">
-            <lable>Image Title</lable>
+            <lable>Image Alt</lable>
             <input class="form-control" type="text" id="img_alt" name="img_alt" multiple >
         </div>
     </div>
@@ -77,14 +77,19 @@
                         }
                      
                         else if (obj.st == 0) {
-                            msg = "file not selected. ";
+                            msg = "File Not Selected.";
                             var successmsg = '<div class="box-body">';
-                            successmsg += '<div class="alert alert-danger alert-dismissable">';
+                            successmsg += '<div class="alert alert-success alert-dismissable">';
                             successmsg += '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>';
-                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Sorry!</h4>';
+                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Sucess!</h4>';
+                            successmsg += msg;
                             successmsg += '</div>';
                             successmsg += '</div>';
-                            $('.successmsg').html(response);
+                            $('.successmsg').html(successmsg);
+                            $('.successmsg').hide(5000);
+                            $('.successmsg').show();
+                            $('.successmsg').hide(5000);
+                            
                         }
 
  

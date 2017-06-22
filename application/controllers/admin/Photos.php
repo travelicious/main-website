@@ -44,8 +44,6 @@ class Photos extends BackendController {
         //this is center body view passed as variable
         $data['body_view'] = 'admin/photos/add';
 //        $this->load->view('admin/layouts/JS_Include');
-
-
         // this is default layout without the center body , center body is passed with the variable body_view
         $this->load->view('admin/layouts/home', $data);
     }
@@ -58,7 +56,7 @@ class Photos extends BackendController {
     }
 
     public function image_upload() {
-         
+
         $config['upload_path'] = "./assets/images";
         $config['allowed_types'] = "*";
         $config['encrypt_name'] = TRUE;
@@ -68,22 +66,19 @@ class Photos extends BackendController {
         if (!$this->upload->do_upload('images')) {
 //            $error = array('error' => $this->upload->display_errors());
             echo json_encode(array('st' => 0));
-           
         } else {
             $upload_data = $this->upload->data();
             $arr_image = array('upload_data' => $this->upload->data());
             $image = $upload_data['file_name'];
-        }
-       
-
-        $data = array(
-        'image_name'=>$image,
-        'image_tiltle'=> $this->input->post('img_title'),
-        'img_alt'=> $this->input->post('img_alt'),
-        );
-        $ok = $this->db->insert('images',$data);
-        if($ok){
-            echo json_encode(array('st' => 1));
+            $data = array(
+                'image_name' => $image,
+                'image_tiltle' => $this->input->post('img_title'),
+                'img_alt' => $this->input->post('img_alt'),
+            );
+            $ok = $this->db->insert('images', $data);
+            if ($ok) {
+                echo json_encode(array('st' => 1));
+            }
         }
     }
 

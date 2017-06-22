@@ -47,6 +47,7 @@
                                                 <th>#</th>
                                                 <th>Image Title</th>
                                                 <th>Images</th>
+                                                <th>Alt</th>
                                                 <th>Created Date/Time</th>
                                             </tr>
                                         </thead>
@@ -62,18 +63,10 @@
                                                     <td style="display: none;"></td>
 
                                                     <td> 
-                                                        <?php
-//                                                       
-                                                        if (file_exists(FCPATH. 'assets/images' . '/' .$val->image_name)) { 
-                                                            ?>
-                                                        
-                                                            <img  src="<?php echo base_url("assets/images") . '/' . $val->image_name; ?>"  class="img-responsive img-thumbnail" width="20%" alt=""/>
+                                                        <img  src="<?php echo base_url("assets/images") . '/' . $val->image_name; ?>"  class="img-responsive img-thumbnail" width="20%" alt=""/>
 
-                                                        <?php } else {  ?>
-                                                            
-                                                            <img  src="<?php echo base_url("assets/images/no_image.jpg"); ?>"  class="img-responsive img-thumbnail" width="20%"/>
-                                                        <?php } ?>
                                                     </td>
+                                                    <td><?php echo $val->img_alt ?></td>
                                                     <td><?php echo $val->created_at; ?></td>
 
 
