@@ -3,11 +3,11 @@
    {  
       public function fetch_data()  
       {  
-         //data is retrive from this query  
+        //data is retrive from this query  
         // $query = $this->db->get('news');  
 
-         $query = $this->db->query("select * from news order by id desc");
-         return $query;  
+        $query = $this->db->query("select * from news order by id desc");
+        return $query;  
       }  
 
 

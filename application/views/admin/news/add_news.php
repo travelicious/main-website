@@ -54,7 +54,7 @@
         </div>
         <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
             <div class="row" id="selectable">
-                <form action="<?php echo base_url();?>admin/News/submit_news" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url();?>admin/News/submit_news" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)">
                 <div class="row row-md mb-2">
                     <div class="col-md-12">
                         <div class="col-md-8">
@@ -63,9 +63,16 @@
                             <div class="form-group row">
                                 <label for="url" class="col-xs-2 col-form-label">News URL</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text" id="url" name="url">
+                                    <input class="form-control" type="text" id="url" name="url" onchange="checkURLExistOrNot(event, this, '<?php echo base_url('admin/news/urlExistOrNot');?>')" >
                                 </div>
                             </div>
+							
+							<div class="form-group row">
+                                <div class="col-xs-10">
+                                  <span id="urlMessage"></span>
+								</div>
+                            </div>
+							
                             <div class="form-group row">
                                         <label for="news-meta-title" class="col-xs-2 col-form-label">Meta Title</label>
                                         <div class="col-xs-10">
@@ -92,12 +99,12 @@
                                     <input class="form-control" type="text"  id="title" name="title">
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <!--<div class="form-group row">
                                 <label for="files" class="col-xs-2 col-form-label">Image</label>
                                 <div class="col-xs-10">
                                     <input class="form-control" type="file" id="files" name="files">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-10">
