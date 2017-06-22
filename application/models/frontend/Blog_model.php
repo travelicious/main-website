@@ -9,7 +9,7 @@ parent::__construct();
       {  
          //data is retrive from this query  
         // $query = $this->db->get('blogs'); 
-         $query = $this->db->query("select * from blogs order by id desc"); 
+         $query = $this->db->query("select * from blogs order by id desc limit 0,4"); 
          return $query;  
          //select* from blogs
       }  
@@ -50,7 +50,59 @@ parent::__construct();
         $this->db->insert('blogs',$insert_data);
     }
 
+    public function single_blog_data($url)  
+      {  
+       
 
+         $query = $this->db->query("select * from blogs where url= '$url' "); 
+
+         return $query;  
+         //select* from blogs
+      } 
+
+     // public function latest_blog_data($url) 
+
+     //  {  
+       
+     //     $query = $this->db->query("select * from blogs order by id desc limit 0,5"); 
+
+     //     return $query;  
+     //     //select* from blogs
+     //  }
+
+      public function latest_blog_data1($url)  
+      {  
+       
+         $query = $this->db->query("select * from blogs order by id desc limit 0,3"); 
+
+         return $query;  
+         //select* from blogs
+      }
+
+
+
+
+
+
+      public function comment_blog1()  
+      {  
+         $query = $this->db->query("select * from blog_comment order by id desc limit 0,3 "); 
+
+         return $query;  
+         //select* from blogs
+      }
+
+
+
+public function fetch_blog_comment($url)  
+      {  
+   //$id = $_GET['$id'];
+
+         $query = $this->db->query("select * from blog_comment where url='$url' "); 
+
+         return $query;  
+         //select* from blogs
+      }
 
 public function comment()
     {

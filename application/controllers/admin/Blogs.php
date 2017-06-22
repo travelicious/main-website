@@ -57,7 +57,7 @@ function __construct()
         {
             $this->Blog_model->comment();
 
-           redirect('frontend/blogs/blog');
+           redirect('frontend/blogs/blog/single_blog');
             //$data['posted_data'] = $this->input->post();
         }
 

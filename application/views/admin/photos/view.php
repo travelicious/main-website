@@ -53,7 +53,7 @@
 
                    
                       <div class="col-md-12 blog-home-ing bdr-block">
-                    <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>">
+                    <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/uploads/images/<?php echo $row->image_name; ?>">
 
                
                     <span><a href="<?php echo base_url();?>admin/photos/delete_photos?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></span>
