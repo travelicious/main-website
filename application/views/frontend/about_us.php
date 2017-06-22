@@ -109,7 +109,9 @@ $(document).ready(function() {
 								Login</button></li></a>
 
 
-								<li class="signup">Sign up</li>
+								<li class="signup"><a href="<?php echo base_url(); ?>frontend/login"> <button class="btn btn-danger btn-md btn-logins" type="button"><i class="fa fa-user-circle-o"></i>
+								Signup</button></li></a>
+</li>
 								
 							</ul>
 						</div>

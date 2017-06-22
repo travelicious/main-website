@@ -44,7 +44,7 @@
                                     <div class="form-group row">
                                         <label for="package-description" class="col-xs-2 col-form-label">Package Description</label>
                                         <div class="col-xs-10">
-                                            <textarea class="form-control" id="package-description" rows="4" name="package_description"></textarea>
+                                            <textarea class="form-control" id="package-description" rows="20" name="package_description"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">

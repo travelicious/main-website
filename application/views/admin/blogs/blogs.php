@@ -48,10 +48,11 @@
                                     <th>TITLE</th>
                                     <th>IMAGE</th>
                                     <th>DESCRIPTION</th>
+                                 
                                     <th>AUTHOR</th>
                                     <th>CREATED_AT</th>
                                     <th>MODIFIED_AT</th>
-                                 
+                            
                                     <th>DELETE</th>
                                 </tr>
             
@@ -71,13 +72,18 @@
                             <td><?php echo $row->url;?></td>
                             <td><?php echo $row->title;?></td>
                       
-                             <td><img src="<?php echo base_url() .'assets/images/'.$row->image; ?>"></td>
+                             <td><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>">
+                             </td>
 
                             <td><?php echo $row->description;?></td>
+
+                        
+
                             <td><?php echo $row->author;?></td>
                             <td><?php echo $row->created_at;?></td>
                             <td><?php echo $row->modified_at;?></td>
                           
+                           
 
                                 <td><a href="<?php echo base_url();?>admin/blogs/delete_blog?id=<?php echo $row->id;?>" onclick="return confirm('Are You Sure You Want To Delete')"> <?php echo 'Delete';?></a></td>
 
