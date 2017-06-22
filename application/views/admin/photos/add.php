@@ -58,13 +58,34 @@
                     contentType: false,
                     processData: false,
                     success: function (response) {
-                         alert('hi');
-                       
+                        var obj = JSON.parse(response);
+                        var msg = "";
+                        if (obj.st == 1) {
+                            msg = "Data Inserted Sucessfuly.";
+                            var successmsg = '<div class="box-body">';
+                            successmsg += '<div class="alert alert-success alert-dismissable">';
+                            successmsg += '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>';
+                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Sucess!</h4>';
+                            successmsg += msg;
+                            successmsg += '</div>';
+                            successmsg += '</div>';
+                            $('.successmsg').html(successmsg);
+                            $('.successmsg').hide(5000);
+                            $("#img_uploadform")[0].reset();
+                            $('.successmsg').show();
+                            $('.successmsg').hide(5000);
+                        }
                      
-                       /* else if (obj.st == 2) {
-                            alert('hi');
-                            
-                        }*/
+                        else if (obj.st == 0) {
+                            msg = "file not selected. ";
+                            var successmsg = '<div class="box-body">';
+                            successmsg += '<div class="alert alert-danger alert-dismissable">';
+                            successmsg += '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>';
+                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Sorry!</h4>';
+                            successmsg += '</div>';
+                            successmsg += '</div>';
+                            $('.successmsg').html(response);
+                        }
 
  
                     }

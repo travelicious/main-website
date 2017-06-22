@@ -66,8 +66,8 @@ class Photos extends BackendController {
         $this->upload->initialize($config); // Make sure it has been initialized
 
         if (!$this->upload->do_upload('images')) {
-            $error = array('error' => $this->upload->display_errors());
-            echo json_encode(array('st' => 2));
+//            $error = array('error' => $this->upload->display_errors());
+            echo json_encode(array('st' => 0));
            
         } else {
             $upload_data = $this->upload->data();
