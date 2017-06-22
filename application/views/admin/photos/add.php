@@ -38,7 +38,6 @@
 
 </form>
 
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/vendor/jquery/jquery-1.12.3.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
@@ -79,9 +78,9 @@
                         else if (obj.st == 0) {
                             msg = "File Not Selected.";
                             var successmsg = '<div class="box-body">';
-                            successmsg += '<div class="alert alert-success alert-dismissable">';
+                            successmsg += '<div class="alert alert-info alert-dismissable">';
                             successmsg += '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>';
-                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Sucess!</h4>';
+                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Info!</h4>';
                             successmsg += msg;
                             successmsg += '</div>';
                             successmsg += '</div>';

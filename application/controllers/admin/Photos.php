@@ -81,5 +81,11 @@ class Photos extends BackendController {
             }
         }
     }
+    public function delete_photo($id) {
+       $ok =  $this->db->query("delete from images where id = $id");
+       if($ok){
+           $this->index();
+       }
+    }
 
 }

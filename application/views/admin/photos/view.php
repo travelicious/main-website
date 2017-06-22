@@ -49,6 +49,7 @@
                                                 <th>Images</th>
                                                 <th>Alt</th>
                                                 <th>Created Date/Time</th>
+                                                <th>Delete</th>
                                             </tr>
                                         </thead>
 
@@ -62,18 +63,23 @@
                                                     <td><?php echo $val->image_tiltle; ?></td>
                                                     <td style="display: none;"></td>
 
-<<<<<<< HEAD
                    
+<<<<<<< HEAD
                       <div class="col-md-12 blog-home-ing bdr-block">
-                    <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/uploads/images/<?php echo $row->image_name; ?>">
+                    <!-- <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $val->image_name; ?>"> -->
+
+                                                    <td> 
+                                                        <img  src="<?php echo base_url("assets/images") . '/' . $val->image_name; ?>"  class="img-responsive img-thumbnail" width="20%" alt=""/>
+
 =======
                                                     <td> 
                                                         <img  src="<?php echo base_url("assets/images") . '/' . $val->image_name; ?>"  class="img-responsive img-thumbnail" width="20%" alt=""/>
->>>>>>> 6da9ef1d7875bb7da7f93dec790d6f9cea98bb33
+>>>>>>> c504124ace30f105861584a4c7997481c62fa8ba
 
                                                     </td>
                                                     <td><?php echo $val->img_alt ?></td>
                                                     <td><?php echo $val->created_at; ?></td>
+                                                    <td><a href="<?php echo base_url("admin/photos/delete_photo").'/'.$val->id;?>">Delete</a></td>
 
 
                                                 </tr>
