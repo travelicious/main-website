@@ -65,7 +65,7 @@
                                             <td> <?php echo $row->url;?></td>
                                             <td> <?php echo $row->title;?></td>
                                             <td> <img width="100" class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
-                                            <td> <?php echo $row->description;?></td>
+                                            <td> <?php echo substr($row->description,0,200);?></td>
                                             <td> <?php echo $row->author;?></td>
                                             <td> <?php echo $row->created_at;?></td>
                                             <td> <?php echo $row->modified_at;?></td>

@@ -62,14 +62,13 @@
                                                     <td><?php echo $val->image_tiltle; ?></td>
                                                     <td style="display: none;"></td>
 
-<<<<<<< HEAD
                    
                       <div class="col-md-12 blog-home-ing bdr-block">
-                    <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/uploads/images/<?php echo $row->image_name; ?>">
-=======
+                    <!-- <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $val->image_name; ?>"> -->
+
                                                     <td> 
                                                         <img  src="<?php echo base_url("assets/images") . '/' . $val->image_name; ?>"  class="img-responsive img-thumbnail" width="20%" alt=""/>
->>>>>>> 6da9ef1d7875bb7da7f93dec790d6f9cea98bb33
+
 
                                                     </td>
                                                     <td><?php echo $val->img_alt ?></td>
