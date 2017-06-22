@@ -54,7 +54,7 @@
                                     <th>Title</th>
                                     <th>URL</th>
                                     <th>Description</th>
-                                    <th>Image</th>
+                                    <!--<th>Image</th>-->
                                     <th>Action</th>
                                     <th>Manage</th>
                                 </tr>
@@ -88,9 +88,9 @@
                                     <td>
                                        <span><?=$rows->description?></span>
                                     </td>
-                                    <td>
+<!--                                    <td>
                                         <span class="text-muted"><img src="<?php echo  base_url()?>assets/images/destination/<?=$rows->image?>" style="width:100px"></span>
-                                    </td>
+                                    </td>-->
                                
                                     <td>
                                         

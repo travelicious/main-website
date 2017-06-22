@@ -2,12 +2,16 @@
     <div class="container-fluid">
         <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
             <div class="row" id="selectable">
-                <form action="" method="post" enctype="multipart/form-data">
-                <div class="row row-md mb-2">
-                    <div class="col-md-12">
-                        <div class="col-md-8">
+                <form action="<?php echo base_url("admin/packages/add_packages"); ?>" method="post" enctype="multipart/form-data">
+                    <div class="row row-md mb-2">
+                        <div class="col-md-12">
+                            <div class="col-md-8">
 
                                 <div class="box box-block bg-white">
+                                    
+                                    <div class="form-group row">
+                                            <input class="form-control" type="text" id="imag_id" name="imag_id">
+                                    </div>
                                     <div class="form-group row">
                                         <label for="package-url" class="col-xs-2 col-form-label">Package URL</label>
                                         <div class="col-xs-10">
@@ -67,59 +71,90 @@
                                     </div>
                                 </div>
 
-                        </div>
-                        <div class="col-md-4" >
-                            <div class="col-md-12" style="    background: #d6d4d4;
-                        padding: 41px 10px;
-                        margin: 2px 0px;">
-                                <div class="panel panel-default">
-                                    <div class="panel-headline">
-                                        <h4>Package Category</h4>
-                                    </div>
-                                    <div class="panel-body">
-                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
-                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
-                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
-                                        <label><input type="checkbox"> <span>Kerala </span></label><br>
-                                        <label><input type="checkbox"> <span>Kerala </span></label>
-                                    </div>
-                                    <div class="panel-booter">
-                                        <a href="#">Add New Category</a>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="col-md-12" style="    background: #d6d4d4;
-                        padding: 41px 10px;
-                        margin: 8px 0px;">
-                                <div class="panel panel-default">
-                                    <div class="panel-body" style="    margin-top: -32px;">
-                                        <a class="" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                            Link with href
-                                        </a>
-                                        <hr>
-                                        <div class="collapse" id="collapseExample">
-                                            <div class="well">
-                                                Separate tags with commas
-                                            </div>
+                            <div class="col-md-4" >
+                                <div class="col-md-12" style="    background: #d6d4d4;
+                                     padding: 41px 10px;
+                                     margin: 2px 0px;">
+                                    <div class="panel panel-default">
+                                        <div class="panel-headline">
+                                            <h4>Package Category</h4>
+                                        </div>
+                                        <div class="panel-body">
+                                            <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                            <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                            <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                            <label><input type="checkbox"> <span>Kerala </span></label><br>
+                                            <label><input type="checkbox"> <span>Kerala </span></label>
+                                        </div>
+                                        <div class="panel-booter">
+                                            <a href="#">Add New Category</a>
                                         </div>
                                     </div>
-                                    <div class="panel-footer">
-                                        <a href="#">Choose from the most used tags</a>
+                                </div>
+
+                                <!--service inclusion/exclusion block-->
+
+
+
+                                <div class="col-md-12" style="background: #d6d4d4;margin-top:10px; margin-bottom: 10px; width: 22em;height: 15em;overflow: auto;">
+                                    <div class="panel panel-default">
+                                        <div class="panel-headline" style="margin-top:10px;">
+                                            <h4>Add Services</h4>
+                                        </div>
+                                        <div class="panel-body" >
+                                            <?php
+                                            foreach ($service_list as $val) {
+                                                ?>
+                                                <label><input type="checkbox"  name="service[]" value="<?php echo $val->id ?>"> <span><?php echo $val->service_name ?> </span></label><br>
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="panel-booter" style="margin-bottom: 10px;">
+                                            <a href="<?php echo base_url("admin/services/add_services"); ?>">Add New Services</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <img src="images/pkg1.jpg" class="img-rersponsive" alt="img" title="img" style="    width: 100%;
-                           margin-left: -13px;
-                           height: 150px;" data-toggle="modal" data-target="#myModal">
-                                <div class="caption">
-                                    <p style="margin-left: -14px;"><em>Click images for edit or  update</em></p>
-                                    <a href="#" style="margin-left: -14px;"> Remove Featured Images</a>
+
+
+
+                                <!--service inclusion/exclusion block end-->
+
+
+
+
+                                <div class="col-md-12" style="    background: #d6d4d4;
+                                     padding: 41px 10px;
+                                     margin: 8px 0px;">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body" style="    margin-top: -32px;">
+                                            <a class="" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                Link with href
+                                            </a>
+                                            <hr>
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="well">
+                                                    Separate tags with commas
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <a href="#">Choose from the most used tags</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="<?php echo base_url("assets/images/pkg2.jpg") ?>" class="img-rersponsive" id="pckimg" alt="img" title="img" data-toggle="modal" data-target="#myModal">
+                                    <div class="caption">
+                                        <p style="margin-left: -14px;"><em>Click images for edit or  update</em></p>
+                                        <a href="#" style="margin-left: -14px;"> Remove Featured Images</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </form>
             </div>
             <div class="modal fade" id="myModal" role="dialog">
@@ -144,10 +179,10 @@
                                     <div class="col-md-4">
                                         <h6 class="mt-2">File browser</h6>
                                         <label class="custom-file">
-                                            <form action="<?php echo base_url(); ?>admin/photos/upload" method="post" enctype="multipart/form-data">
-                                            <input type="file" id="file" class="custom-file-input" name="image" onchange="this.form.submit()">
+                                            <form id="packages_images_from" enctype="multipart/form-data">
+                                            <input type="file" id="package_img" class="custom-file-input" name="package_img">
                                             <span class="custom-file-control"></span>
-                                            </form>
+                                          
                                         </label>
                                     </div>
                                     <div class="col-md-4"></div>
@@ -186,11 +221,40 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" >Set as thumbnail images</button>
+                            <button type="submit" name="submit" lass="btn btn-default" >Set as thumbnail images</button>
                         </div>
+                        
                     </div>
+                     
                 </div>
+                  </form>
             </div>
         </div>
     </div>
 </div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script>
+  $(function () {
+
+        $("#packages_images_from").submit(function (event) {
+            
+                event.preventDefault();
+                var formData = new FormData(this);
+
+                $.ajax({
+                    type: 'POST',
+                    url: "<?php echo site_url('admin/packages/upload_package_img') ?>",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                      alert(response);
+                        $('#imag_id').val(response);
+                     
+                    }
+                });
+            
+        });
+    });
+</script>

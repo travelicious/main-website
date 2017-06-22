@@ -49,6 +49,7 @@
                                                 <th>Images</th>
                                                 <th>Alt</th>
                                                 <th>Created Date/Time</th>
+                                                <th>Delete</th>
                                             </tr>
                                         </thead>
 
@@ -68,6 +69,7 @@
                                                     </td>
                                                     <td><?php echo $val->img_alt ?></td>
                                                     <td><?php echo $val->created_at; ?></td>
+                                                    <td><a href="<?php echo base_url("admin/photos/delete_photo").'/'.$val->id;?>">Delete</a></td>
 
 
                                                 </tr>
