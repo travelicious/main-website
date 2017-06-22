@@ -4,12 +4,18 @@
    {  
       public function fetch_data()  
       {  
-         //data is retrive from this query  
+        //data is retrive from this query  
         // $query = $this->db->get('news');  
 
+<<<<<<< HEAD
+        $query = $this->db->query("select * from news order by id desc");
+        return $query;  
+      }  
+=======
          $query = $this->db->query("select * from news order by id desc");
          return $query;  
       }   
+>>>>>>> 91b82734c47983e68590a863a88041c037ce2c7d
 
 
 

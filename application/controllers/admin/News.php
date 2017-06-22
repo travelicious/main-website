@@ -12,7 +12,25 @@ class News extends BackendController {
         $this->load->view('admin/news/news',$data);
     }
 
-
+    
+	
+	public function urlExistOrNot($url = null)
+	{
+	  if($url != null)
+	  {
+		$records = $this->db->select("*")
+		                    ->where('url', $url)
+                            ->get('news');
+        if($records->num_rows() > 0)
+		{
+		  echo "exist";	
+		}
+        else
+		{
+		  echo "notExist";	
+		}			
+	  }		  
+	}
 
 /* ________________________________________ Add News ________________________________  */
 
@@ -34,11 +52,11 @@ class News extends BackendController {
     {
         $url = $_POST["url"];
         $title = $_POST["title"];
-        $description = $_POST["description"];
+        $description = addslashes($_POST["description"]);
         $author = $_POST["author"];
         $meta_title = $_POST['news_meta_title'];
         $meta_robots = $_POST['news_meta_robots'];
-        $meta_description = $_POST['news_meta_description'];
+        $meta_description = addslashes($_POST['news_meta_description']);
 
         $image_name = $_FILES['files']['name'];
 

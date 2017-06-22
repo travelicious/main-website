@@ -75,7 +75,22 @@
                              <td><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>">
                              </td>
 
-                            <td><?php echo $row->description;?></td>
+                            <td>
+							
+							  <?php 
+											     
+								if(strlen($row->description) > 100)
+								{
+								  $description = substr($row->description, 0, 100);
+                                  echo $description.' ......'; 												   
+								}
+								else
+								{
+								  echo $row->description;
+							 	}
+							  ?>
+							
+							</td>
 
                         
 

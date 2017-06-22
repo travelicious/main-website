@@ -182,7 +182,7 @@ ndard dummy text ever since the 1500s.
                  <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
                  <p>Place :<b>City name</b></p>
                  <p>Date :<b><?php echo $row->created_at; ?></b></p>
-                     <p class="new-para-news"> <?php echo substr($row->description,0,100); ?>  </p>
+                     <p class="new-para-news"> <?php echo substr($row->description,0,200); ?>  </p>
                      <a href="<?php echo base_url("frontend/news/single_news").'/'.$row->url; ?>" class="text-right text-danger readmore">Read More</a>
                  
                  </div>
@@ -219,8 +219,8 @@ ndard dummy text ever since the 1500s.
                  <p class="right-side ">
                  <a href="<?php echo base_url("frontend/news/single_news").'/'.$row3->url; ?>">
                  <img src="<?php echo base_url(); ?>assets/images/news/<?php echo $row3->image; ?>" class="img-responsive img-rounded" alt="" tilte="" style="height: 59px; width: 79px; display: inline-block;"><br>
-                 <span><?php echo $row3->title; ?></span></a>
-                 <?php echo substr($row->description,0,50); ?>
+                 <span><?php echo $row3->title; ?></span><br></a>
+                 <?php echo substr($row3->description,0,200); ?>
 
                      <span>..........</span>
                      <a href="<?php echo base_url("frontend/news/single_news").'/'.$row3->url; ?>" class="text-right text-danger">Read More</a>

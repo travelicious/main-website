@@ -52,6 +52,15 @@ $(document).ready(function() {
 }); 
 </script>
 
+
+
+<script type="text/javascript">
+function genericSocialShare(url){
+    window.open(url,'sharer','toolbar=0,status=0,width=648,height=395');
+    return true;
+}
+</script>
+
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <![endif]-->
@@ -132,6 +141,9 @@ $(document).ready(function() {
 
                           ?>
 <?php
+
+
+
                          $url=$row->url;
 
                          $title=$row->title;
@@ -143,7 +155,9 @@ $(document).ready(function() {
                          $author=$row->author;
 
                          $created_at=$row->created_at;
-                        
+
+                         
+                     
 
 ?>
 
@@ -159,14 +173,14 @@ $(document).ready(function() {
 
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
       
-             <h6 class="h6-class">Kerala Tour</h6>
+         <br><br>
              
         <h3 class="blog-headline-3"><?php echo $title ?></h3>
                     
                 <small class="sml"><?php echo $created_at ?></small>    
                     <div class="clearfix"></div>
 
-                    <a href="<?php echo base_url();?>frontend/blog/single_blog?id=<?php echo $row->id;?>"><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>" class="img-responsive blog-img" alt="img-blog" title="blog images title"> </a>
+                     <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$url;?>"><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>" class="img-responsive blog-img" alt="img-blog" title="blog images title"> </a>
                     <div class="caption">
 
                     <p class="sng-blog"><?php echo substr($description,0,400); ?></p>
@@ -177,13 +191,18 @@ $(document).ready(function() {
              <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col12-zindex">
               <div class="col-md-6 col-lg-6 col-sm-1`2 col-xs-12 mrg-pad">
                  <div class="btn-group border-radius-group">
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-facebook" aria-hidden="true"></i></button>
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-twitter" aria-hidden="true"></i></button>
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-google-plus" aria-hidden="true"></i></button>
-    <button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-youtube" aria-hidden="true"></i></button>
+
+
+<a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://www.facebook.com')"><button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-facebook" aria-hidden="true"></i></button></a>
+
+    <a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://twitter.com')"><button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-twitter" aria-hidden="true"></i></button></a>
+
+    <a href="javascript:void(0)" onclick="javascript:genericSocialShare('https://plus.google.com')"><button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-google-plus" aria-hidden="true"></i></button></a>
+
+   <a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://youtube.com')"><button type="button" class="btn btn-danger border-radius-group"><i class="fa fa-youtube" aria-hidden="true"></i></button></a>
   </div>
                  </div>
-                 <a href="<?php echo base_url();?>frontend/blog/single_blog?id=<?php echo $row->id;?>">
+              <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$url;?>">
                  <div class="col-md-6 col-lg-6 col-sm-1`2 col-xs-12 pull-right text-right mrg-pad"> <button class="btn btn-danger border-radius-group">Continue Reading</button></div></a>
              
 
@@ -249,9 +268,9 @@ $(document).ready(function() {
 
  <?php
                             
-                          if($latest_blog_data->num_rows() >0)
+                          if($fetch_data->num_rows() >0)
                           {
-                      foreach($latest_blog_data->result() as $row)
+                      foreach($fetch_data->result() as $row)
                           {
 
                           ?>
@@ -275,8 +294,8 @@ $(document).ready(function() {
                  
                  <div class="dovimg">
                  <h6><?php echo $created_at ?> </h6>
-                <img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-right" alt="" title="">
-                 <div class="caption"><?php echo $title ?></div>
+               <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$url;?>"> <img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-right" alt="" title=""></a>
+                <h3 class="blog-headline-3"><?php echo $title ?></h3>
 
 
                  
@@ -311,24 +330,61 @@ $(document).ready(function() {
 		    	
 		    	Recent Comment
     		</button>
+
+
+
+
+
+ <?php
+                            
+                          if($comment_blog1->num_rows() >0)
+                          {
+                      foreach($comment_blog1->result() as $row)
+                          {
+
+                          ?>
+
+                      <?php
+                    
+
+                         $comment=$row->comment;
+
+                        
+
+                        ?>
+
                  
                 <ul class="ul-class">
                  
-                 <li>Lorem ipsum text goes here for comment recent comment.</li>
-                    <li class="seperator"></li>
-                 <li>Lorem ipsum text goes here for comment recent comment.</li>
-                    <li class="seperator"></li>
-                 <li>Lorem ipsum text goes here for comment recent comment.</li>
+                   <li class="seperator">
+                 <li><?php echo $comment ?></li>
+                 </li>
 
         
-                 
                  </ul>
                  
                  
                  
                  
                 
-                </div> 
+              
+
+
+
+                         <?php
+
+
+                         }
+                           }
+                         else
+                           {
+                            ?>
+<?php
+
+}
+
+        ?>    
+          </div> 
               <!--// end recent blog post-->
             <!--follow us-->
              <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12-b-n">

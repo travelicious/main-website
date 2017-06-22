@@ -29,12 +29,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="image" class="col-xs-2 col-form-label">Image</label>
                             <div class="col-xs-8">
                                 <input class="form-control" type="file"  name="files">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="description" class="col-xs-2 col-form-label">Description</label>
