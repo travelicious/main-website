@@ -162,6 +162,13 @@ function genericSocialShare(url){
 ?>
 
 
+<<<<<<< HEAD
+                      <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                   
+                      <div class="col-md-12 blog-home-ing bdr-block">
+                      <a href="blog/single_blog?id=<?php echo $row->id; ?>"><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>" class="img-responsive img-news bdr-block" alt="blog" title="blog"></a>
+=======
+>>>>>>> 022f2e93ca6bc11ab62122740f8dc31a35f3da32
 
 
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">

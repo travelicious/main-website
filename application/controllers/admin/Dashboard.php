@@ -26,4 +26,6 @@ class Dashboard extends BackendController {
         $data['body_view'] = 'admin/Dashboard';
         $this->load->view('admin/layouts/home',$data);
     }
+    
+    
 }

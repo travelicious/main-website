@@ -83,6 +83,9 @@
                                 <div class="col-xs-10">
                                     <select class="form-control"  id="news-meta-robots" name="news_meta_robots">
                                         <option value="0">.......</option>
+                                        <option value="NOINDEX">FOLLOW</option>
+                                        <option value="INDEX">NOFOLLOW</option>
+                                        <option value="NOINDEX">NOFOLLOW</option>
                                     </select>
                                 </div>
                             </div>
@@ -216,8 +219,8 @@
                                     ?>
 
                                         <div class="col-md-3">
-                                            <input type="checkbox" class="chk inpt "  id="img1" name="img1" value="0"  />
-                                            <label for="img1" class="customlbl"> <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>"></label>
+                                            <input type="checkbox" class="chk inpt "  id="<?php echo $row->id; ?>" name="img1" value="<?php echo $row->id; ?>"  />
+                                            <label for="<?php echo $row->id; ?>" class="customlbl"> <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>"></label>
                                         </div>
                                     <?php } ?>
                                         <!-- <div class="col-md-3">

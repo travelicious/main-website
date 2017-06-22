@@ -101,6 +101,7 @@ class News extends BackendController {
         $meta_title = $_POST["news_meta_title"];
         $meta_description = $_POST["news_meta_description"];
         $meta_robots = $_POST["news_meta_robots"];
+       // echo $meta_robots ;exit;
         $title = $_POST["title"];
         $description = addslashes($_REQUEST["description"]);
         $author = $_POST["author"];
