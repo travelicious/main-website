@@ -129,17 +129,17 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <ul class="nav nav-tabs mb-0-5" role="tablist">
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Upload Media</a>
-                                </li>
+                                </li>-->
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Media Library</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">Media Library</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="modal-body">
                             <div class="tab-content">
-                                <div class="tab-pane active" id="home" role="tabpanel">
+                              <div class="tab-pane " id="home" role="tabpanel">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4">
                                         <h6 class="mt-2">File browser</h6>
@@ -153,7 +153,7 @@
                                     <div class="col-md-4"></div>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="tab-pane" id="profile" role="tabpanel">
+                                <div class="tab-pane active" id="profile" role="tabpanel">
                                     <div class="row">
                                         <div class="col-md-3">
                                             <input type="checkbox" class="chk inpt "  id="img1" name="img1" value="0"  />
@@ -186,7 +186,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" >Set as thumbnail images</button>
+                          <a class="nav-link " data-toggle="tab" href="#home" role="tab" class="btn btn-default pull-right"> Upload Media</a> <button type="button" class="btn btn-default" >Set as thumbnail images</button>
                         </div>
                     </div>
                 </div>
