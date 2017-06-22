@@ -78,9 +78,9 @@
                         else if (obj.st == 0) {
                             msg = "File Not Selected.";
                             var successmsg = '<div class="box-body">';
-                            successmsg += '<div class="alert alert-success alert-dismissable">';
+                            successmsg += '<div class="alert alert-info alert-dismissable">';
                             successmsg += '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>';
-                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Sucess!</h4>';
+                            successmsg += '<h4>	<i class="icon fa fa-check"></i> Info!</h4>';
                             successmsg += msg;
                             successmsg += '</div>';
                             successmsg += '</div>';
