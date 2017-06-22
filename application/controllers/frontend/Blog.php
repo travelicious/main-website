@@ -6,6 +6,8 @@ public function index()
 {
 
 
+
+
   $this->load->model('frontend/Blog_model');
 
  	$data["fetch_data"]=$this->Blog_model->fetch_data();
@@ -69,10 +71,7 @@ public function single_blog($url)
             //$data['posted_data'] = $this->input->post();
         }
 
-        // /* Loading the layout and the body layout is passed as name which will be loaded in view */
-        // $data['page_title'] = 'Add a Blog';
-        // //$data['body_view'] = 'admin/blogs/add_blog';
-        // $this->load->view('frontend/blogs/single_blog',$data);
+     
 
 
     }

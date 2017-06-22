@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +53,7 @@
         </div>
         <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
             <div class="row" id="selectable">
-                <form action="<?php echo base_url();?>admin/News/submit_news" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)">
+                <form action="<?php echo base_url();?>admin/News/submit_news" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)" >
                 <div class="row row-md mb-2">
                     <div class="col-md-12">
                         <div class="col-md-8">
@@ -63,7 +62,7 @@
                             <div class="form-group row">
                                 <label for="url" class="col-xs-2 col-form-label">News URL</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text" id="url" name="url" onchange="checkURLExistOrNot(event, this, '<?php echo base_url('admin/news/urlExistOrNot');?>')" >
+                                    <input class="form-control" type="text" id="url" name="url" onchange="checkURLExistOrNot(event, this, '<?php echo base_url("admin/news/urlExistOrNot")?>')">
                                 </div>
                             </div>
 							
@@ -102,17 +101,17 @@
                                     <input class="form-control" type="text"  id="title" name="title">
                                 </div>
                             </div>
-                            <!--<div class="form-group row">
+                            <!-- <div class="form-group row">
                                 <label for="files" class="col-xs-2 col-form-label">Image</label>
                                 <div class="col-xs-10">
                                     <input class="form-control" type="file" id="files" name="files">
                                 </div>
-                            </div> -->
+                            </div> --> 
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-10">
                                     <!-- <input class="form-control" type="text"  id="description" name="description"> -->
-                                    <textarea name="description" class="form-control" id="description" placeholder="Description">
+                                    <textarea name="description" class="form-control" id="description" placeholder="Description" rows="13">
                                     </textarea>
                                 </div>
                             </div>
@@ -277,6 +276,7 @@
 
 </div>
 
+<script src="<?php echo base_url('assets/js/comman.js') ?>"></script>
 <?php $this->load->view('admin/layouts/JS_Include'); ?>
 </body>
 

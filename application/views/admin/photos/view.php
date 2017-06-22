@@ -63,11 +63,17 @@
                                                     <td><?php echo $val->image_tiltle; ?></td>
                                                     <td style="display: none;"></td>
 
-                   
-                                                    <td> 
-                                                        <img  src="<?php echo base_url("assets/images") . '/' . $val->image_name; ?>"  class="img-responsive img-thumbnail" width="20%" alt=""/>
 
-                                                    </td>
+                      <div class="col-md-12 blog-home-ing bdr-block">
+                    <!-- <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $val->image_name; ?>"> -->
+
+                                                    <td> 
+                                                        <img  src="<?php echo base_url("assets/images") . '/' . $val->image_name; ?>"  class="img-responsive img-thumbnail" width="20%" alt=""/></td>
+
+                                 
+
+
+                                
                                                     <td><?php echo $val->img_alt ?></td>
                                                     <td><?php echo $val->created_at; ?></td>
                                                     <td><a href="<?php echo base_url("admin/photos/delete_photo").'/'.$val->id;?>">Delete</a></td>

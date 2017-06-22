@@ -123,11 +123,14 @@ wn printer </p>
                  <a href="#" class="text-danger">Read More</a>
              </div>
         </div>  -->  
-          
+          <?php
+               foreach ($front_latest_news->result() as $row2);
+                ?>
            <div class="panel panel-body pbody">
                <h3 class="h3-news1">Top <mark>News</mark></h3>
                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mrgbt">
-               <img src="<?php echo base_url(); ?>assets/frontend/images/news-left.jpg" class="img-responsive img-rounded" alt="" title=""> 
+               <a href="<?php echo base_url("frontend/news/single_news").'/'.'top'; ?>">
+               <img src="<?php echo base_url(); ?>assets/frontend/images/news-left.jpg" class="img-responsive img-rounded" alt="" title=""> </a>
              <div class="caption">
              <h4>This is News Headline</h4>
                  <p class="new-para-news">ce the 1500s, when an unknown printer took a galley of 
@@ -136,13 +139,14 @@ m Ipsum is simply dummy text of the printing and typese
 tting industry. Lorem Ipsum has been the industry's sta
 ndard dummy text ever since the 1500s, when an unkno
 wn printer </p>
-                 <a href="#" class="text-danger">Read More</a>
+                 <a href="<?php echo base_url("frontend/news/single_news").'/'.'top'; ?>" class="text-danger">Read More</a>
                  
              </div>
                
                </div>
                  <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mrgbt">
-               <img src="<?php echo base_url(); ?>assets/frontend/images/news-left.jpg" class="img-responsive img-rounded" alt="" title=""> 
+                 <a href="<?php echo base_url("frontend/news/single_news").'/'.'top'; ?>">
+               <img src="<?php echo base_url(); ?>assets/frontend/images/news-left.jpg" class="img-responsive img-rounded" alt="" title=""> </a>
              <div class="caption">
              <h4>This is News Headline</h4>
                  <p class="new-para-news">ce the 1500s, when an unknown printer took a galley of 
@@ -156,7 +160,7 @@ wn printer.Lorem Ipsum has been the industry's sta
 ndard dummy text ever since the 1500s.
                  
                  </p>
-                 <a href="#" class="text-danger">Read More</a>
+                 <a href="<?php echo base_url("frontend/news/single_news").'/'.'top'; ?>" class="text-danger">Read More</a>
              </div>
                </div>
           </div>   

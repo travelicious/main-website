@@ -52,6 +52,17 @@ parent::__construct();
 
 
 
+
+public function fetch_blog_comment($url)  
+      {  
+   //$id = $_GET['$id'];
+
+         $query = $this->db->query("select * from blog_comment where url='$url' "); 
+
+         return $query;  
+         //select* from blogs
+      }
+
 public function comment()
     {
 

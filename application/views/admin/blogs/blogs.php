@@ -48,11 +48,9 @@
                                     <th>TITLE</th>
                                     <th>IMAGE</th>
                                     <th>DESCRIPTION</th>
-                                 
                                     <th>AUTHOR</th>
                                     <th>CREATED_AT</th>
                                     <th>MODIFIED_AT</th>
-                            
                                     <th>DELETE</th>
                                 </tr>
             
@@ -75,25 +73,10 @@
                              <td><img src="<?php echo base_url().'assets/uploads/images/'.$row->image; ?>">
                              </td>
 
-                            <td>
-							
-							  <?php 
-											     
-								if(strlen($row->description) > 100)
-								{
-								  $description = substr($row->description, 0, 100);
-                                  echo $description.' ......'; 												   
-								}
-								else
-								{
-								  echo $row->description;
-							 	}
-							  ?>
-							
-							</td>
+
 
                         
-
+                                <td><?php echo substr($row->description,0,300);?></td>
                             <td><?php echo $row->author;?></td>
                             <td><?php echo $row->created_at;?></td>
                             <td><?php echo $row->modified_at;?></td>
