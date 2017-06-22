@@ -73,7 +73,7 @@ parent::__construct();
       public function latest_blog_data1($url)  
       {  
        
-         $query = $this->db->query("select * from blogs order by id desc limit 0,3"); 
+         $query = $this->db->query("select * from blogs order by id desc limit 0,5"); 
 
          return $query;  
          //select* from blogs

@@ -9,8 +9,6 @@ function __construct()
 }
 
 
-
-
  public function add_blog()
     {
         /* We are now adding new packages to the database */
@@ -32,14 +30,21 @@ function __construct()
     }
 
 
+    public function delete_blog()
+    {
+        $id = $_GET['id'];
+        $queryDelete = $this->db->query("DELETE FROM blogs WHERE id= '$id' ");
+
+        redirect('admin/blogs');
+    }
+
+
 	public function index()
-
-
 
  	{  
 
-  	
-  	//$this->load->model('Blog');
+    
+
 
  		$data["fetch_data"]=$this->Blog_model->fetch_data();
 
@@ -68,6 +73,7 @@ function __construct()
 
 
     }
+
 
 
 

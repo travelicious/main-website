@@ -221,11 +221,12 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-<<<<<<< HEAD
+
                             <button type="submit" name="submit" lass="btn btn-default" >Set as thumbnail images</button>
-=======
-                          <a class="nav-link " data-toggle="tab" href="#home" role="tab" class="btn btn-default pull-right"> Upload Media</a> <button type="button" class="btn btn-default" >Set as thumbnail images</button>
->>>>>>> 25e7b4ec00754aa07fa143046cdabb9af3b30d38
+
+                          <a class="nav-link " data-toggle="tab" href="#home" role="tab" class="btn btn-default pull-right"> Upload Media</a> 
+
+                      
                         </div>
                         
                     </div>
