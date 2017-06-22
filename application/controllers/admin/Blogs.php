@@ -9,8 +9,6 @@ function __construct()
 }
 
 
-
-
  public function add_blog()
     {
         /* We are now adding new packages to the database */
@@ -32,14 +30,21 @@ function __construct()
     }
 
 
+    public function delete_blog()
+    {
+        $id = $_GET['id'];
+        $queryDelete = $this->db->query("DELETE FROM blogs WHERE id= '$id' ");
+
+        redirect('admin/blogs');
+    }
+
+
 	public function index()
-
-
 
  	{  
 
-  	
-  	//$this->load->model('Blog');
+    
+
 
  		$data["fetch_data"]=$this->Blog_model->fetch_data();
 
@@ -57,7 +62,7 @@ function __construct()
         {
             $this->Blog_model->comment();
 
-           redirect('frontend/blogs/blog');
+           redirect('frontend/blogs/blog/single_blog');
             //$data['posted_data'] = $this->input->post();
         }
 
@@ -68,6 +73,32 @@ function __construct()
 
 
     }
+	
+	
+	
+	public function urlExistOrNot($url = null)
+	{
+	  if($url != null)
+	  {
+		$records = $this->db->select('*')
+		                    ->where('url', $url)
+                            ->get('blogs');
+         							
+        if($records->num_rows() > 0)
+		{
+		  echo "exist";	
+		}
+        else
+		{
+		  echo "notExist";	
+		}			
+	  }
+      else
+	  {
+	    echo "";	  
+	  }		  	
+	}
+
 
 
 

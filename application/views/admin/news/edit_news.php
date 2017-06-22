@@ -49,13 +49,13 @@
 
         <div class="row row-md mb-2">
             <div class="col-md-12">
-                <h1>Adding News</h1>
+                <h1>Edit News</h1>
             </div>
         </div>
         <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
             <div class="row" id="selectable">
 
-                <form action="<?php echo base_url();?>admin/News/save_news" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url();?>admin/News/save_news" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)">
 
                 <?php foreach ($fetch_item->result() as $row2); ?>
 
@@ -67,10 +67,17 @@
                             <div class="form-group row">
                                 <label for="url" class="col-xs-2 col-form-label">News URL</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text" id="url" name="url" value="<?php echo $row2->url; ?>">
+                                    <input class="form-control" type="text" id="url" name="url" value="<?php echo $row2->url;?>"  onchange="checkURLExistOrNot(event, this, '<?php echo base_url("admin/news/urlExistOrNot")?>')">
                                     <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $row2->id; ?>">
                                 </div>
                             </div>
+							
+							<div class="form-group row">
+                                <div class="col-xs-10">
+                                  <span id="urlMessage"></span>
+								</div>
+                            </div>
+							
                             <div class="form-group row">
                                         <label for="news-meta-title" class="col-xs-2 col-form-label">Meta Title</label>
                                         <div class="col-xs-10">
@@ -87,8 +94,17 @@
                                 <label for="news-meta-robots" class="col-xs-2 col-form-label">Meta Robots</label>
                                 <div class="col-xs-10">
                                     <select class="form-control"  id="news-meta-robots" name="news_meta_robots">
-                                        <option value="0">.......</option>
-                                    </select>
+                                        <option value="0">........</option>
+                                        <option value="NOINDEX">FOLLOW</option>
+                                        <option value="INDEX">NOFOLLOW</option>
+                                        <option value="NOINDEX">NOFOLLOW</option>
+                                    </select><br>
+
+                                    <?php if ($row2->meta_robots=='INDEX') { ?>
+                                        <span>NOFOLLOW</span>
+                                <?php    } elseif ($row2->meta_robots=='NOINDEX') { ?>
+                                        <span>FOLLOW</span>
+                             <?php   } ?>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -103,7 +119,7 @@
                                     <input class="form-control" type="file" id="files" name="files">
                                     <span><img width="100" src="<?php echo base_url();?>assets/images/news/<?php echo $row2->image; ?>"></span>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-10">
@@ -253,6 +269,7 @@
 
 </div>
 
+<script src="<?php echo base_url('assets/js/comman.js') ?>"></script>
 <?php $this->load->view('admin/layouts/JS_Include'); ?>
 </body>
 

@@ -24,4 +24,5 @@
 <!-- Neptune JS -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/app.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/demo.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/index.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/index.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/comman.js"></script> 

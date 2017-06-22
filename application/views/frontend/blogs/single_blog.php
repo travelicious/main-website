@@ -197,8 +197,7 @@ $(document).ready(function() {
    
 
 
-
-                  <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
                     <div class="col-md-12">
 
                      <h3 class="blog-headling">Latest Post</h3>
@@ -212,6 +211,7 @@ $(document).ready(function() {
 
                           ?>
                       <?php
+                      
                          $url=$row->url;
 
                          $title=$row->title;
@@ -228,9 +228,12 @@ $(document).ready(function() {
                         ?>
 
                      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                       <hr class="cls">
                         <div class="col-md-9"><img src="<?php echo base_url().'assets/uploads/images/'.$image ?>" class="img-responsive img-rounded bx-sado" alt="right side blog" title=""></div>
                         <div class="col-md-9"><p><span>
-                        <h3 class="blog-headline-3"> <a href="single_blog?id=<?php echo $row->id; ?>" class="custom-txt"><?php echo $title ?></h3></a></p></span> 
+
+                        <h3 class="blog-headline-5"><a href="<?php echo base_url("frontend/blog/single_blog").'/'.$url;?>" class="custom-txt">
+                        <?php echo $title ?></h3></p></span> </a>
                         </div>
                         
                         
@@ -257,7 +260,7 @@ $(document).ready(function() {
              </div>
               <br>
                   
-           <!--        
+          <!--         
                     <div class="col-md-12">
                      <h3 class="blog-headling">Categories</h3>
                         <em class="categories-tag"> Category name</em>
@@ -269,7 +272,7 @@ $(document).ready(function() {
                    
                    
                 
- </div>    
+
 
 
 
@@ -277,16 +280,16 @@ $(document).ready(function() {
                  
                 
             
-            </div>
+       
 
 
 
 
- <?php
+                   <?php
                             
-                          if($comment_blog->num_rows() >0)
+                          if($fetch_blog_comment->num_rows() >0)
                           {
-                      foreach($comment_blog->result() as $row)
+                      foreach($fetch_blog_comment->result() as $row)
                           {
 
                           ?>
@@ -295,35 +298,28 @@ $(document).ready(function() {
                         
                   
 
-<<<<<<< HEAD
-                          $name=$row->name;
+                  
+                                $name=$row->name;
+
 
 
 
                           $datatime = time($row->created_at);
-=======
-                         $name=$row->name;
-
-
 
                           $datatime = strtotime($row1->created_at);
->>>>>>> 7ff6f67bb583a8d24ab42af5b1638e20479223fa
+
                            $now = time();
 
                          $created_at= timespan($datatime, $now) . '&nbsp'.'ago';
-                      
-<<<<<<< HEAD
-=======
-
-                         
 
 
->>>>>>> 7ff6f67bb583a8d24ab42af5b1638e20479223fa
                          $comment=$row->comment;
 
                         
 
                         ?>
+
+                        </div>
 
   <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo cont">
 
@@ -332,9 +328,10 @@ $(document).ready(function() {
                 <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
                  <ul class="timeline">
         <li>
-          <div class="timeline-badge"><img src="<?php 
+          <div class="timeline-badge">
+          <img src="<?php 
           echo base_url().'assets/uploads/images/'.$image ?>" 
-          class="img-responsive img-circle"></div>
+          class="img-responsive img-circle blg-img"></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title"><?php echo $name ?></h4>
@@ -395,8 +392,10 @@ $(document).ready(function() {
                          <div class="form-group">
                             <label for="name">
                                 Name</label>
+
                             <input type="text" name="name" class="form-control" id="name" placeholder="Enter name" required="required" />
-                            <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $row1->id; ?>" />
+
+                            <input type="hidden" name="url" class="form-control" id="id" value="<?php echo $row1->url; ?>" />
                         </div>
 
 

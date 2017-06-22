@@ -45,6 +45,12 @@ class Packages_model extends CI_Model {
         );
         $this->db->insert('packages',$insert_data);
     }
+    
+    public function fetch_services_details(){
+        
+        $service_data = $this->db->query("select * from services order by service_name")->result();
+        return $service_data;
+    }
 
 
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +53,7 @@
         </div>
         <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
             <div class="row" id="selectable">
-                <form action="<?php echo base_url();?>admin/News/submit_news" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url();?>admin/News/submit_news" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)" >
                 <div class="row row-md mb-2">
                     <div class="col-md-12">
                         <div class="col-md-8">
@@ -63,9 +62,16 @@
                             <div class="form-group row">
                                 <label for="url" class="col-xs-2 col-form-label">News URL</label>
                                 <div class="col-xs-10">
-                                    <input class="form-control" type="text" id="url" name="url">
+                                    <input class="form-control" type="text" id="url" name="url" onchange="checkURLExistOrNot(event, this, '<?php echo base_url("admin/news/urlExistOrNot")?>')">
                                 </div>
                             </div>
+							
+							<div class="form-group row">
+                                <div class="col-xs-10">
+                                  <span id="urlMessage"></span>
+								</div>
+                            </div>
+							
                             <div class="form-group row">
                                         <label for="news-meta-title" class="col-xs-2 col-form-label">Meta Title</label>
                                         <div class="col-xs-10">
@@ -83,6 +89,9 @@
                                 <div class="col-xs-10">
                                     <select class="form-control"  id="news-meta-robots" name="news_meta_robots">
                                         <option value="0">.......</option>
+                                        <option value="NOINDEX">FOLLOW</option>
+                                        <option value="INDEX">NOFOLLOW</option>
+                                        <option value="NOINDEX">NOFOLLOW</option>
                                     </select>
                                 </div>
                             </div>
@@ -92,17 +101,17 @@
                                     <input class="form-control" type="text"  id="title" name="title">
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <!-- <div class="form-group row">
                                 <label for="files" class="col-xs-2 col-form-label">Image</label>
                                 <div class="col-xs-10">
                                     <input class="form-control" type="file" id="files" name="files">
                                 </div>
-                            </div>
+                            </div> --> 
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-10">
                                     <!-- <input class="form-control" type="text"  id="description" name="description"> -->
-                                    <textarea name="description" class="form-control" id="description" placeholder="Description">
+                                    <textarea name="description" class="form-control" id="description" placeholder="Description" rows="13">
                                     </textarea>
                                 </div>
                             </div>
@@ -216,8 +225,8 @@
                                     ?>
 
                                         <div class="col-md-3">
-                                            <input type="checkbox" class="chk inpt "  id="img1" name="img1" value="0"  />
-                                            <label for="img1" class="customlbl"> <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>"></label>
+                                            <input type="checkbox" class="chk inpt "  id="<?php echo $row->id; ?>" name="img1" value="<?php echo $row->id; ?>"  />
+                                            <label for="<?php echo $row->id; ?>" class="customlbl"> <img class="img-responsive" width="100" src="<?php echo base_url();?>assets/images/<?php echo $row->image_name; ?>"></label>
                                         </div>
                                     <?php } ?>
                                         <!-- <div class="col-md-3">
@@ -267,6 +276,7 @@
 
 </div>
 
+<script src="<?php echo base_url('assets/js/comman.js') ?>"></script>
 <?php $this->load->view('admin/layouts/JS_Include'); ?>
 </body>
 
