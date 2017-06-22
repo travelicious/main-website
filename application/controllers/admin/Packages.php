@@ -67,7 +67,7 @@ class Packages extends BackendController {
             $ok = $this->db->insert('packages', $data);
             if ($ok) {
                 echo $this->db->insert_id();
-                ;
+                
             }
         }
     }
@@ -75,7 +75,7 @@ class Packages extends BackendController {
     public function add_packages() {
 
         if ($this->input->post('submit')) {
-          $pak_id = $this->input->post('imag_id');
+            $pak_id = $this->input->post('imag_id');
             $url = $this->input->post('package_url');
             $title = $this->input->post('package_title');
             $duration = $this->input->post('package_duration');
@@ -84,23 +84,33 @@ class Packages extends BackendController {
             $meta_robots = $this->input->post('package_meta_robots');
             $meta_description = $this->input->post('package_meta_description');
             $price = $this->input->post('package_price');
-            
-        }
-        $this->db->query("update  packages set url='$url', title = '$title',  duration = $duration, description = '$description', meta_title = '$meta_title', meta_robots = '$meta_robots', meta_description = '$meta_description', price = $price where id = $pak_id");;
+            $update = $this->db->query("update  packages set url='$url', title = '$title',  duration = $duration, description = '$description', meta_title = '$meta_title', meta_robots = '$meta_robots', meta_description = '$meta_description', price = $price where id = $pak_id");
 
-        if (!empty($_POST['service'] != "")) {
-            $serv = $_POST['service'];
-            $pack_id = $this->input->post('imag_id');
 
-            foreach ($serv as $val) {
-                $sev_ar = array(
-                    'service_id' => $val,
-                    'package_id' => $pack_id,
-                );
-                print_r($sev_ar); 
-                $this->db->insert('services_inclusion', $sev_ar);
+            if (empty($_POST['service'])) {
+                $this->add();
+                $_POST['service']='null';
+                 
+                exit;
+            } else {
+                $serv = $_POST['service'];
+                $pack_id = $this->input->post('imag_id');
+
+                foreach ($serv as $val) {
+                    $sev_ar = array(
+                        'service_id' => $val,
+                        'package_id' => $pack_id,
+                    );
+
+                    $nsert_ok = $this->db->insert('services_inclusion', $sev_ar);
+                   
+                   
+                }
             }
+           
         }
+         $this->add();
     }
+   
 
 }

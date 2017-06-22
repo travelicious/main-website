@@ -6,10 +6,10 @@
       {  
 
 
+
         $query = $this->db->query("select * from news order by id desc");
         return $query;  
       }  
-
 
 
 
@@ -49,7 +49,7 @@
       public function front_most_visited_news()  
       {  
         // $query = $this->db->query("select * from news limit 0,10");
-         $query = $this->db->query("SELECT * from news ORDER BY view_count DESC LIMIT 10");
+         $query = $this->db->query("SELECT * from news ORDER BY view_count DESC LIMIT 5");
          return $query;  
       } 
 

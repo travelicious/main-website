@@ -73,6 +73,31 @@ function __construct()
 
 
     }
+	
+	
+	
+	public function urlExistOrNot($url = null)
+	{
+	  if($url != null)
+	  {
+		$records = $this->db->select('*')
+		                    ->where('url', $url)
+                            ->get('blogs');
+         							
+        if($records->num_rows() > 0)
+		{
+		  echo "exist";	
+		}
+        else
+		{
+		  echo "notExist";	
+		}			
+	  }
+      else
+	  {
+	    echo "";	  
+	  }		  	
+	}
 
 
 

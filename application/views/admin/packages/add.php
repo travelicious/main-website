@@ -2,14 +2,14 @@
     <div class="container-fluid">
         <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
             <div class="row" id="selectable">
-                <form action="<?php echo base_url("admin/packages/add_packages"); ?>" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url("admin/packages/add_packages"); ?>" method="post" id="packagesubmitform" enctype="multipart/form-data">
                     <div class="row row-md mb-2">
                         <div class="col-md-12">
                             <div class="col-md-8">
 
                                 <div class="box box-block bg-white">
                                     
-                                    <div class="form-group row">
+                                    <div class="form-group row" style="display: none;">
                                             <input class="form-control" type="text" id="imag_id" name="imag_id">
                                     </div>
                                     <div class="form-group row">
@@ -106,7 +106,7 @@
                                             <?php
                                             foreach ($service_list as $val) {
                                                 ?>
-                                                <label><input type="checkbox"  name="service[]" value="<?php echo $val->id ?>"> <span><?php echo $val->service_name ?> </span></label><br>
+                                                <label><input type="checkbox"  name="service[]" id="service[]" value="<?php echo $val->id ?>"> <span><?php echo $val->service_name ?> </span></label><br>
 
                                                 <?php
                                             }
@@ -224,9 +224,8 @@
 
                             <button type="submit" name="submit" lass="btn btn-default" >Set as thumbnail images</button>
 
-                          <a class="nav-link " data-toggle="tab" href="#home" role="tab" class="btn btn-default pull-right"> Upload Media</a> 
+                          <a class="nav-link " data-toggle="tab" href="#home" role="tab" class="btn btn-default pull-right"> Upload Media</a>
 
-                      
                         </div>
                         
                     </div>
@@ -262,4 +261,7 @@
             
         });
     });
+    
+    
+              
 </script>
