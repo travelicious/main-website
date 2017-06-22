@@ -18,9 +18,10 @@ class News extends BackendController {
 	{
 	  if($url != null)
 	  {
-		$records = $this->db->select("*")
+		$records = $this->db->select('*')
 		                    ->where('url', $url)
                             ->get('news');
+         							
         if($records->num_rows() > 0)
 		{
 		  echo "exist";	
@@ -29,6 +30,10 @@ class News extends BackendController {
 		{
 		  echo "notExist";	
 		}			
+	  }
+      else
+	  {
+	    echo "";	  
 	  }		  
 	}
 
