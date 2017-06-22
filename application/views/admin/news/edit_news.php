@@ -106,13 +106,13 @@
                                     <input class="form-control" type="text"  id="title" name="title" value="<?php echo $row2->title; ?>">
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <!-- <div class="form-group row">
                                 <label for="files" class="col-xs-2 col-form-label">Image</label>
                                 <div class="col-xs-10">
                                     <input class="form-control" type="file" id="files" name="files">
                                     <span><img width="100" src="<?php echo base_url();?>assets/images/news/<?php echo $row2->image; ?>"></span>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group row">
                                 <label for="description" class="col-xs-2 col-form-label">Description</label>
                                 <div class="col-xs-10">

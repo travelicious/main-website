@@ -48,6 +48,7 @@
                                     <th>News Title</th>
                                     <th>image</th>
                                     <th>Description</th>
+									<th>View Count</th>
                                     <th>Author</th>
                                     <th>Created At</th>
                                     <th>Modified At</th>
@@ -64,8 +65,34 @@
                                             <tr>
                                             <td> <?php echo $row->url;?></td>
                                             <td> <?php echo $row->title;?></td>
+<<<<<<< HEAD
+                                            <td> <img class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
+                                            <td> 
+											
+											   <?php 
+											     
+												 if(strlen($row->description) > 100)
+												 {
+												   $description = substr($row->description, 0, 100);
+                                                   echo $description.' ......'; 												   
+												 }
+												 else
+												 {
+												   echo $row->description;
+											     }
+											   ?>
+											
+											</td>
+											<td> <?php echo $row->view_count;?></td>
+                                            
+=======
                                             <td> <img width="100" class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
+<<<<<<< HEAD
                                             <td> <?php echo substr($row->description,0,200);?></td>
+=======
+                                            <td> <?php echo $row->description;?></td>
+>>>>>>> 91b82734c47983e68590a863a88041c037ce2c7d
+>>>>>>> c504124ace30f105861584a4c7997481c62fa8ba
                                             <td> <?php echo $row->author;?></td>
                                             <td> <?php echo $row->created_at;?></td>
                                             <td> <?php echo $row->modified_at;?></td>

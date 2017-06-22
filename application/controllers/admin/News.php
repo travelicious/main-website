@@ -12,7 +12,25 @@ class News extends BackendController {
         $this->load->view('admin/news/news',$data);
     }
 
-
+    
+	
+	public function urlExistOrNot($url = null)
+	{
+	  if($url != null)
+	  {
+		$records = $this->db->select("*")
+		                    ->where('url', $url)
+                            ->get('news');
+        if($records->num_rows() > 0)
+		{
+		  echo "exist";	
+		}
+        else
+		{
+		  echo "notExist";	
+		}			
+	  }		  
+	}
 
 /* ________________________________________ Add News ________________________________  */
 

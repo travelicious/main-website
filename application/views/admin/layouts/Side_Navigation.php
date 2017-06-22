@@ -29,7 +29,7 @@
                     <span class="s-text">News</span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo base_url(); ?>admin/news">News</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news">View All</a></li>
                     <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
                     <!-- <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li>
                     <li><a href="<?php echo base_url(); ?>admin/news/library">Library</a></li> -->
@@ -116,7 +116,7 @@
                     <span class="s-text">Blogs</span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo base_url();?>admin/blogs">Blog</a></li>
+                    <li><a href="<?php echo base_url();?>admin/blogs">View All</a></li>
                     <li><a href="<?php echo base_url();?>admin/blogs/add_blog">Add Blog</a></li>
                     <li><a href="<?php echo base_url();?>admin/upload_file">Upload Image</a></li>
                 
