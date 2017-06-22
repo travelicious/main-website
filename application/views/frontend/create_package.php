@@ -335,7 +335,7 @@ $(document).ready(function() {
 				<div class="col-md-4 agile-footer-grid mid">
 					<h4>Quick Links</h4>
 					<ul class="w3agile_footer_grid_list">
-						<li><a href="#">About Us </a> </li>
+						<li><a href="<?php echo base_url() ?>frontend/about_us">About Us </a> </li>
 						<li><a href="#">Contact Us </a></li>
                         <li><a href="#">Privacy Policy</a></li>
 						<li><a href="#">Term & Condation</a></li>

@@ -52,11 +52,11 @@ class News extends BackendController {
     {
         $url = $_POST["url"];
         $title = $_POST["title"];
-        $description = $_POST["description"];
+        $description = addslashes($_POST["description"]);
         $author = $_POST["author"];
         $meta_title = $_POST['news_meta_title'];
         $meta_robots = $_POST['news_meta_robots'];
-        $meta_description = $_POST['news_meta_description'];
+        $meta_description = addslashes($_POST['news_meta_description']);
 
         $image_name = $_FILES['files']['name'];
 
@@ -119,6 +119,7 @@ class News extends BackendController {
         $meta_title = $_POST["news_meta_title"];
         $meta_description = $_POST["news_meta_description"];
         $meta_robots = $_POST["news_meta_robots"];
+       // echo $meta_robots ;exit;
         $title = $_POST["title"];
         $description = addslashes($_REQUEST["description"]);
         $author = $_POST["author"];

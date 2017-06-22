@@ -6,6 +6,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Services extends BackendController {
 
     public function view_services() {
+<<<<<<< HEAD
+=======
+//        $this->load->library('encryption');
+>>>>>>> 022f2e93ca6bc11ab62122740f8dc31a35f3da32
         $data['page_title'] = 'Services';
         $this->load->model('admin/services_model');
         $data['fetch_data'] = $this->services_model->get_data_byid();

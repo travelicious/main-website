@@ -21,7 +21,7 @@ class Home extends FrontendController {
 	 */
 	public function index()
 	{
-		$this->load->view('frontend/home');
+		$this->load->view('frontend/index');
 
 	}
 

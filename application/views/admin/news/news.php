@@ -65,6 +65,7 @@
                                             <tr>
                                             <td> <?php echo $row->url;?></td>
                                             <td> <?php echo $row->title;?></td>
+<<<<<<< HEAD
                                             <td> <img class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
                                             <td> 
 											
@@ -84,6 +85,10 @@
 											</td>
 											<td> <?php echo $row->view_count;?></td>
                                             
+=======
+                                            <td> <img width="100" class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
+                                            <td> <?php echo $row->description;?></td>
+>>>>>>> 91b82734c47983e68590a863a88041c037ce2c7d
                                             <td> <?php echo $row->author;?></td>
                                             <td> <?php echo $row->created_at;?></td>
                                             <td> <?php echo $row->modified_at;?></td>

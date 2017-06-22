@@ -818,6 +818,7 @@
 //                                                        $("#datepicker").datepicker();
 //                                                    });
         </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.11.1/validate.min.js"></script>
         <script>
             $(document).ready(function () {
                 $('.next').click(function () {

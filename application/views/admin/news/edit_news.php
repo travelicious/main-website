@@ -49,7 +49,7 @@
 
         <div class="row row-md mb-2">
             <div class="col-md-12">
-                <h1>Adding News</h1>
+                <h1>Edit News</h1>
             </div>
         </div>
         <div class="box box-block bg-white" style="border: 0px solid rgba(0, 0, 0, 0.125);">
@@ -87,8 +87,17 @@
                                 <label for="news-meta-robots" class="col-xs-2 col-form-label">Meta Robots</label>
                                 <div class="col-xs-10">
                                     <select class="form-control"  id="news-meta-robots" name="news_meta_robots">
-                                        <option value="0">.......</option>
-                                    </select>
+                                        <option value="0">........</option>
+                                        <option value="NOINDEX">FOLLOW</option>
+                                        <option value="INDEX">NOFOLLOW</option>
+                                        <option value="NOINDEX">NOFOLLOW</option>
+                                    </select><br>
+
+                                    <?php if ($row2->meta_robots=='INDEX') { ?>
+                                        <span>NOFOLLOW</span>
+                                <?php    } elseif ($row2->meta_robots=='NOINDEX') { ?>
+                                        <span>FOLLOW</span>
+                             <?php   } ?>
                                 </div>
                             </div>
                             <div class="form-group row">

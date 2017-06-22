@@ -22,6 +22,7 @@ class Photos_model extends CI_Model {
             'image_name'         => $file_data['file_name']
         );
         $this->db->insert('images',$insert_data);
+        
         redirect('admin/photos/');
 
     }
