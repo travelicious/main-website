@@ -49,6 +49,23 @@
                     <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li> -->
                 </ul>
             </li>
+            
+            
+            
+             <li class="with-sub">
+                <a href="#" class="waves-effect  waves-light">
+                    <span class="s-caret"><i class="fa fa-angle-down"></i></span>
+                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-text">Category</span>
+                </a>
+                <ul>
+                    <li><a href="<?php echo base_url(); ?>admin/Category">View</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/Category/add_Category">Add Category</a></li>
+                    <!-- <li><a href="<?php echo base_url(); ?>admin/news/add_news">Add News</a></li>
+                    <li><a href="<?php echo base_url(); ?>admin/news/add_photo">Add Photo</a></li> -->
+                </ul>
+            </li>
+            
 
             <!-- <li class="with-sub">
                  <a href="#" class="waves-effect  waves-light">

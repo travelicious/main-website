@@ -39,6 +39,9 @@ class Packages extends BackendController {
 
 //        fetch service list
         $data['service_list'] = $this->packages_model->fetch_services_details();
+//        fetch category list
+        $data['category_list'] = $this->packages_model->fetch_category_details();
+
 
         /* Loading the layout and the body layout is passed as name which will be loaded in view */
         $data['page_title'] = 'Add a Package';
@@ -67,7 +70,6 @@ class Packages extends BackendController {
             $ok = $this->db->insert('packages', $data);
             if ($ok) {
                 echo $this->db->insert_id();
-                
             }
         }
     }
@@ -75,6 +77,8 @@ class Packages extends BackendController {
     public function add_packages() {
 
         if ($this->input->post('submit')) {
+            
+            
             $pak_id = $this->input->post('imag_id');
             $url = $this->input->post('package_url');
             $title = $this->input->post('package_title');
@@ -88,10 +92,7 @@ class Packages extends BackendController {
 
 
             if (empty($_POST['service'])) {
-                $this->add();
-                $_POST['service']='null';
-                 
-                exit;
+                $_POST['service'] = 'null';
             } else {
                 $serv = $_POST['service'];
                 $pack_id = $this->input->post('imag_id');
@@ -103,14 +104,26 @@ class Packages extends BackendController {
                     );
 
                     $nsert_ok = $this->db->insert('services_inclusion', $sev_ar);
-                   
-                   
                 }
             }
-           
+
+            if (empty($_POST['category'])) {
+                $_POST['category'] = 'null';
+            } else {
+                $catgr = $_POST['category'];
+                $pack_id = $this->input->post('imag_id');
+
+                foreach ($catgr as $val) {
+                    $cat_ar = array(
+                        'category_id' => $val,
+                        'package_id ' => $pack_id,
+                    );
+
+                    $nsert_catg_ok = $this->db->insert('category_mapping', $cat_ar);
+                }
+            }
         }
-         $this->add();
+         redirect('admin/packages/add');
     }
-   
 
 }
