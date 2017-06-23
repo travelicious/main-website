@@ -9,14 +9,16 @@
         <div class="content-area py-1">
             <div class="container-fluid">
                 <div class="row row-md">
+
+                	<a href="<?php echo base_url(); ?>admin/news">
                     <div class="col-lg-4 col-md-6 col-xs-12">
                         <div class="box box-block bg-white tile tile-1 mb-2">
                             <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
                             <div class="t-content">
                                 <h2 class="text-uppercase mb-1" style="color:grey">News</h2>
                                 <?php
-                                        $i=1;
-                                        foreach ($fetch_data->result() as $row) {
+                                        $i=0;
+                                        foreach ($fetch_news->result() as $row) {
                                         	  $i;
                                         	 $i++;
                                         	} 
@@ -27,15 +29,17 @@
                                 <!-- <span class="text-muted font-90">from previous period</span> -->
                             </div>
                         </div>
-                    </div>
+                    </div></a>
+
+                    <a href="<?php echo base_url();?>admin/blogs">
                     <div class="col-lg-4 col-md-6 col-xs-12">
                         <div class="box box-block bg-white tile tile-1 mb-2">
                             <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
                             <div class="t-content">
                                 <h2 class="text-uppercase mb-1" style="color:grey">Blogs</h2>
                                 <?php
-                                        $i=1;
-                                        foreach ($fetch_data->result() as $row2) {
+                                        $i=0;
+                                        foreach ($fetch_data->result() as $row) {
                                         	  $i;
                                         	 $i++;
                                         	} 
@@ -46,38 +50,84 @@
                                 <!-- <span class="text-muted font-90">from previous period</span> -->
                             </div>
                         </div>
-                    </div>
-                     <div class="col-lg-4 col-md-6 col-xs-12">
+                    </div></a>
+
+                    <a href="<?php echo base_url(); ?>admin/Category">
+                    <div class="col-lg-4 col-md-6 col-xs-12">
                         <div class="box box-block bg-white tile tile-1 mb-2">
                             <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
                             <div class="t-content">
-                                <h2 class="text-uppercase mb-1" style="color:grey">Packages</h2>
+                                <h2 class="text-uppercase mb-1" style="color:grey">Categories</h2>
                                 <?php
-                                        $i=1;
-                                        foreach ($fetch_data->result() as $row2) {
-                                        	  $i;
+                                        $i=0;
+                                        foreach ($fetch_category as $row) {
                                         	 $i++;
                                         	} 
                                         	//echo $i;exit;
                                 ?>
-                                <h3 class="mb-1">Total Packages : <?php echo $i; ?></h3>
+                                <h3 class="mb-1">Total Category : <?php echo $i; ?></h3>
                                 <!-- <span class="tag tag-danger mr-0-5">+17%</span> -->
                                 <!-- <span class="text-muted font-90">from previous period</span> -->
                             </div>
                         </div>
-                    </div>
+                    </div></a>
+                     
                     
 
                 </div>
                 <div class="row row-md">
-	                 	<div class="col-lg-4 col-md-6 col-xs-12">
+
+                	<a href="<?php echo base_url(); ?>admin/packages">
+	            	<div class="col-lg-4 col-md-6 col-xs-12">
+	                        <div class="box box-block bg-white tile tile-1 mb-2">
+	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+	                            <div class="t-content">
+	                                <h2 class="text-uppercase mb-1" style="color:grey">Packages</h2>
+	                                <?php
+	                                        $i=0;
+	                                        foreach ($fetch_package as $row2) {
+	                                        	  $i;
+	                                        	 $i++;
+	                                        	} 
+	                                        	//echo $i;exit;
+	                                ?>
+	                                <h3 class="mb-1">Total Packages : <?php echo $i; ?></h3>
+	                                <!-- <span class="tag tag-danger mr-0-5">+17%</span> -->
+	                                <!-- <span class="text-muted font-90">from previous period</span> -->
+	                            </div>
+	                        </div>
+	                </div>  </a>
+
+	                <a href="<?php echo base_url();?>admin/destination"> 	
+	                <div class="col-lg-4 col-md-6 col-xs-12">
+	                        <div class="box box-block bg-white tile tile-1 mb-2">
+	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+	                            <div class="t-content">
+	                                <h2 class="text-uppercase mb-1" style="color:grey">Destination</h2>
+	                                <?php
+	                                        $i=0;
+	                                        foreach ($fetch_destination as $row2) {
+	                                        	  $i;
+	                                        	 $i++;
+	                                        	} 
+	                                        	//echo $i;exit;
+	                                ?>
+	                                <h3 class="mb-1">Total Destination : <?php echo $i; ?></h3>
+	                                <!-- <span class="tag tag-danger mr-0-5">+17%</span> -->
+	                                <!-- <span class="text-muted font-90">from previous period</span> -->
+	                            </div>
+	                        </div>
+	                </div></a>  
+
+	                <a href="<?php echo base_url(); ?>admin/photos">
+	                <div class="col-lg-4 col-md-6 col-xs-12">
 	                        <div class="box box-block bg-white tile tile-1 mb-2">
 	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
 	                            <div class="t-content">
 	                                <h2 class="text-uppercase mb-1" style="color:grey">Photos</h2>
 	                                <?php
-	                                        $i=1;
-	                                        foreach ($fetch_data->result() as $row2) {
+	                                        $i=0;
+	                                        foreach ($fetch_photo->result() as $row2) {
 	                                        	  $i;
 	                                        	 $i++;
 	                                        	} 
@@ -88,45 +138,7 @@
 	                                <!-- <span class="text-muted font-90">from previous period</span> -->
 	                            </div>
 	                        </div>
-	                    </div>
-	                    <div class="col-lg-4 col-md-6 col-xs-12">
-	                        <div class="box box-block bg-white tile tile-1 mb-2">
-	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
-	                            <div class="t-content">
-	                                <h2 class="text-uppercase mb-1" style="color:grey">Destination</h2>
-	                                <?php
-	                                        $i=1;
-	                                        foreach ($fetch_data->result() as $row2) {
-	                                        	  $i;
-	                                        	 $i++;
-	                                        	} 
-	                                        	//echo $i;exit;
-	                                ?>
-	                                <h3 class="mb-1">Total Destination : <?php echo $i; ?></h3>
-	                                <!-- <span class="tag tag-danger mr-0-5">+17%</span> -->
-	                                <!-- <span class="text-muted font-90">from previous period</span> -->
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <div class="col-lg-4 col-md-6 col-xs-12">
-	                        <div class="box box-block bg-white tile tile-1 mb-2">
-	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
-	                            <div class="t-content">
-	                                <h2 class="text-uppercase mb-1" style="color:grey">Destination</h2>
-	                                <?php
-	                                        $i=1;
-	                                        foreach ($fetch_data->result() as $row2) {
-	                                        	  $i;
-	                                        	 $i++;
-	                                        	} 
-	                                        	//echo $i;exit;
-	                                ?>
-	                                <h3 class="mb-1">Total Destination : <?php echo $i; ?></h3>
-	                                <!-- <span class="tag tag-danger mr-0-5">+17%</span> -->
-	                                <!-- <span class="text-muted font-90">from previous period</span> -->
-	                            </div>
-	                        </div>
-	                    </div>
+	                </div></a>
                    
 
                 </div>
