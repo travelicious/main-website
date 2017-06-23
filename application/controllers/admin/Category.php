@@ -55,14 +55,11 @@ class Category extends BackendController {
         }
     }
 
-    public function delete_category() {
-        $c_id = $this->input->post('cat_id');
+    public function delete_category($c_id) {
         $ok_del = $this->db->query("delete from category where id  = $c_id");
         if ($ok_del) {
-            echo json_encode(array('st' => 1));
-        } else {
-            echo json_encode(array('st' => 0));
-        }
+            redirect('admin/category');
+        } 
     }
 
 }
