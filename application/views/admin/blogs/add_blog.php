@@ -10,7 +10,7 @@
 
     <div class="col-md-12">
         <div class="box bg-white">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)">
                 <div class="col-md-8">
 
                     <div class="box box-block bg-white">
@@ -18,8 +18,15 @@
                         <div class="form-group row">
                             <label for="url" class="col-xs-2 col-form-label">URL</label>
                             <div class="col-xs-8">
-                                <input class="form-control" type="text" name="url">
+                                <input class="form-control" type="text" name="url" onchange="checkURLExistOrNot(event, this, '<?php echo base_url("admin/blogs/urlExistOrNot")?>')">
                             </div>
+                        </div>
+						
+						
+						<div class="form-group row">
+							<div class="col-xs-10">
+							  <span id="urlMessage"></span>
+							</div>
                         </div>
 
                         <div class="form-group row">
@@ -34,12 +41,12 @@
                             <div class="col-xs-8">
                                 <input class="form-control" type="file"  name="files">
                             </div>
-                        </div> -->
+                        </div> --> 
 
                         <div class="form-group row">
                             <label for="description" class="col-xs-2 col-form-label">Description</label>
                             <div class="col-xs-8">
-                                <textarea class="form-control" rows="4" name="description"></textarea>
+                                <textarea class="form-control" rows="13" name="description"></textarea>
                             </div>
                         </div>
 
@@ -158,3 +165,4 @@
 
 
     </div>
+<script src="<?php echo base_url('assets/js/comman.js') ?>"></script>

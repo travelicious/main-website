@@ -134,14 +134,11 @@ $(document).ready(function() {
                 <em style="color: blue;" class="single-news-em">Total Views : <?php echo $row->view_count; ?></em>
             
             </div>
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 demo" style="text-align: justify;">
                <p class="single-news-para"><span><img src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>" class="img-responsive" alt="single news" title="single news"></span>
                <?php echo $row->description; ?>
                 </p>
                 
-                 
-                
-            
             </div>
             <?php } ?>
             
