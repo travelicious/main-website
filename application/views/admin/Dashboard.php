@@ -65,7 +65,7 @@
                                         	} 
                                         	//echo $i;exit;
                                 ?>
-                                <h3 class="mb-1">Total Category : <?php echo $i; ?></h3>
+                                <h3 class="mb-1">Total Categoryies : <?php echo $i; ?></h3>
                                 <!-- <span class="tag tag-danger mr-0-5">+17%</span> -->
                                 <!-- <span class="text-muted font-90">from previous period</span> -->
                             </div>
@@ -112,7 +112,7 @@
 	                                        	} 
 	                                        	//echo $i;exit;
 	                                ?>
-	                                <h3 class="mb-1">Total Destination : <?php echo $i; ?></h3>
+	                                <h3 class="mb-1">Total Destinations : <?php echo $i; ?></h3>
 	                                <!-- <span class="tag tag-danger mr-0-5">+17%</span> -->
 	                                <!-- <span class="text-muted font-90">from previous period</span> -->
 	                            </div>
