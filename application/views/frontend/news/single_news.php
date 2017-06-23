@@ -61,7 +61,8 @@ $(document).ready(function() {
     <div class="container-fluid bg-custom container-height" >
    <div class="row">
     <div class="col-md-3">
-       <img src="<?php echo base_url();?>assets/frontend/images/logo.png" class="img-responsive logos" alt="logo" title="logo title">
+   <a href="<?php echo base_url(); ?>frontend/home"> 
+       <img src="<?php echo base_url();?>assets/frontend/images/logo.png" class="img-responsive logos" alt="logo" title="logo title"></a>
        </div>
       <div class="col-md-1 col-1">  <span>News</span></div>
     <div class="col-md-5">

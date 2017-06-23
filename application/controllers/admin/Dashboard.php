@@ -22,10 +22,23 @@ class Dashboard extends BackendController {
     public function index()
     {
         $data['page_title'] = 'Dashboard';
-
+        $this->load->model('Get_news');
+        //$this->load->model('Blog_model');
+        $data['fetch_data']= $this->Get_news->fetch_data();
+        //$data['fetch_data']= $this->Blog_model->fetch_data();
         $data['body_view'] = 'admin/Dashboard';
         $this->load->view('admin/layouts/home',$data);
+
+        
+       // $this->load->view('admin/dashboard',$data1);
     }
+
+   /* public function dashboard()
+    {
+        $this->load->model('Get_news');
+        $data['fetch_data']= $this->Get_news->fetch_data();
+        $this->load->view('admin/dashboard/dashboard',$data);
+    }*/
     
     
 }
