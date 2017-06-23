@@ -25,7 +25,7 @@
             <li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-icon"><i class="fa fa-newspaper-o"></i></span>
                     <span class="s-text">News</span>
                 </a>
                 <ul>
@@ -39,7 +39,7 @@
             <li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-icon"><i class="fa fa-calculator"></i></span>
                     <span class="s-text">Inclusion/Exclusion</span>
                 </a>
                 <ul>
@@ -55,7 +55,7 @@
              <li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-icon"><i class="fa fa-tags"></i></span>
                     <span class="s-text">Category</span>
                 </a>
                 <ul>
@@ -82,7 +82,7 @@
             <li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-icon"><i class="fa fa-gift"></i></span>
                     <span class="s-text">Packages</span>
                 </a>
                 <ul>
@@ -93,7 +93,7 @@
             <li class="with-sub">
                 <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-icon"><i class="fa fa-picture-o"></i></span>
                     <span class="s-text">Photos</span>
                 </a>
                 <ul>
@@ -115,7 +115,7 @@
 			 <li class="with-sub">
            <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-icon"><i class="fa fa-map-marker"></i></span>
                     <span class="s-text">Destination</span>
                 </a>  
 				<ul>
@@ -129,7 +129,7 @@
              <li class="with-sub">
                     <a href="#" class="waves-effect  waves-light">
                     <span class="s-caret"><i class="fa fa-angle-down"></i></span>
-                    <span class="s-icon"><i class="ti-paint-bucket"></i></span>
+                    <span class="s-icon"><i class="fa fa-file-o fa-stack-2x"></i></span>
                     <span class="s-text">Blogs</span>
                 </a>
                 <ul>

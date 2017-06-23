@@ -13,7 +13,7 @@
                 	<a href="<?php echo base_url(); ?>admin/news">
                     <div class="col-lg-4 col-md-6 col-xs-12">
                         <div class="box box-block bg-white tile tile-1 mb-2">
-                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+                            <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-newspaper-o"></i></div>
                             <div class="t-content">
                                 <h2 class="text-uppercase mb-1" style="color:grey">News</h2>
                                 <?php
@@ -34,7 +34,7 @@
                     <a href="<?php echo base_url();?>admin/blogs">
                     <div class="col-lg-4 col-md-6 col-xs-12">
                         <div class="box box-block bg-white tile tile-1 mb-2">
-                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+                            <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-file-o fa-stack-2x"></i></div>
                             <div class="t-content">
                                 <h2 class="text-uppercase mb-1" style="color:grey">Blogs</h2>
                                 <?php
@@ -55,7 +55,7 @@
                     <a href="<?php echo base_url(); ?>admin/Category">
                     <div class="col-lg-4 col-md-6 col-xs-12">
                         <div class="box box-block bg-white tile tile-1 mb-2">
-                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+                            <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-tags"></i></div>
                             <div class="t-content">
                                 <h2 class="text-uppercase mb-1" style="color:grey">Categories</h2>
                                 <?php
@@ -80,7 +80,7 @@
                 	<a href="<?php echo base_url(); ?>admin/packages">
 	            	<div class="col-lg-4 col-md-6 col-xs-12">
 	                        <div class="box box-block bg-white tile tile-1 mb-2">
-	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+	                            <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-gift"></i></div>
 	                            <div class="t-content">
 	                                <h2 class="text-uppercase mb-1" style="color:grey">Packages</h2>
 	                                <?php
@@ -101,7 +101,7 @@
 	                <a href="<?php echo base_url();?>admin/destination"> 	
 	                <div class="col-lg-4 col-md-6 col-xs-12">
 	                        <div class="box box-block bg-white tile tile-1 mb-2">
-	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+	                            <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-map-marker"></i></div>
 	                            <div class="t-content">
 	                                <h2 class="text-uppercase mb-1" style="color:grey">Destination</h2>
 	                                <?php
@@ -122,7 +122,7 @@
 	                <a href="<?php echo base_url(); ?>admin/photos">
 	                <div class="col-lg-4 col-md-6 col-xs-12">
 	                        <div class="box box-block bg-white tile tile-1 mb-2">
-	                            <div class="t-icon right"><span class="bg-danger"></span><i class="ti-shopping-cart-full"></i></div>
+	                            <div class="t-icon right"><span class="bg-danger"></span><i class="fa fa-picture-o"></i></div>
 	                            <div class="t-content">
 	                                <h2 class="text-uppercase mb-1" style="color:grey">Photos</h2>
 	                                <?php
