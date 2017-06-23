@@ -63,6 +63,8 @@ class Category extends BackendController {
         } else {
             echo json_encode(array('st' => 0));
         }
+        
     }
+
 
 }
