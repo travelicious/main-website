@@ -37,7 +37,7 @@
         <div class="col-md-1">
         </div>
         <div class="col-md-6">
-<form action="#" id="formsubmitDestination" name="formsubmitDestination" onsubmit="return submitDestination()">
+<form enctype="multipart/form-data" method="POST" id="formsubmitDestination" name="formsubmitDestination" >
   <div class="form-group">
     <label for="title">Destination Title</label>
     <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title">
@@ -53,10 +53,7 @@
     <label for="description">Description</label>
     <textarea class="form-control" id="description" name="description" rows="3"></textarea>
   </div>
-  <div class="form-group">
-    <label for="image">Image</label>
-    <input type="file" class="form-control-file" id="image" name="image" aria-describedby="fileHelp">
-  </div>
+
  
  <div class="form-group">
     <label for="meta_title">Meta Title</label>
@@ -70,14 +67,14 @@
 
     <div class="form-group">
     <label for="meta_description">Meta Description</label>
-    <textarea class="form-control" id="meta_description" name="meta_description" rows="2"></textarea>
+    <input type="text" class="form-control" id="meta_description" name="meta_description" >
   </div>
 
  <div class="form-group">
 
     <small id="msg" class="form-text">&nbsp;</small>
     <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <input type="submit" class="btn btn-primary" name="submit">
   </div> 
 </form>
         </div>
@@ -90,46 +87,7 @@
         </div>
 
 
-<script>
 
-function submitDestination(){
-
-    var data = new FormData($('#formsubmitDestination')[0]); 
-
-      var ajaxmap=$.ajax({
-                      type:"POST",
-                      url:"<?php echo site_url('admin/destination/submitDestination');?>",
-                      data:data,
-                      mimeType: "multipart/form-data",
-                      contentType: false,
-                      cache: false,
-                      processData: false,
-
-                     success:function(data)
-                    {
-
-                      console.log(data);
-                      // return false;
-                      if(data==1){
-                        setTimeout(function(){ 
-                            document.getElementById('msg').innerHTML = "Destination successfully add.";
-                            document.getElementById('msg').style.color = "#4CAF50";
-                            
-                        }, 800); 
-                        setTimeout(function(){ 
-                            window.location.href = "<?php echo base_url()?>admin/destination";
-                        }, 2000); 
-                     }else{
-
-                          setTimeout(function(){ 
-                            document.getElementById('msg').innerHTML = "Destination not add try again.";
-                            console.log("Error in Submission...");
-                          }, 800);
-                      }
-                   }
-             }).responseText;  
-         return false;
-} 
 
 </script>   
         <!-- Footer -->
