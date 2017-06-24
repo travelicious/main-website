@@ -41,6 +41,8 @@ class Packages extends BackendController {
         $data['service_list'] = $this->packages_model->fetch_services_details();
 //        fetch category list
         $data['category_list'] = $this->packages_model->fetch_category_details();
+//        fetch destination list
+        $data['destination_list'] = $this->packages_model->fetch_destination_details();
 
 
         /* Loading the layout and the body layout is passed as name which will be loaded in view */
@@ -77,8 +79,8 @@ class Packages extends BackendController {
     public function add_packages() {
 
         if ($this->input->post('submit')) {
-            
-            
+
+
             $pak_id = $this->input->post('imag_id');
             $url = $this->input->post('package_url');
             $title = $this->input->post('package_title');
@@ -122,8 +124,24 @@ class Packages extends BackendController {
                     $nsert_catg_ok = $this->db->insert('category_mapping', $cat_ar);
                 }
             }
+
+            if (empty($_POST['destn'])) {
+                $_POST['destn'] = 'null';
+            } else {
+                $dest_val = $_POST['destn'];
+                $pack_id = $this->input->post('imag_id');
+
+                foreach ($dest_val as $val_dest) {
+                    $dest_ar = array(
+                        'destination_id' => $val_dest,
+                        'package_id ' => $pack_id,
+                    );
+
+                    $nsert_catg_ok = $this->db->insert('packages_destination', $dest_ar);
+                }
+            }
         }
-         redirect('admin/packages/add');
+        redirect('admin/packages/add');
     }
 
 }
