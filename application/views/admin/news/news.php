@@ -44,6 +44,7 @@
                             <table class="table table-responsive">
                           
                                 <tr>
+                                    <th>S.N</th>
                                     <th>URL</th>
                                     <th>News Title</th>
                                     <th>image</th>
@@ -56,48 +57,33 @@
                                     <th>Delete</th>
                                 </tr>
                                 <?php
-
+                                        $i=1;
                                         foreach ($fetch_data->result() as $row) {
 
-
-                                            ?>
+                                ?>
 
                                             <tr>
+                                            <td> <?php echo $i; ?></td>
                                             <td> <?php echo $row->url;?></td>
                                             <td> <?php echo $row->title;?></td>
                                             <td> <img class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
-                                            <td> 
-											
-											   <?php 
-											     
-												 if(strlen($row->description) > 100)
-												 {
-												   $description = substr($row->description, 0, 100);
-                                                   echo $description.' ......'; 												   
-												 }
-												 else
-												 {
-												   echo $row->description;
-											     }
-											   ?>
-											
-											</td>
-											<td> <?php echo $row->view_count;?></td>
-                                            
-                                            <td> <img width="100" class="img-responsive" src="<?php echo base_url();?>assets/images/news/<?php echo $row->image; ?>"></td>
+                                           
+										
+
 
                                             <td> <?php echo substr($row->description,0,200);?></td>
 
-
+                                             <td> <?php echo $row->view_count;?></td>
                                             <td> <?php echo $row->author;?></td>
                                             <td> <?php echo $row->created_at;?></td>
                                             <td> <?php echo $row->modified_at;?></td>
+
                                             <td><a href="<?php echo base_url();?>admin/News/edit_news?id=<?php echo $row->id; ?>"><?php echo 'Edit';?></a> </td>
                                             <td><a href="<?php echo base_url();?>admin/News/delete_news?id=<?php echo $row->id; ?>"> <?php echo 'Delete';?></a></td>
                                             </tr>
 
 
-                                            <?php
+                                            <?php $i++;
                                         }
                                 ?>
                              
