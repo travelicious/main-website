@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Demo</title>
+<title>Home | Travels</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
@@ -376,18 +376,21 @@ DEALS of Day's</h4>
                 <hr class="indx-hr">
 			</div>
 
-
+                      
 
 			<div class="services-w3ls-row">
+                      <?php
+                         foreach ($fetch_packages->result() as $rowP) {
+                          
+                      ?>
 				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
                     <div class="box-shadow-index">
 					<!--<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>-->
                     <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
                     <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
+                    <h4 class="headlines-indx"><?php echo $rowP->title; ?></h4>
+                    <p><b><?php echo $rowP->duration; ?></b></p> 
+                    <p><b>Destination : <?php echo substr($rowP->description,0,200); ?></p>  
                     <div class="panel-footer">
                     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label></div>
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
@@ -398,124 +401,12 @@ DEALS of Day's</h4>
                         
                         </div>    
                     </div>
-                    
-					
 				</div>
+        <?php } ?>
 
 
-
-
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>-->
-					 <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                    <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                        </div>
-                        </div>    
-                    </div>
-				</div>
-
-
-
-
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>-->
-					<img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                     <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                         </div>
-                        </div>    
-                    </div>
-
-
-
-				
-				<div class="clearfix"> </div>
-			</div>  
 		</div>
-            <div class="services-w3ls-row">
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>-->
-                    <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                    <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                        </div>
-                        </div>    
-                    </div>
-                    
-					
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>-->
-					 <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                     <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                         </div>
-                        </div>    
-                    </div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>-->
-					<img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                    <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                        </div>
-                        </div>    
-                    </div>
-				
-				<div class="clearfix"> </div>
-			</div>  
-		</div>
+            
 	</div>
     </div>
 	<!-- //services -->
