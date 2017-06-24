@@ -287,14 +287,15 @@ DEALS of Day's</h4>
 					</div>
 				</div>
 				
+        <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$arrayB[0]['url'];?>">
         <div class="col-sm-3 welcome-grids padding-0-brnd">
-					
-						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[0]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
-                    <div class="caption brnd-imgs-mention">
-                    <h3><?php echo $arrayB[0]['title']; ?></h3>
-                        <em><?php echo $arrayB[0]['created_at']; ?></em> 
-                    </div>
-				</div>
+    						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[0]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
+                <div class="caption brnd-imgs-mention">
+                <h3><?php echo $arrayB[0]['title']; ?></h3>
+                    <em><?php echo $arrayB[0]['created_at']; ?></em> 
+                </div>
+				</div></a>
+
 
         <div class="col-sm-3 welcome-grids padding-0-brnd ">
           
@@ -323,13 +324,15 @@ DEALS of Day's</h4>
                     </div>
           </div>
         </div>
+
+        <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$arrayB[1]['url'];?>">
         <div class="col-sm-3 welcome-grids padding-0-brnd">
             <img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[1]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
                     <div class="caption brnd-imgs-mention">
                     <h3><?php echo $arrayB[1]['title']; ?></h3>
                         <em><?php echo $arrayB[1]['created_at']; ?></em>
                     </div>
-        </div>
+        </div></a>
   </div>
                         
 
@@ -338,13 +341,15 @@ DEALS of Day's</h4>
 						<iframe class="ifrm-vdo-brnd" src="https://www.youtube.com/embed/0zpvZOiqvLY" frameborder="0" allowfullscreen></iframe>
 				</div>
         
+        <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$arrayB[2]['url'];?>">
         <div class="col-sm-3 welcome-grids padding-0-brnd">
 						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[2]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
                     <div class="caption brnd-imgs-mention">
                     <h3><?php echo $arrayB[2]['title']; ?></h3>
                         <em><?php echo $arrayB[2]['created_at']; ?></em>
                     </div>
-				</div>
+				</div></a>
+        
         <div class="col-sm-6 welcome-grids brnd-mntion">
                     <div class=" ">
                     <div class="col-md-7">
