@@ -13,6 +13,7 @@
                     <option value='NULL'>Select City</option>
                 <?php
                 $i=0;
+                
                 foreach ($all_destination as $destination) {
 
 
@@ -50,6 +51,7 @@
                 <tbody>
                 <?php
                 $i=0;
+
                 foreach ($all_packages as $package)
                 {
                     ?>

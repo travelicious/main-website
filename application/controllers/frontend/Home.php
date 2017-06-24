@@ -1,29 +1,19 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+ defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends FrontendController {
+ class Home extends FrontendController
+ {
 
-	/**
-	<!-- ____________________ Alamgir ________________ -->
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('frontend/index');
+ 	public function index()
+ 	{
 
-	}
+   $this->load->model('frontend/Package_model');
+
+ 	$data["package_fetch"]=$this->Package_model->best_package_fetch();
+
+	$this->load->view('frontend/home',$data);
+ 	}
+ }
 
 
-}
+?>
