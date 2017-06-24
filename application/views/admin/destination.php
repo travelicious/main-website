@@ -54,7 +54,7 @@
                                     <th>Title</th>
                                     <th>URL</th>
                                     <th>Description</th>
-                                    <!--<th>Image</th>-->
+                               
                                     <th>Action</th>
                                     <th>Manage</th>
                                 </tr>
@@ -86,7 +86,7 @@
                                         <a class="text-primary" href="#"><span class="underline"><?=$rows->url?></span></a>
                                     </td>
                                     <td>
-                                       <span><?=$rows->description?></span>
+                                       <span><?= substr($rows->description,0,50);?></span>
                                     </td>
 <!--                                    <td>
                                         <span class="text-muted"><img src="<?php echo  base_url()?>assets/images/destination/<?=$rows->image?>" style="width:100px"></span>
@@ -96,7 +96,7 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="<?php echo base_url()?>admin/destination/destination_edit?id=<?=$rows->id?>">Edit</a>
+                                        <a href="<?php echo base_url()?>admin/destination/updateDestination?id=<?=$rows->id ;?>">Edit</a>
                                     </td>
                                 </tr>
     <?php
