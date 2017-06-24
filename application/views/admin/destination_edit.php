@@ -29,7 +29,6 @@
 
             $title = $rows->title;
             $url = $rows->url;
-            $image = $rows->image;
             $description = $rows->description;
             $meta_title = $rows->meta_title;
             $meta_robots = $rows->meta_robots;
@@ -51,7 +50,7 @@
         <div class="col-md-1">
         </div>
         <div class="col-md-6">
-<form action="#" id="formupdateDestination" name="formupdateDestination" onsubmit="return updateDestination()">
+<form  id="formupdateDestination" name="formupdateDestination" enctype="multipart/form-data" method="POST">
     <input type="hidden" class="form-control" id="id" name="id" value="<?=$id?>">
   <div class="form-group">
     <label for="title">Destination Title</label>
@@ -68,35 +67,27 @@
     <label for="description">Description</label>
     <textarea class="form-control" id="description" name="description" rows="3"><?=$description?></textarea>
   </div>
-  <div class="form-group">
-    <img src="<?php echo base_url()?>assets/images/destination/<?=$image?>">
-  </div>
- 
-  <div class="form-group">
-    <label for="image">Image</label>
-    <input type="file" class="form-control-file" id="image" name="image" aria-describedby="fileHelp">
-  </div>
- 
+  <br>
  <div class="form-group">
     <label for="meta_title">Meta Title</label>
-    <input type="text" class="form-control" id="meta_title" name="meta_title" placeholder="Enter Meta Title" value="<?=$meta_title?>">
+    <input type="text" class="form-control" id="meta_title" name="meta_title" placeholder="Enter Meta Title" value="<?php echo $meta_title; ?>">
   </div>
 
    <div class="form-group">
     <label for="meta_robots">Meta Robots</label>
-    <input type="text" class="form-control" id="meta_robots" name="meta_robots" placeholder="Enter Meta Robot" value="<?=$meta_robots?>">
+    <input type="text" class="form-control" id="meta_robots" name="meta_robots" placeholder="Enter Meta Robot" value="<?php echo $meta_robots; ?>">
   </div>
 
    <div class="form-group">
     <label for="meta_description">Meta Description</label>
-    <textarea class="form-control" id="meta_description" name="meta_description" rows="2"><?=$meta_description?></textarea>
+    <input type="text" class="form-control" id="meta_description" name="meta_description" value="<?=$meta_description?>">
   </div>
 
  <div class="form-group">
 
     <small id="msg" class="form-text">&nbsp;</small>
     <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <input type="submit" class="btn btn-primary" name="submit">
   </div> 
 </form>
         </div>
@@ -109,48 +100,7 @@
         </div>
 
 
-<script>
 
-function updateDestination(){
-
-    var data = new FormData($('#formupdateDestination')[0]); 
-
-      var ajaxmap=$.ajax({
-                      type:"POST",
-                      url:"<?php echo site_url('admin/destination/updateDestination');?>",
-                      data:data,
-                      mimeType: "multipart/form-data",
-                      contentType: false,
-                      cache: false,
-                      processData: false,
-
-                     success:function(data)
-                    {
-
-                      console.log(data);
-                      // return false;
-                      if(data==1){
-                        setTimeout(function(){ 
-                            document.getElementById('msg').innerHTML = "Destination successfully updated.";
-                            document.getElementById('msg').style.color = "#4CAF50";
-                            
-                        }, 800); 
-                        setTimeout(function(){ 
-                            window.location.href = "<?php echo base_url()?>admin/destination";
-                        }, 2000); 
-                     }else{
-
-                          setTimeout(function(){ 
-                            document.getElementById('msg').innerHTML = "Destination not update try again.";
-                            console.log("Error in Submission...");
-                          }, 800);
-                      }
-                   }
-             }).responseText;  
-         return false;
-} 
-
-</script>   
         <!-- Footer -->
         <?php $this->load->view('admin/layouts/Footer'); ?>
     </div>

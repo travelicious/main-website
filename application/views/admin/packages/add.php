@@ -73,7 +73,7 @@
 
                             </div>
                             <div class="col-md-4" >
-                                <div class="col-md-12" style="background: #d6d4d4;margin-top:10px; margin-bottom: 10px; width: 22em;height: 15em;overflow: auto;">
+                                <div class="col-md-12" style="background: #d6d4d4;margin-top:10px; margin-bottom: 10px; width: 22em;height: 10em;overflow: auto;">
                                     <div class="panel panel-default">
                                         <div class="panel-headline">
                                             <h4>Package Category</h4>
@@ -93,7 +93,7 @@
 
 
 
-                                <div class="col-md-12" style="background: #d6d4d4;margin-top:10px; margin-bottom: 10px; width: 22em;height: 15em;overflow: auto;">
+                                <div class="col-md-12" style="background: #d6d4d4;margin-top:10px; margin-bottom: 10px; width: 22em;height: 10em;overflow: auto;">
                                     <div class="panel panel-default">
                                         <div class="panel-headline" style="margin-top:10px;">
                                             <h4>Add Services</h4>
@@ -110,6 +110,29 @@
                                         </div>
                                         <div class="panel-booter" style="margin-bottom: 10px;">
                                             <a href="<?php echo base_url("admin/services/add_services"); ?>">Add New Services</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <!--destination-->
+                                <div class="col-md-12" style="background: #d6d4d4;margin-top:10px; margin-bottom: 10px; width: 22em;height: 10em;overflow: auto;">
+                                    <div class="panel panel-default">
+                                        <div class="panel-headline" style="margin-top:10px;">
+                                            <h4>Add Services</h4>
+                                        </div>
+                                        <div class="panel-body" >
+                                            <?php
+                                            foreach ($destination_list as $values) {
+                                                ?>
+                                                <label><input type="checkbox"  name="destn[]" id="destn[]" value="<?php echo $values->id ?>"> <span><?php echo $values->title ?> </span></label><br>
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="panel-booter" style="margin-bottom: 10px;">
+                                            <a href="#">Add New Services</a>
                                         </div>
                                     </div>
                                 </div>

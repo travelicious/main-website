@@ -52,5 +52,9 @@ class Packages_model extends CI_Model {
         $category_name = $this->db->query("select * from category order by category_name ")->result();
         return $category_name;
     }
+    public function fetch_destination_details() {
+        $dest_data = $this->db->query("select * from destination order by title ")->result();
+        return $dest_data;
+    }
 
 }

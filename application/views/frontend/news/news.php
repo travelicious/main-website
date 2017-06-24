@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Demo</title>
+<title>News | Travels</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
@@ -60,7 +60,8 @@ $(document).ready(function() {
     <div class="container-fluid bg-custom">
    <div class="row">
        <div class="col-md-3">
-       <img src="<?php echo base_url(); ?>assets/frontend/images/logo.png" class="img-responsive logos" alt="logo" title="logo title">
+       <a href="<?php echo base_url(); ?>frontend/home">
+       <img src="<?php echo base_url(); ?>assets/frontend/images/logo.png" class="img-responsive logos" alt="logo" title="logo title"></a>
        </div>
     <div class="col-md-3">
        
@@ -184,9 +185,9 @@ ndard dummy text ever since the 1500s.
                      </div>
                  </div>
                  <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
-                 <p>Place :<b>City name</b></p>
+               
                  <p>Date :<b><?php echo $row->created_at; ?></b></p>
-                     <p class="new-para-news"> <?php echo substr($row->description,0,200); ?>  </p>
+                     <p class="new-para-news"> <?php echo substr($row->description,0,300); ?>  </p>
                      <a href="<?php echo base_url("frontend/news/single_news").'/'.$row->url; ?>" class="text-right text-danger readmore">Read More</a>
                  
                  </div>
@@ -222,12 +223,13 @@ ndard dummy text ever since the 1500s.
              <div class="panel panel-body pbody">
                  <p class="right-side ">
                  <a href="<?php echo base_url("frontend/news/single_news").'/'.$row3->url; ?>">
-                 <img src="<?php echo base_url(); ?>assets/images/news/<?php echo $row3->image; ?>" class="img-responsive img-rounded" alt="" tilte="" style="height: 59px; width: 79px; display: inline-block;"><br>
-                 <span><?php echo $row3->title; ?></span><br></a>
-                 <?php echo substr($row3->description,0,200); ?>
+                 <img src="<?php echo base_url(); ?>assets/images/news/<?php echo $row3->image; ?>" class="img-responsive img-rounded" alt="" tilte="" style="height: 59px; width: 79px; display: inline-block;">
+                 <span>&nbsp &nbsp<?php echo $row3->title; ?></span></a>
+                 <p>Date :<b><?php echo $row3->created_at; ?></b></p>
+                 <?php echo substr($row3->description,0,200); ?><br>
 
-                     <span>..........</span>
-                     <a href="<?php echo base_url("frontend/news/single_news").'/'.$row3->url; ?>" class="text-right text-danger">Read More</a>
+                    <!--  <span>..........</span> -->
+                     <a style="float : right" href="<?php echo base_url("frontend/news/single_news").'/'.$row3->url; ?>" class="text-right text-danger">Read More</a>
                      </p>
                  <div class="clearfix"></div>
                  
@@ -289,9 +291,9 @@ ndard dummy text ever since the 1500s.
                 <div class="col-md-3 agile-footer-grid">
                     <h4>Social Link</h4>
                     <div class="popular-grids">
-                    <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                    <a href="https://www.facebook.com/traveliciousholidays.in"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/travelicious_H"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/116438473609065178412"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
                 <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
 </p>
                     </div>

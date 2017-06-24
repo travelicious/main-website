@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Demo</title>
+<title>Home | Travels</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
@@ -261,41 +261,53 @@ $(document).ready(function() {
 			</div>
 			<div class="w3l-welcome-info">
                 <div class="row">
+
+
+                      <?php
+                            $arrayN = array();
+                         foreach ($fetch_news->result_array() as $rowN) {
+                                
+                            $arrayN[] = $rowN;
+                            }
+                      ?>
+                      <?php
+                            $arrayB = array();
+                         foreach ($fetch_blog->result_array() as $rowB) {
+                                
+                            $arrayB[] = $rowB;
+                            }
+                      ?>
                 
 				<div class="col-sm-6 welcome-grids brnd-mntion">
                     <div class=" ">
                     <div class="col-md-7">
-                    <h2 class="ind-brnd-h2">Lorum Ipsum Doller</h2>
-                        <em class="brnds-dates">04 May, 2017</em>
-                        <p class="txt-dis-brnd">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text... <a href="#"><em>Read More >></em></a></p>
-                    
+                    <h2 class="ind-brnd-h2"><?php echo $arrayN[0]['title']; ?></h2>
+                        <em class="brnds-dates"><?php echo $arrayN[0]['created_at']; ?></em>
+                        <p class="txt-dis-brnd"><?php echo substr($arrayN[0]['description'],0,200); ?>... <a href="<?php echo base_url("frontend/news/single_news").'/'.$arrayN[0]['url']; ?>"><em>Read More >></em></a></p>
                     </div>
                     <div class="col-md-5">
                   
-						<img src="<?php echo base_url(); ?>assets/layouts/images/mjb.jpg" class="img-responsive zoom-img" alt="">
-				
-                    
+						<img width="200" src="<?php echo base_url(); ?>assets/images/news/<?php echo $arrayN[0]['image']; ?>" class="img-responsive zoom-img" alt="">
                     </div>
 					</div>
 				</div>
-				<div class="col-sm-3 welcome-grids padding-0-brnd ">
+				
+        <div class="col-sm-3 welcome-grids padding-0-brnd">
 					
-						<iframe class="ifrm-vdo-brnd" src="https://www.youtube.com/embed/0zpvZOiqvLY" frameborder="0" allowfullscreen></iframe>
-					
-				</div>
-                <div class="col-sm-3 welcome-grids padding-0-brnd">
-					
-						<img src="<?php echo base_url(); ?>assets/layouts/images/modi-aus-mit.jpg" class="img-responsive zoom-img imgs-brnd" alt="">
+						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[0]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
                     <div class="caption brnd-imgs-mention">
-                    <h3>Lorem Ipsume Doller goes</h3>
-                        <em>04 May, 2017</em>
-                        
-                        
+                    <h3><?php echo $arrayB[0]['title']; ?></h3>
+                        <em><?php echo $arrayB[0]['created_at']; ?></em> 
                     </div>
-					
 				</div>
+
+        <div class="col-sm-3 welcome-grids padding-0-brnd ">
+          
+            <iframe class="ifrm-vdo-brnd" src="https://www.youtube.com/embed/0zpvZOiqvLY" frameborder="0" allowfullscreen></iframe>
+        </div>
+
             </div>
-                <div class="row brnd-row">
+    <div class="row brnd-row">
                 
 				
 				<div class="col-sm-3 welcome-grids padding-0-brnd ">
@@ -303,72 +315,57 @@ $(document).ready(function() {
 						<iframe class="ifrm-vdo-brnd" src="https://www.youtube.com/embed/0zpvZOiqvLY" frameborder="0" allowfullscreen></iframe>
 					
 				</div>
-                    <div class="col-sm-6 welcome-grids brnd-mntions">
+        <div class="col-sm-6 welcome-grids brnd-mntion">
                     <div class=" ">
-                         <div class="col-md-2 rowsecond-cls">
+                    <div class="col-md-7">
+                    <h2 class="ind-brnd-h2"><?php echo $arrayN[1]['title']; ?></h2>
+                        <em class="brnds-dates"><?php echo $arrayN[1]['created_at']; ?></em>
+                        <p class="txt-dis-brnd"><?php echo substr($arrayN[1]['description'],0,200); ?>... <a href="<?php echo base_url("frontend/news/single_news").'/'.$arrayN[1]['url']; ?>"><em>Read More >></em></a></p>
+                    </div>
+                    <div class="col-md-5">
                   
-						<h4>MAY 2017</h4>
-				
-                    
+            <img width="200" src="<?php echo base_url(); ?>assets/images/news/<?php echo $arrayN[1]['image']; ?>" class="img-responsive zoom-img" alt="">
                     </div>
-                    <div class="col-md-10">
-                    <h2 class="ind-brnd-h2s">Lorum Ipsum Doller</h2>
-                             <p class="txt-dis-brnd">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text... <a href="#"><em>Read More >></em></a></p>
-                    
-                    </div>
-                   
-					</div>
-				</div>
-                <div class="col-sm-3 welcome-grids padding-0-brnd">
-					
-						<img src="<?php echo base_url(); ?>assets/layouts/images/modi-aus-mit.jpg" class="img-responsive zoom-img imgs-brnd" alt="">
+          </div>
+        </div>
+        <div class="col-sm-3 welcome-grids padding-0-brnd">
+            <img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[1]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
                     <div class="caption brnd-imgs-mention">
-                    <h3>Lorem Ipsume Doller goes</h3>
-                        <em>04 May, 2017</em>
-                        
-                        
+                    <h3><?php echo $arrayB[1]['title']; ?></h3>
+                        <em><?php echo $arrayB[1]['created_at']; ?></em>
                     </div>
-					
-				</div>
-            </div>
+        </div>
+  </div>
+                        
+
                         <div class="row brnd-rows">
-                
-				
-				<div class="col-sm-4 welcome-grids padding-0-brnd ">
-					
+				<div class="col-sm-3 welcome-grids padding-0-brnd ">
 						<iframe class="ifrm-vdo-brnd" src="https://www.youtube.com/embed/0zpvZOiqvLY" frameborder="0" allowfullscreen></iframe>
-					
 				</div>
-                    <div class="col-sm-4 welcome-grids padding-0-brnd">
-                        <div class=" ">
-                         <div class="col-md-5 col-5">
-                  
-						<img src="<?php echo base_url(); ?>assets/layouts/images/right-img-r3.jpg" class="img-responsive img-third-brnds" alt=" blog quotes" title="person say img">
-				
-                    
-                    </div>
-                    <div class="col-md-7 commenmt-brnd">
-                    <h2 class="ind-brnd-h2s">Lorum Ipsum Doller</h2>
-                             <p class="txt-dis-brnd">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text... <a href="#"><em>Read More >></em></a></p>
-                    
-                    </div>
-                   
-					</div>
-                   
-				</div>
-                <div class="col-sm-4 welcome-grids padding-0-brnd">
-					
-						<img src="<?php echo base_url(); ?>assets/layouts/images/modi-aus-mit.jpg" class="img-responsive zoom-img imgs-brnd" alt="">
+        
+        <div class="col-sm-3 welcome-grids padding-0-brnd">
+						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[2]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
                     <div class="caption brnd-imgs-mention">
-                    <h3>Lorem Ipsume Doller goes</h3>
-                        <em>04 May, 2017</em>
-                        
-                        
+                    <h3><?php echo $arrayB[2]['title']; ?></h3>
+                        <em><?php echo $arrayB[2]['created_at']; ?></em>
                     </div>
-					
 				</div>
-            </div>
+        <div class="col-sm-6 welcome-grids brnd-mntion">
+                    <div class=" ">
+                    <div class="col-md-7">
+                    <h2 class="ind-brnd-h2"><?php echo $arrayN[2]['title']; ?></h2>
+                        <em class="brnds-dates"><?php echo $arrayN[2]['created_at']; ?></em>
+                        <p class="txt-dis-brnd"><?php echo substr($arrayN[2]['description'],0,200); ?>... <a href="<?php echo base_url("frontend/news/single_news").'/'.$arrayN[2]['url']; ?>"><em>Read More >></em></a></p>
+                    </div>
+                    <div class="col-md-5">
+                  
+            <img width="200" src="<?php echo base_url();?>assets/images/news/<?php echo $arrayN[2]['image']; ?>" class="img-responsive zoom-img" alt="">
+                    </div>
+          </div>
+        </div>
+  </div>
 			
+
                 <div class="clearfix"> </div>
 			</div>
             
@@ -384,18 +381,21 @@ $(document).ready(function() {
                 <hr class="indx-hr">
 			</div>
 
-
+                      
 
 			<div class="services-w3ls-row">
+                      <?php
+                         foreach ($fetch_packages->result() as $rowP) {
+                          
+                      ?>
 				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
                     <div class="box-shadow-index">
 					<!--<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>-->
                     <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
                     <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
+                    <h4 class="headlines-indx"><?php echo $rowP->title; ?></h4>
+                    <p><b><?php echo $rowP->duration; ?></b></p> 
+                    <p><b>Destination : <?php echo substr($rowP->description,0,200); ?></p>  
                     <div class="panel-footer">
                     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label></div>
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
@@ -406,124 +406,12 @@ $(document).ready(function() {
                         
                         </div>    
                     </div>
-                    
-					
 				</div>
+        <?php } ?>
 
 
-
-
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>-->
-					 <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                    <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                        </div>
-                        </div>    
-                    </div>
-				</div>
-
-
-
-
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>-->
-					<img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                     <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                         </div>
-                        </div>    
-                    </div>
-
-
-
-				
-				<div class="clearfix"> </div>
-			</div>  
 		</div>
-            <div class="services-w3ls-row">
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>-->
-                    <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                    <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                        </div>
-                        </div>    
-                    </div>
-                    
-					
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>-->
-					 <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                     <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                         </div>
-                        </div>    
-                    </div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
-                    <div class="box-shadow-index">
-					<!--<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>-->
-					<img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
-                    <div class="caption packages-index">
-                    <h4 class="headlines-indx">Lorem ipsum</h4>
-                    <p><b>Duration :4 Night, 3 Days</b></p> 
-                    <p><b>Destination : Delhi - Agra - Jaipur - Delhi</b></p> 
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>  
-                    <div class="panel-footer">
-                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 rating-str"><label><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label></div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-right">
-                        <button class="btn btn-danger btn-txt-dtl">Details</button>
-                        </div>
-                        <div class="clearfix"> </div>
-                        </div>
-                        </div>    
-                    </div>
-				
-				<div class="clearfix"> </div>
-			</div>  
-		</div>
+            
 	</div>
     </div>
 	<!-- //services -->

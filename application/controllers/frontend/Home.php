@@ -21,7 +21,14 @@ class Home extends FrontendController {
 	 */
 	public function index()
 	{
-		$this->load->view('frontend/index');
+		
+		$this->load->model('Get_news');
+        $data['fetch_news']= $this->Get_news->fetch_data();
+        $this->load->model('frontend/Blog_model');
+        $data['fetch_blog']= $this->Blog_model->fetch_data();
+        $this->load->model('frontend/Packages_model');
+        $data['fetch_packages']= $this->Packages_model->fetch_packages();
+        $this->load->view('frontend/index',$data);
 
 	}
 	
