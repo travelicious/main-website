@@ -198,15 +198,20 @@ $(document).ready(function() {
                             </div>
                         <h4 class="h4head">Create Your Package</h4>
                         </div></a>
-                          <div class="col-md-3">
-                        <div class="circle text-center">
+						
+                          
+						  <div class="col-md-3">
+                        <a href="<?php echo base_url('frontend/home/hotDealsOfADay'); ?>">
+						<div class="circle text-center">
                               <i class="fa fa-handshake-o bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             
                               </div>   
-                              <h4 class="h4head htd">HOT
-DEALS of Day's</h4>
+                              <h4 class="h4head htd">HOT DEALS of Day's</h4>
+						</a>
                         </div>
+						
+						
                           <div class="col-md-3">
                         <div class="circle text-center">
                               <i class="fa fa-hourglass-end bgicon" aria-hidden="true"></i>

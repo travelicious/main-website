@@ -48,6 +48,7 @@
                                     <th>TITLE</th>
                                     <th>IMAGE</th>
                                     <th>DESCRIPTION</th>
+									<th>View Count</th>
                                     <th>AUTHOR</th>
                                     <th>CREATED_AT</th>
                                     <th>MODIFIED_AT</th>
@@ -77,6 +78,7 @@
 
                         
                                 <td><?php echo substr($row->description,0,300);?></td>
+								<td><?php echo $row->view_count; ?></td>
                             <td><?php echo $row->author;?></td>
                             <td><?php echo $row->created_at;?></td>
                             <td><?php echo $row->modified_at;?></td>
