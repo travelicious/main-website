@@ -396,7 +396,7 @@ $(document).ready(function() {
 				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
                     <div class="box-shadow-index">
 					<!--<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>-->
-                    <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
+                    <img style="width: 100%; height: 300px" src="<?php echo base_url(); ?>assets/uploads/images/<?php echo $rowP->image; ?>" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
                     <div class="caption packages-index">
                     <h4 class="headlines-indx"><?php echo $rowP->title; ?></h4>
                     <p><b><?php echo $rowP->duration; ?></b></p> 
