@@ -144,4 +144,15 @@ class Packages extends BackendController {
         redirect('admin/packages/add');
     }
 
+    public function enquiry_submit() {
+        $data = array(
+        'package_id'=> $this->input->post('packid'),
+        'hotel_type'=> $this->input->post('std'),
+        'name'=>$this->input->post('name'),
+        'email'=>$this->input->post('enq_email'),
+        'contact_number'=>$this->input->post('conact'),
+        );
+       echo '<pre>'; print_r($data);
+    }
+
 }
