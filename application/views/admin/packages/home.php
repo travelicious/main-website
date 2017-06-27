@@ -42,7 +42,7 @@
                     <th>#</th>
                     <th>Package Title</th>
                     <th>URL</th>
-                    <th>Views</th>
+                    <th>DESCRIPTION</th>
                     <th>Price</th>
                     <th>Image</th>
                     <th>Creation Date</th>
@@ -62,7 +62,7 @@
                             <a class="text-primary" href="#"><span class="underline"><?php echo $package->url; ?></span></a>
                         </td>
                         <td>
-                            <a class="text-primary" href="#"><span class="underline"><?php echo $package->views; ?></span></a>
+                            <?php echo $package->description; ?>
                         </td>
                         <td>
                             <?php echo $package->price; ?>

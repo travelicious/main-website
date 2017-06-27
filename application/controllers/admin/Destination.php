@@ -34,8 +34,25 @@ class Destination extends BackendController {
 
     public function destination_add()
     {
-        $this->load->view('admin/destination_add');
+		$this->load->view('admin/destination_add');
+		if(isset($_REQUEST['submit'])){
+		$datetimes=datetimes;
+        $title = addslashes($_REQUEST['title']);
+        $url = addslashes($_REQUEST['url']);
+        $description = addslashes($_REQUEST['description']);
+        $meta_title = addslashes($_REQUEST['meta_title']);
+        $meta_robots = addslashes($_REQUEST['meta_robots']);
+        $meta_description = addslashes($_REQUEST['meta_description']);
+        $target_dir = "assets/images/destination/";
+	    $insertdestination = $this->db->query("INSERT INTO `destination` (`url`, `title`,`description`, `meta_title`, `meta_robots`, `meta_description`, `created_at`, `flag`) VALUES ('$url', '$title','$description', '$meta_title', '$meta_robots', '$meta_description', '$datetimes', '1')");
+        if ($insertdestination == true)
+		 {
+			 redirect('admin/destination');
+		 }
+		}
     }
+	
+	
 
 
     public function changestatus()
@@ -78,49 +95,24 @@ class Destination extends BackendController {
             echo "2";
         }
     }
-    public function updateDestination()
-    {
+    public function updateDestination($id=false)
+    {   
+	   $id = $_GET['id'];
+	   $this->load->view('admin/destination_edit');
+	   if(isset($_REQUEST['submit'])){
         $datetimes=datetimes;
         $title = addslashes($_REQUEST['title']);
-        $id = addslashes($_REQUEST['id']);
         $url = addslashes($_REQUEST['url']);
         $description = addslashes($_REQUEST['description']);
         $meta_title = addslashes($_REQUEST['meta_title']);
         $meta_robots = addslashes($_REQUEST['meta_robots']);
         $meta_description = addslashes($_REQUEST['meta_description']);
-        $target_dir = "assets/images/destination/";
-     if($_FILES['image']['name']!="")
-     {
-        $image_name = $_FILES['image']['name'];
-        $ext  = ".".pathinfo($image_name, PATHINFO_EXTENSION);
-        $image = "dest_".uniqid().$ext;
-        $target_file = $target_dir.$image;
-        if(move_uploaded_file($_FILES['image']['tmp_name'],$target_file)){
-
-            $insertdestination = $this->db->query("UPDATE `destination` SET `url` = '$url', `title` = '$title', `image` = '$image', `description` = '$description', `meta_title` = 'meta_title', `meta_robots` = 'meta_robots', `meta_description` = '$meta_description', `modified_at` = '$datetimes' WHERE `destination`.`id` = ".$id);
-            if($insertdestination==true)
-            {
-                echo "1";
-            }else
-            {
-                echo "3";
-            }
-        }else{
-            echo "2";
-        }
-    }else{
-
-            $insertdestination = $this->db->query("UPDATE `destination` SET `url` = '$url', `title` = '$title', `description` = '$description', `meta_title` = 'meta_title', `meta_robots` = 'meta_robots', `meta_description` = '$meta_description', `modified_at` = '$datetimes' WHERE `destination`.`id` = ".$id);
-
-            if($insertdestination==true)
-            {
-                echo "1";
-            }else
-            {
-                echo "3";
-            }
-
-    }
+        $insertdestination = $this->db->query("UPDATE `destination` SET `url` = '$url', `title` = '$title',`description` = '$description', `meta_title` = '$meta_title', `meta_robots` = '$meta_robots', `meta_description` = '$meta_description', `modified_at` = '$datetimes' WHERE `destination`.`id` = ".$id);
+         if ($insertdestination == true)
+		 {
+			 redirect('admin/destination');
+		 }
+		}
 
         // echo "test submition";
 
