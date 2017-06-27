@@ -196,8 +196,10 @@ $(document).ready(function() {
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             
                             </div>
-                        <h4 class="h4head">Create Your Package</h4>
-                        </div></a>
+                      <h4 class="h4head">Create Your Package</h4>
+                        </div>
+                        </a>
+                        <a href="<?php echo base_url(); ?>frontend/home/hotDealsOfADay">
                           <div class="col-md-3">
                         <div class="circle text-center">
                               <i class="fa fa-handshake-o bgicon" aria-hidden="true"></i>
@@ -207,6 +209,7 @@ $(document).ready(function() {
                               <h4 class="h4head htd">HOT
 DEALS of Day's</h4>
                         </div>
+                        </a>
                           <div class="col-md-3">
                         <div class="circle text-center">
                               <i class="fa fa-hourglass-end bgicon" aria-hidden="true"></i>
@@ -221,13 +224,12 @@ DEALS of Day's</h4>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                               
                               </div>     
-                                  <h4 class="h4head">Request a Call back</h4>
+                               <h4 class="h4head">Request a Call back</h4>
                          </div>
                         
                             </div>
                             </div>
                       </section>
-
                     <!--end-->
 					<!-- flexSlider -->
 					<script defer src="<?php echo base_url(); ?>assets/layouts/js/jquery.flexslider.js"></script>
@@ -642,7 +644,7 @@ DEALS of Day's</h4>
 						<li><a href="#">About Us </a> </li>
 						<li><a href="#">Contact Us </a></li>
                         <li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Term & Condation</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
                         <li><a href="#">Refund and cancllation policy</a></li>
 						<li><a href="#">Testimonial</a></li>
 					</ul>

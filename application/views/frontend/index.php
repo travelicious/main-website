@@ -198,15 +198,20 @@ $(document).ready(function() {
                             </div>
                         <h4 class="h4head">Create Your Package</h4>
                         </div></a>
-                          <div class="col-md-3">
-                        <div class="circle text-center">
+						
+                          
+						  <div class="col-md-3">
+                        <a href="<?php echo base_url('frontend/home/hotDealsOfADay'); ?>">
+						<div class="circle text-center">
                               <i class="fa fa-handshake-o bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             
                               </div>   
-                              <h4 class="h4head htd">HOT
-DEALS of Day's</h4>
+                              <h4 class="h4head htd">HOT DEALS of Day's</h4>
+						</a>
                         </div>
+						
+						
                           <div class="col-md-3">
                         <div class="circle text-center">
                               <i class="fa fa-hourglass-end bgicon" aria-hidden="true"></i>
@@ -287,14 +292,15 @@ DEALS of Day's</h4>
 					</div>
 				</div>
 				
+        <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$arrayB[0]['url'];?>">
         <div class="col-sm-3 welcome-grids padding-0-brnd">
-					
-						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[0]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
-                    <div class="caption brnd-imgs-mention">
-                    <h3><?php echo $arrayB[0]['title']; ?></h3>
-                        <em><?php echo $arrayB[0]['created_at']; ?></em> 
-                    </div>
-				</div>
+    						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[0]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
+                <div class="caption brnd-imgs-mention">
+                <h3><?php echo $arrayB[0]['title']; ?></h3>
+                    <em><?php echo $arrayB[0]['created_at']; ?></em> 
+                </div>
+				</div></a>
+
 
         <div class="col-sm-3 welcome-grids padding-0-brnd ">
           
@@ -323,13 +329,15 @@ DEALS of Day's</h4>
                     </div>
           </div>
         </div>
+
+        <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$arrayB[1]['url'];?>">
         <div class="col-sm-3 welcome-grids padding-0-brnd">
             <img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[1]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
                     <div class="caption brnd-imgs-mention">
                     <h3><?php echo $arrayB[1]['title']; ?></h3>
                         <em><?php echo $arrayB[1]['created_at']; ?></em>
                     </div>
-        </div>
+        </div></a>
   </div>
                         
 
@@ -338,13 +346,15 @@ DEALS of Day's</h4>
 						<iframe class="ifrm-vdo-brnd" src="https://www.youtube.com/embed/0zpvZOiqvLY" frameborder="0" allowfullscreen></iframe>
 				</div>
         
+        <a href="<?php echo base_url("frontend/blog/single_blog").'/'.$arrayB[2]['url'];?>">
         <div class="col-sm-3 welcome-grids padding-0-brnd">
 						<img src="<?php echo base_url(); ?>assets/uploads/images/<?php  echo $arrayB[2]['image'];?>" class="img-responsive zoom-img imgs-brnd" alt="">
                     <div class="caption brnd-imgs-mention">
                     <h3><?php echo $arrayB[2]['title']; ?></h3>
                         <em><?php echo $arrayB[2]['created_at']; ?></em>
                     </div>
-				</div>
+				</div></a>
+        
         <div class="col-sm-6 welcome-grids brnd-mntion">
                     <div class=" ">
                     <div class="col-md-7">
@@ -386,7 +396,7 @@ DEALS of Day's</h4>
 				<div class="col-md-4 col-sm-4 col-xs-6 services-grid agileits-w3layouts">
                     <div class="box-shadow-index">
 					<!--<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>-->
-                    <img src="<?php echo base_url(); ?>assets/layouts/images/best-pkges-img.jpg" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
+                    <img style="width: 100%; height: 300px" src="<?php echo base_url(); ?>assets/uploads/images/<?php echo $rowP->image; ?>" class="img-responsive zoom-img ind-our-packages" alt="img" title="img title">
                     <div class="caption packages-index">
                     <h4 class="headlines-indx"><?php echo $rowP->title; ?></h4>
                     <p><b><?php echo $rowP->duration; ?></b></p> 
