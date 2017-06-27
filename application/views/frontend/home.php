@@ -130,61 +130,72 @@ $(document).ready(function() {
 					  <div class="clearfix"></div>	
 				</div>
 			</div>
-			<div class="banner-slider">
-				<div class="container">
-					<section class="slider">
-						<div class="flexslider">
-				<div class="row cust-row">
-                <form role="frorm">
-                    <div class="col-md-3">
-                    <div class="input-group">
-  
-  <input type="text" class="form-control cust-form" aria-label="Amount (to the nearest dollar)" placeholder="Wher are you Going">
-  <span class="input-group-addon radius-0"><i class="fa fa-map-marker"></i></span>
-</div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group">
-  
-  <input type="text" class="form-control cust-form" aria-label="Amount (to the nearest dollar)" placeholder="from">
-  <span class="input-group-addon radius-0"><i class="fa fa-map-marker"></i></span>
-</div>
-                    
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group">
-   <input placeholder="When" class="textbox-n form-control cust-form" type="text" onfocus="(this.type='date')"  id="date">
-  <!--<input type="text" class="form-control cust-form" id="datepicker"  placeholder="When">-->
-  <span class="input-group-addon radius-0"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-</div>
-                    
-                    </div>
-                    <div class="col-md-3">
-                      <div class="input-group ig">
-  
-                          <select class="form-control cust-form" >
-                          <option value="0">Guest</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                          
-                          </select>
-  
-</div>
-                    </div>
-              
-                    <div class="col-md-2">
-                   <button class="btn btn-danger btn-md btn-logins search-btn" type="button">Search</button>
-                    
-                    </div>
-                    
-                    
-                    </form>                
-                            
-                            </div>			
-                            
-						</div>
-					</section>
+    <div class="banner-slider">
+                    <div class="container">
+                        <section class="slider">
+                            <div class="flexslider">
+                                <div class="row cust-row">
+                                    <form role="frorm" action="<?php echo base_url("frontend/home/searched_package");?>" method="post">
+                                        <div class="col-md-3">
+                                            <div class="input-group">
+                                               
+                                                <select class="form-control cust-form" aria-label="Amount (to the nearest dollar)" name="dest_name">
+                                                     <option value="">---Where are you Going---</option>
+
+                                        <?php foreach ($dest_list as $value) { ?>
+                                            <option value="<?php echo $value->id; ?>"><?php echo $value->title; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                              
+                                                    
+                                              
+
+                                                <!--<input type="text" id="skills" class="form-control cust-form" aria-label="Amount (to the nearest dollar)" placeholder="Wher are you Going">-->
+                                                <span class="input-group-addon radius-0"><i class="fa fa-map-marker"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="input-group">
+
+                                                <input type="text" class="form-control cust-form" aria-label="Amount (to the nearest dollar)" placeholder="from">
+                                                <span class="input-group-addon radius-0"><i class="fa fa-map-marker"></i></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="input-group">
+                                                <input placeholder="When" class="textbox-n form-control cust-form" type="text" onfocus="(this.type = 'date')"  id="date">
+                                               <!--<input type="text" class="form-control cust-form" id="datepicker"  placeholder="When">-->
+                                                <span class="input-group-addon radius-0"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group ig">
+
+                                                <select class="form-control cust-form" >
+                                                    <option value="0">Guest</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <button class="btn btn-danger btn-md btn-logins search-btn" type="submit">Search</button>
+
+                                        </div>
+
+
+                                    </form>                
+
+                                </div>      
+
+                            </div>
+                        </section>
                 <!--for circle-->    
                     <section class="m-t">
                         <div class="row">

@@ -117,4 +117,15 @@ class Destination extends BackendController {
         // echo "test submition";
 
 }
+
+    public function delete($id)
+    {   
+	  $delete = $this->db->delete('destination', array('id' => $id)); 
+	  if ($delete == true)
+		 {
+			 redirect('admin/destination');
+		 }
+	 
+    }
+
 }

@@ -119,7 +119,7 @@
                                 <div class="col-md-12" style="background: #d6d4d4;margin-top:10px; margin-bottom: 10px; width: 22em;height: 10em;overflow: auto;">
                                     <div class="panel panel-default">
                                         <div class="panel-headline" style="margin-top:10px;">
-                                            <h4>Add Services</h4>
+                                            <h4>Add Destination</h4>
                                         </div>
                                         <div class="panel-body" >
                                             <?php
@@ -132,7 +132,7 @@
                                             ?>
                                         </div>
                                         <div class="panel-booter" style="margin-bottom: 10px;">
-                                            <a href="#">Add New Services</a>
+                                            <a href="<?php echo base_url("admin/destination/destination_add");?>">Add New Destination</a>
                                         </div>
                                     </div>
                                 </div>
