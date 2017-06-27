@@ -9,4 +9,5 @@ class Destination_model extends CI_Model {
         $query = $this->db->get('destination');
         return $query->result();
     }
+	
 }

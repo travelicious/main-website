@@ -96,8 +96,9 @@
                                         
                                     </td>
                                     <td>
-                                        <a href="<?php echo base_url()?>admin/destination/updateDestination?id=<?=$rows->id ;?>">Edit</a>
-                                    </td>
+                                        <a href="<?php echo base_url()?>admin/destination/updateDestination?id=<?=$rows->id ;?>">Edit</a>/
+                                        <a href="<?php echo base_url()?>admin/destination/delete/<?=$rows->id ;?>" onclick="return confirm('Are you sure you want to delete')"><?php echo "Delete";  ?></a>
+									</td>
                                 </tr>
     <?php
         $i++; 

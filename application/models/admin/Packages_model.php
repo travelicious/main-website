@@ -5,10 +5,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Packages_model extends CI_Model {
 
     public function get_all() {
-        $this->db->where('flag', 1);
-        $query = $this->db->get('packages');
+      
+        $query = $this->db->query("select * from packages order by id desc");
         return $query->result();
     }
+
 
     public function get_package_by_destination($destination_id) {
         $this->db->select('p.*');

@@ -1,38 +1,30 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends FrontendController {
+ defined('BASEPATH') OR exit('No direct script access allowed');
 
-	/**
-	<!-- ____________________ Alamgir ________________ -->
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		
-		$this->load->model('Get_news');
-        $data['fetch_news']= $this->Get_news->fetch_data();
+ class Home extends FrontendController
+
+ {
+ 	public function index()
+ 	{
+
+    $this->load->model('frontend/Home_model');
+ 	$data['dest_list'] = $this->Home_model->fetch_destination_list();
+
+        $this->load->model('Get_news');
+        $data['fetch_news'] = $this->Get_news->fetch_data();
+
         $this->load->model('frontend/Blog_model');
-        $data['fetch_blog']= $this->Blog_model->fetch_data();
-        $this->load->model('frontend/Packages_model');
-        $data['fetch_packages']= $this->Packages_model->fetch_packages();
-        $this->load->view('frontend/index',$data);
+        $data['fetch_blog'] = $this->Blog_model->fetch_data();
 
-	}
-	
-	
+       $this->load->model('frontend/Package_model');
+
+
+ 	$data["package_fetch"] =$this->Package_model->best_package_fetch();
+
+	$this->load->view('frontend/home',$data);
+
+ 	}
 	
 	public function categories()
 	{
@@ -115,14 +107,21 @@ class Home extends FrontendController {
 		  }		  
 	  }	  
       
-	  /*foreach($data['hotPackages'] as $hotPackages)
-	  {
-		print_r($hotPackages);
-        echo "<br>";  		
-	  }*/
-  	  
-	  $this->load->view('frontend/hot-deals', $data);
+	  $this->load->view('frontend/hot-deals');
 	}
 
+ 
+    public function searched_package()
+     {
+    	 $this->load->model('frontend/Home_model');
 
+        $dst_id = $this->input->post('dest_name');
+          $data['package_list'] = $this->Home_model->fetch_package_by_destination($dst_id);
+//    echo '<pre>';   print_r($this->data['package_list']); exit;
+        $this->load->view('frontend/search-result', $data);
+    }
 }
+
+
+
+?>
