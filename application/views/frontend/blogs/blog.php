@@ -217,6 +217,9 @@ function genericSocialShare(url){
                 <!--//first blog-->
   
                 </div>
+
+<!-- ________________________ Alamgir leftsidebar __________________ -->
+
         <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 col-4-blog">
             
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12-b-n">

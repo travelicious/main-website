@@ -195,9 +195,9 @@ $(document).ready(function() {
                             <i class="fa fa-archive bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             
-                            </div>
+                            </div></a>
                         <h4 class="h4head">Create Your Package</h4>
-                        </div></a>
+                        </div>
 						
                           
 						  <div class="col-md-3">
@@ -206,9 +206,9 @@ $(document).ready(function() {
                               <i class="fa fa-handshake-o bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             
-                              </div>   
+                              </div> </a>  
                               <h4 class="h4head htd">HOT DEALS of Day's</h4>
-						</a>
+						
                         </div>
 						
 						
