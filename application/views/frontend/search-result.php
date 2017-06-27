@@ -80,7 +80,7 @@
                         <div class="col-md-3">
                             <div class="navbar-brand logo ">
                                 <h1 class="animated wow pulse" data-wow-delay=".5s">
-                                    <a href="index.html"><img src="images/logo.png" class="img-responsive custom-img" alt="logo" title="company logo"></a></h1>
+                                    <a href="index.html"><img src="<?php echo base_url(); ?>assets/layouts/images/logo.png" class="img-responsive custom-img" alt="logo" title="company logo"></a></h1>
                             </div>
                         </div>
                         <div class="col-md-9">
@@ -247,52 +247,50 @@
                             <?php foreach($package_list as $values){?>
                             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 bg-col-serch">
 
-                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                                    <img src="<?php echo base_url("assets/uploads/images").'/'.$values->image ;?>" class="img-responsive img-rs" alt="item 1" title="saerch item -1">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <img src="<?php echo base_url("assets/uploads/images").'/'.$values->image ;?>" class="img-responsive img-rs" alt="item 1" title="saerch item -1">
                                 </div>
                                 <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
 
-                                    <!--<form  id="pack_enquiry<?php // echo $values->id?>">-->
-                                        <!--<input type="hidden" value="<?php echo $values->id?>" name="packid"/>-->
-                                        
+                            
 
-                                        <div class="row">
-                                            <div class="panel-heading">
-                                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                    <h3 class="h3search-results"><?php echo $values->title?></h3>
-                                                    <p><?php echo $values->duration?></p>                        
-                                                </div>
-                                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                    <span class="cls"><i class="fa fa-phone"></i> 18445668454</span>
-                                                    <small class="search-result-small">(Toll Free)</small>
+                             <div class="row">
+                            <div class="panel-heading">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <h3 class="h3search-results"><?php echo $values->title ?></h3>
+                <p><?php echo $values->duration ?></p>                        
+                    </div>
+        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+            <span class="cls"><i class="fa fa-phone"></i> 18445668454</span>
+                    <small class="search-result-small">(Toll Free)</small>
 
-                                                </div>
-                                                <div class="clearfix"></div>
+                </div>
+             <div class="clearfix"></div>
                                             </div>
                                             <div class="panel-body froms">
                                                 
-                                                <div class="col-md-4 col-md-4s">
-                                                    <p><input type="radio" value="Standered" name="std" id="std<?php echo $values->id?>" checked> Standered</p>
-                                                    <p><input type="radio" value="Luxury" name="std" id="std<?php echo $values->id?>"> Luxury</p>
-                                                    <p><input type="radio" value="Low" name="std" id="std<?php echo $values->id?>"> Low</p>
+                <div class="col-md-4 col-md-4s">
+            <p><input type="radio" value="Standered" name="std" id="std<?php echo $values->id?>" checked> Standered</p>
+        <p><input type="radio" value="Luxury" name="std" id="std<?php echo $values->id?>"> Luxury</p>
+            <p><input type="radio" value="Low" name="std" id="std<?php echo $values->id?>"> Low</p>
 
                                                 </div>
-                                                <div class="col-md-8 col-8-serch-frm">
-                                                    <div class="row">
-                                                        <div class="form-group src-fg">
-                                                            <input type="text" placeholder="Enter Your Name" name="name"  id="namestd<?php echo $values->id?>" class="from-control">
+            <div class="col-md-8 col-8-serch-frm">
+    <div class="row">
+                    <div class="form-group src-fg">
+      <input type="text" placeholder="Enter Your Name" name="name"  id="namestd<?php echo $values->id ?>" class="from-control">
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="form-group src-fg"> <input type="email" placeholder="Enter Your email id" class="from-control" name="enq_email" id="enq_emailstd<?php echo $values->id?>"></div>
+ <div class="row">
+ <div class="form-group src-fg"> <input type="email" placeholder="Enter Your email id" class="from-control" name="enq_email" id="enq_emailstd<?php echo $values->id?>"></div>
+                                 </div>
+                    <div class="row">
+              <div class="form-group src-fg"><input type="text" placeholder="Enter Your contect no." name="conact" id="contactstd<?php echo $values->id?>" class="from-control"></div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="form-group src-fg"><input type="text" placeholder="Enter Your contect no." name="conact" id="contactstd<?php echo $values->id?>" class="from-control"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="form-group src-fg">
-                                                            <button class="btn bnt-default btn-gray">View Details</button>
-                                                            <button type="button" onclick="submit_qnqry(<?php echo $values->id?>);" class="btn bnt-Danger dgnr">Enquiry Now</button>
+                             <div class="row">
+                                <div class="form-group src-fg">
+             <button class="btn bnt-default btn-gray">View Details</button>
+    <button type="button" onclick="submit_qnqry(<?php echo $values->id?>);" class="btn bnt-Danger dgnr">Enquiry Now</button>
 
                                                         </div>
                                                     </div>
@@ -301,7 +299,7 @@
 
 
                                             </div>
-                                            <div class="panel-footer">
+                    <div class="panel-footer">
                                                 <h5>Also Include</h5>
                                                 <a class="btn icon-btn btn-muted" href="#"><span class="glyphicon btn-glyphicon fa fa-plane img-circle text-muted"></span>Flight</a>
                                                 <a class="btn icon-btn btn-muted" href="#"><span class="glyphicon btn-glyphicon fa fa-bed img-circle text-muted"></span>Hotel</a>
