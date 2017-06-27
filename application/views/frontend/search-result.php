@@ -1,62 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Demo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
+        <title>Search | Packeges </title>
 
-        <!-- bootstrap-css -->
-        <link href="<?php echo base_url(); ?>assets/layouts/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <!--// bootstrap-css -->
-        <!-- css -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/style.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/font-awesome.css" type="text/css">
-        <!--// css -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/flexslider.css" type="text/css" media="screen" property="" />
-        <!-- font-awesome icons -->
-        <link href="<?php echo base_url(); ?>assets/layouts/css/font-awesome.css" rel="stylesheet"> 
-        <!-- //font-awesome icons -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/owl.carousel.css" type="text/css" media="all">
-
-        <link href="<?php echo base_url(); ?>assets/layouts/css/owl.theme.css" rel="stylesheet">
-
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/cm-overlay.css" />
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/layouts/css/font.css" />
-        <!-- font -->
-  <script src="<?php echo base_url("assets/jquery-ui-1.12.1.custom/external/jquery/jquery.js"); ?>" type="text/javascript"></script>
-        <!-- font -->
-        <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        <link href="https://www.myfonts.com/fonts/linotype/rage-italic/" rel="stylesheet">    
-
-        <!-- //font -->
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function ($) {
-                $(".scroll").click(function (event) {
-                    event.preventDefault();
-                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-                });
-            });
-        </script> 
-        <script>
-//            $(document).ready(function () {
-//                $("#owl-demo").owlCarousel({
-//
-//                    autoPlay: 3000, //Set AutoPlay to 3 seconds
-//                    autoPlay: true,
-//                    items: 3,
-//                    itemsDesktop: [640, 5],
-//                    itemsDesktopSmall: [414, 4]
-//
-//                });
-//
-//            });
-        </script>
-
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <![endif]-->
+<?php
+$this->load->view('frontend/layouts/css_include');
+?>
+       
     </head>
     <body>
         <!-- banner -->
