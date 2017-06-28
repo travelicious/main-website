@@ -1,10 +1,10 @@
 
-<div class="wrapper bg-white">
+
 
     <!-- Preloader -->
     <div class="preloader"></div>
 
-    <div class="site-content">
+
         <!-- Content -->
         <div class="content-area py-1">
             <div class="container-fluid">
@@ -175,6 +175,4 @@
                 </div>
             </div>
         </div>
-    </div>
-
-</div>
+   
