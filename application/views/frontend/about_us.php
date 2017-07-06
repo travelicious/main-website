@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>About | Us</title>
-
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto+Slab" rel="stylesheet">
 
 <?php
 $this->load->view('frontend/layouts/css_include');
@@ -107,12 +107,12 @@ $this->load->view('frontend/layouts/css_include');
 	<div class="welcome" id="welcome">
         <div class="container-fluid wlc cont-fluid">
         
-            <div class="row row-height">
-            <div class="col-md-7">
+            <div class="row row-height ">
+            <div class="col-md-7 leftpart-about">
                 <ul  class="breadcrumb"><li><a href="#">Home</a></li><li class="active">About US</li></ul>
                 
                 </div>
-            <div class="col-md-5">
+            <div class="col-md-5 rightpart-about">
                 <div class="tabbable-panel">
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs cus-ul ">
@@ -147,7 +147,7 @@ $this->load->view('frontend/layouts/css_include');
 	<!-- //welcome -->
  <!--for package-->
 	<div class="news-letter newslider">
-    <div class="container-fluid">
+    <div class="container">
         
         <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -253,7 +253,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 	<div class="news-letter nwzltr">
 		<div class="col-md-12">
        <div class="col-md-3"></div>
-            <div class="col-md-6"><h1 class="headlins-heart">Spread The <i class="fa fa-heart fa fa-2x c-fa-heat"></i> Tell a Friend</h1></div>
+            <div class="col-md-6 col-xs-12 col-lg-12"><h1 class="headlins-heart">Spread The <i class="fa fa-heart fa fa-2x c-fa-heat"></i> Tell a Friend</h1></div>
             <div class="col-md-3"></div>
         </div>
         <div class="clearfix"></div>

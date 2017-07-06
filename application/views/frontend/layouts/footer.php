@@ -11,8 +11,8 @@
 	<div class="footer">
 		<div class="container">
 			<div class="agile-footer-grids">
-				<div class="col-md-4 agile-footer-grid">
-					<h4>Contact Us</h4>
+				<div class="col-md-4 agile-footer-grid contact-heading">
+					<h4 >Contact Us</h4>
 					<p><i class="fa fa-map-marker" aria-hidden="true"></i> C-18, Achraya Niketan,Mayur Vihar, Phass-1, Delhi-110091</p>
                     <p><i class="fa fa-mobile" aria-hidden="true"></i> 9818565002  </p>
                     <p><i class="fa fa-envelope" aria-hidden="true"></i>Jyoti@traveliciousholiday.com</p>

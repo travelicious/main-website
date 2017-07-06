@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <title>Home | Page</title>
+<!-- font- family link here -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link rel="stylesheet" media="all and (orientation:portrait)"
+ href="portrait.css">
+<!--  for mozilla firefox font awesome link use  -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 
 <?php
 $this->load->view('frontend/layouts/css_include');
@@ -135,8 +142,8 @@ $this->load->view('frontend/layouts/css_include');
                                             </div>
                                         </div>
 
-                                        <div class="col-md-2">
-                                            <button class="btn btn-danger btn-md btn-logins search-btn" type="submit">Search</button>
+                                        <div class="col-md-2 search-button">
+                                            <button class="btn btn-danger btn-md btn-logins search-btn search-button1" type="submit">Search</button>
 
                                         </div>
 
@@ -152,7 +159,7 @@ $this->load->view('frontend/layouts/css_include');
                         <div class="row">
                     <div class="col-md-12">
                     <a href="<?php echo base_url(); ?>frontend/create_package">
-                        <div class="col-md-3">
+                        <div class="col-md-3 for-mozilla-width for-mozilla-use">
                         <div class="circle text-center">
                             <i class="fa fa-archive bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -162,25 +169,29 @@ $this->load->view('frontend/layouts/css_include');
                         </div>
                         </a>
                         <a href="<?php echo base_url(); ?>frontend/home/hotDealsOfADay">
-                          <div class="col-md-3">
+
+                          <div class="col-md-3 for-mozilla-width-right">
                         <div class="circle text-center">
                               <i class="fa fa-handshake-o bgicon" aria-hidden="true"></i>
+
+                             
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             
                               </div>   
                               <h4 class="h4head htd">HOT
-DEALS of Day's</h4>
+DEALS of Day's</h4>       
                         </div>
+                        
                         </a>
-                          <div class="col-md-3">
+                          <div class="col-md-3 for-mozilla-width">
                         <div class="circle text-center">
-                              <i class="fa fa-hourglass-end bgicon" aria-hidden="true"></i>
+                              <i class="fa fa-hourglass-3 [&#xf253;] bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                               </div>
                               <h4 class="h4head">Last Minitus Deals</h4>
                          </div>
                         
-                          <div class="col-md-3">
+                          <div class="col-md-3 for-mozilla-width-right">
                         <div class="circle text-center">
                               <i class="fa fa-headphones bgicon" aria-hidden="true"></i>
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -213,7 +224,7 @@ DEALS of Day's</h4>
 	</div>
 	<!-- //banner -->
 	<!-- welcome -->
-			 <div class="welcome" id="welcome">
+			 <div class="welcome for-mozilla" id="welcome">
     <div class="container">
       <div class="w3-welcome-heading">
         <h3>Brand <mark>Mentions</mark></h3>
@@ -443,8 +454,10 @@ DEALS of Day's</h4>
                      <hr class="indx-hr">
 				</div>
 				<div class="agileits-feedback-grids">
+
+    <!--   this is left section which comment -->
 			    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+          <!--   <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                 <h4 class="contact-form"> <i class="fa fa-map-marker" aria-hidden="true"></i> Head Office Delhi</h4>    
                     <address>
                     <p class="cpr-indx">Address : C-18, Acharya Niketan, Mayur Vihar Phase-1, 110096</p>
@@ -465,27 +478,28 @@ DEALS of Day's</h4>
                     <p class="cpr-indx">jyoto@traveliciousholidays.com</p>
                     <p class="cpr-indx">info@traveliciousholidays.com</p>
                     </address>
-                    
-                    </div>   
+                   
+                    </div> -->
                     
                     </div>
+                   <!--  get in touch left part comment -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                     
                     	<form>
 					<div class="col-md-12 ">
-			  			<div class="form-group">
+			  			<div class="form-group form-box">
 			  				<label for="exampleInputUsername" class="lb-indx">Your name</label>
 					    	<input type="text" class="form-control inp-indx" id="" placeholder=" Enter Name" required="true">
 				  		</div>
-				  		<div class="form-group">
+				  		<div class="form-group form-box">
 					    	<label for="exampleInputEmail" class="lb-indx">Email Address</label>
 					    	<input type="email" class="form-control inp-indx" id="exampleInputEmail" placeholder=" Enter Email id" required="true">
 					  	</div>	
-					  	<div class="form-group">
+					  	<div class="form-group form-box">
 					    	<label for="telephone" class="lb-indx">Mobile No.</label>
 					    	<input type="tel" class="form-control inp-indx" id="telephone" placeholder=" Enter 10-digit mobile no." required="true">
 			  			</div>
-                        <div class="form-group">
+                        <div class="form-group form-box">
 			  				<label for ="description" class="lb-indx"> Message</label>
 			  			 	<textarea  class="form-control inp-indx" id="description" placeholder="Enter Your Message" required="true"></textarea>
 			  			</div>
@@ -684,7 +698,6 @@ DEALS of Day's</h4>
 
 	<!-- //footer -->
 	
-
 
     
 </body>	
